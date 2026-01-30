@@ -1,0 +1,102 @@
+// Example: How to use Puck root for editable header/footer
+// This file shows the pattern - not active in the project
+
+import { Config } from "@measured/puck";
+
+// Root component wraps all page content
+const RootComponent = ({
+  children,
+  editMode,
+  // These props come from root.fields
+  siteName,
+  navLinks,
+  footerText,
+}: {
+  children: React.ReactNode;
+  editMode: boolean;
+  siteName: string;
+  navLinks: Array<{ label: string; href: string }>;
+  footerText: string;
+}) => (
+  <div className="min-h-screen flex flex-col">
+    {/* Editable Header */}
+    <header className="bg-white shadow-sm py-4 px-6">
+      <div className="max-w-6xl mx-auto flex justify-between items-center">
+        <span className="text-xl font-bold">{siteName}</span>
+        <nav className="flex gap-4">
+          {navLinks.map((link, i) => (
+            <a key={i} href={link.href} className="text-gray-600 hover:text-gray-900">
+              {link.label}
+            </a>
+          ))}
+        </nav>
+      </div>
+    </header>
+
+    {/* Page Content (Puck components render here) */}
+    <main className="flex-1">{children}</main>
+
+    {/* Editable Footer */}
+    <footer className="bg-gray-900 text-white py-8 px-6">
+      <div className="max-w-6xl mx-auto text-center">
+        <p>{footerText}</p>
+      </div>
+    </footer>
+  </div>
+);
+
+export const configWithRoot: Config = {
+  // Root configuration - wraps all components
+  root: {
+    fields: {
+      siteName: {
+        type: "text",
+        label: "Site Name",
+      },
+      navLinks: {
+        type: "array",
+        label: "Navigation Links",
+        arrayFields: {
+          label: { type: "text" },
+          href: { type: "text" },
+        },
+      },
+      footerText: {
+        type: "text",
+        label: "Footer Text",
+      },
+    },
+    defaultProps: {
+      siteName: "My Site",
+      navLinks: [
+        { label: "Home", href: "/" },
+        { label: "About", href: "/about" },
+      ],
+      footerText: "© 2024 My Company",
+    },
+    render: RootComponent,
+  },
+
+  components: {
+    // ... your components here
+  },
+};
+
+// Usage in data:
+// Each page stores root props that define header/footer for that page
+const examplePageData = {
+  root: {
+    props: {
+      siteName: "Acme Corp",
+      navLinks: [
+        { label: "Home", href: "/" },
+        { label: "Products", href: "/products" },
+        { label: "Contact", href: "/contact" },
+      ],
+      footerText: "© 2024 Acme Corp. All rights reserved.",
+    },
+  },
+  content: [
+    // ... page components
+  ],
+};
