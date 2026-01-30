@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React from "react";
 
 export type RootProps = {
@@ -34,6 +35,11 @@ export function PuckRoot({
   socialLinks,
   copyright,
 }: RootProps) {
+  const pathname = usePathname();
+
+  // Generate dynamic editor link based on current page
+  const editorLink = `/editor?path=${pathname === "/" ? "/" : pathname}`;
+
   return (
     <div className="min-h-screen flex flex-col">
       {/* Header */}
@@ -61,7 +67,7 @@ export function PuckRoot({
 
             {ctaText && (
               <Link
-                href={ctaHref}
+                href={editorLink}
                 className="px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition"
               >
                 {ctaText}
