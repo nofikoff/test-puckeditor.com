@@ -34,8 +34,11 @@ import {
   LogoCloud,
   Breadcrumbs,
   BlogList,
+  RichTextBlock,
 } from "@/components/puck-components";
 import { BlogListProps } from "@/components/puck-components/BlogList";
+import { RichTextBlockProps } from "@/components/puck-components/TipTapEditor";
+import { RichTextField } from "@/components/puck-fields/RichTextField";
 
 type Props = {
   Heading: React.ComponentProps<typeof Heading>;
@@ -71,6 +74,7 @@ type Props = {
   LogoCloud: React.ComponentProps<typeof LogoCloud>;
   Breadcrumbs: React.ComponentProps<typeof Breadcrumbs>;
   BlogList: BlogListProps;
+  RichTextBlock: RichTextBlockProps;
 };
 
 export const config: Config<Props> = {
@@ -158,7 +162,7 @@ export const config: Config<Props> = {
   categories: {
     typography: {
       title: "Typography",
-      components: ["Heading", "Text", "Badge"],
+      components: ["Heading", "Text", "Badge", "RichTextBlock"],
     },
     layout: {
       title: "Layout",
@@ -1102,6 +1106,42 @@ export const config: Config<Props> = {
         layout: "grid",
       },
       render: BlogList,
+    },
+    RichTextBlock: {
+      label: "Rich Text",
+      fields: {
+        content: {
+          type: "custom",
+          label: "Content",
+          render: RichTextField,
+        },
+        maxWidth: {
+          type: "select",
+          label: "Max Width",
+          options: [
+            { label: "Small (36rem)", value: "small" },
+            { label: "Medium (48rem)", value: "medium" },
+            { label: "Large (64rem)", value: "large" },
+            { label: "Full Width", value: "full" },
+          ],
+        },
+        padding: {
+          type: "select",
+          label: "Padding",
+          options: [
+            { label: "None", value: "none" },
+            { label: "Small", value: "small" },
+            { label: "Medium", value: "medium" },
+            { label: "Large", value: "large" },
+          ],
+        },
+      },
+      defaultProps: {
+        content: "<p>Start writing your content here...</p>",
+        maxWidth: "medium",
+        padding: "medium",
+      },
+      render: RichTextBlock,
     },
   },
 };

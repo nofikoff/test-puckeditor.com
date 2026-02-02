@@ -919,3 +919,6 @@ export const Breadcrumbs = ({
 
 // Re-export BlogList from separate file
 export { BlogList } from "./puck-components/BlogList";
+
+// Re-export RichTextBlock from TipTap
+export { RichTextBlock } from "./puck-components/TipTapEditor";
