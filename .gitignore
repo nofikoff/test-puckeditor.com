@@ -35,3 +35,7 @@ next-env.d.ts
 *.swo
 .DS_Store
 /.claude/
+
+# Database dumps
+*.sql
+dump/
