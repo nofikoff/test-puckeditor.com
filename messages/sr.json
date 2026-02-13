@@ -1,0 +1,52 @@
+{
+  "common": {
+    "home": "Početna",
+    "about": "O nama",
+    "services": "Usluge",
+    "blog": "Blog",
+    "contact": "Kontakt",
+    "login": "Prijava",
+    "logout": "Odjava",
+    "save": "Sačuvaj",
+    "cancel": "Otkaži",
+    "delete": "Obriši",
+    "edit": "Izmeni",
+    "create": "Kreiraj",
+    "search": "Pretraga",
+    "loading": "Učitavanje...",
+    "noResults": "Nema rezultata",
+    "language": "Jezik"
+  },
+  "admin": {
+    "dashboard": "Kontrolna tabla",
+    "posts": "Postovi",
+    "categories": "Kategorije",
+    "tags": "Tagovi",
+    "pages": "Stranice",
+    "newPost": "Novi post",
+    "editPost": "Izmeni post",
+    "title": "Naslov",
+    "slug": "Slug",
+    "content": "Sadržaj",
+    "excerpt": "Izvod",
+    "coverImage": "Naslovna slika",
+    "published": "Objavljeno",
+    "draft": "Nacrt",
+    "featured": "Istaknuto",
+    "settings": "Podešavanja"
+  },
+  "auth": {
+    "signIn": "Prijava",
+    "email": "Email",
+    "password": "Lozinka",
+    "invalidCredentials": "Pogrešan email ili lozinka",
+    "signingIn": "Prijavljivanje..."
+  },
+  "blog": {
+    "latestArticles": "Najnoviji članci",
+    "readMore": "Pročitaj više",
+    "publishedOn": "Objavljeno",
+    "by": "od",
+    "allCategories": "Sve kategorije"
+  }
+}
