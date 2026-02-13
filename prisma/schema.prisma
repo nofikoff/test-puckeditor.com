@@ -1,0 +1,88 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String
+  name      String?
+  role      Role     @default(EDITOR)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  posts     Post[]
+
+  @@map("users")
+}
+
+enum Role {
+  ADMIN
+  EDITOR
+}
+
+model Page {
+  id        String   @id @default(cuid())
+  path      String
+  locale    String   @default("en")
+  title     String   @default("")
+  data      Json
+  published Boolean  @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([path, locale])
+  @@map("pages")
+}
+
+model Post {
+  id          String     @id @default(cuid())
+  slug        String
+  locale      String     @default("en")
+  title       String
+  excerpt     String     @default("")
+  content     String     @default("")
+  coverImage  String     @default("")
+  published   Boolean    @default(false)
+  featured    Boolean    @default(false)
+  authorId    String
+  author      User       @relation(fields: [authorId], references: [id])
+  categories  Category[] @relation("PostCategories")
+  tags        Tag[]      @relation("PostTags")
+  publishedAt DateTime?
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+
+  @@unique([slug, locale])
+  @@map("posts")
+}
+
+model Category {
+  id        String   @id @default(cuid())
+  slug      String
+  locale    String   @default("en")
+  name      String
+  posts     Post[]   @relation("PostCategories")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([slug, locale])
+  @@map("categories")
+}
+
+model Tag {
+  id        String   @id @default(cuid())
+  slug      String
+  locale    String   @default("en")
+  name      String
+  posts     Post[]   @relation("PostTags")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([slug, locale])
+  @@map("tags")
+}
