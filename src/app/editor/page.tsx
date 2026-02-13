@@ -4,25 +4,74 @@ import "@measured/puck/puck.css";
 import { config } from "@/lib/puck-config";
 import { getPage } from "@/data/demo-pages";
 import { useSearchParams } from "next/navigation";
-import { Suspense } from "react";
+import { Suspense, useEffect, useState } from "react";
+import { useToast } from "@/hooks/use-toast";
 
 function EditorContent() {
   const searchParams = useSearchParams();
   const path = searchParams.get("path") || "/";
-  const initialData = getPage(path);
+  const locale = searchParams.get("locale") || "en";
+  const { toast } = useToast();
+  const [initialData, setInitialData] = useState<Data | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function loadPage() {
+      try {
+        const res = await fetch(`/api/pages?path=${encodeURIComponent(path)}&locale=${locale}`);
+        if (res.ok) {
+          const page = await res.json();
+          setInitialData(page.data as Data);
+        } else {
+          setInitialData(getPage(path) as Data);
+        }
+      } catch {
+        setInitialData(getPage(path) as Data);
+      }
+      setLoading(false);
+    }
+    loadPage();
+  }, [path, locale]);
 
   const handlePublish = async (data: Data) => {
-    console.log("Publishing data:", data);
-    alert("Page data saved to console! In production, this would save to your database.");
+    try {
+      const res = await fetch("/api/pages", {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          path,
+          locale,
+          title: (data.root?.props as Record<string, string>)?.siteName || path,
+          data,
+          published: true,
+        }),
+      });
+
+      if (res.ok) {
+        toast({ title: "Published", description: `Page "${path}" saved successfully` });
+      } else {
+        toast({ title: "Error", description: "Failed to save page", variant: "destructive" });
+      }
+    } catch {
+      toast({ title: "Error", description: "Failed to save page", variant: "destructive" });
+    }
   };
+
+  if (loading) {
+    return <div className="min-h-screen flex items-center justify-center">Loading editor...</div>;
+  }
+
+  if (!initialData) {
+    return <div className="min-h-screen flex items-center justify-center">No page data found</div>;
+  }
 
   return (
     <div className="min-h-screen">
       <Puck
         config={config}
-        data={initialData as any}
+        data={initialData}
         onPublish={handlePublish}
-        headerTitle={`Editing: ${path}`}
+        headerTitle={`Editing: ${path} (${locale})`}
       />
     </div>
   );

@@ -1,5 +1,6 @@
 "use client";
 import { TipTapFieldEditor } from "@/components/puck-components/TipTapEditor";
+import DOMPurify from "isomorphic-dompurify";
 
 // Custom Puck Field for Rich Text editing
 export function RichTextField({
@@ -15,7 +16,7 @@ export function RichTextField({
     return (
       <div
         className="prose prose-sm max-w-none p-3 bg-gray-50 rounded border"
-        dangerouslySetInnerHTML={{ __html: value || "<p>No content</p>" }}
+        dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(value || "<p>No content</p>") }}
       />
     );
   }

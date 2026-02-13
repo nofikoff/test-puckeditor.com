@@ -10,6 +10,7 @@ import TextStyle from "@tiptap/extension-text-style";
 import { Color } from "@tiptap/extension-color";
 import Highlight from "@tiptap/extension-highlight";
 import { useEffect, useCallback } from "react";
+import DOMPurify from "isomorphic-dompurify";
 
 // Toolbar Button Component
 function ToolbarButton({
@@ -332,7 +333,7 @@ export function RichTextContent({
   return (
     <div
       className={`prose prose-lg max-w-none ${className}`}
-      dangerouslySetInnerHTML={{ __html: content }}
+      dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(content) }}
     />
   );
 }

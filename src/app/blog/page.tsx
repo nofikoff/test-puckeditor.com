@@ -1,10 +1,6 @@
 "use client";
-import { Render } from "@measured/puck";
-import "@measured/puck/puck.css";
-import { config } from "@/lib/puck-config";
-import { getPage } from "@/data/demo-pages";
+import { PuckPage } from "@/components/PuckPage";
 
 export default function BlogPage() {
-  const data = getPage("/blog");
-  return <Render config={config} data={data as any} />;
+  return <PuckPage path="/blog" />;
 }
