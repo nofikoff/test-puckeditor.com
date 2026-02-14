@@ -1,6 +1,5 @@
 "use client";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { Link, usePathname } from "@/i18n/navigation";
 import { LocaleSwitcher } from "@/components/LocaleSwitcher";
 
 const navigation = [
@@ -15,7 +14,6 @@ const navigation = [
 export function Header() {
   const pathname = usePathname();
 
-  // Hide header in editor mode
   if (pathname === "/editor") {
     return null;
   }

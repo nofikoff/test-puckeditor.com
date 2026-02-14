@@ -3,14 +3,15 @@ import { Puck, Data } from "@measured/puck";
 import "@measured/puck/puck.css";
 import { config } from "@/lib/puck-config";
 import { getPage } from "@/data/demo-pages";
-import { useSearchParams } from "next/navigation";
+import { useSearchParams, useParams } from "next/navigation";
 import { Suspense, useEffect, useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 
 function EditorContent() {
   const searchParams = useSearchParams();
+  const params = useParams();
   const path = searchParams.get("path") || "/";
-  const locale = searchParams.get("locale") || "en";
+  const locale = params.locale as string || "en";
   const { toast } = useToast();
   const [initialData, setInitialData] = useState<Data | null>(null);
   const [loading, setLoading] = useState(true);

@@ -1,7 +1,7 @@
 "use client";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import DOMPurify from "isomorphic-dompurify";
 import { getPostBySlug, getAllPosts } from "@/data/blog-posts";
 import { markdownToHtml } from "@/lib/markdown";

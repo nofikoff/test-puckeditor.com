@@ -1,8 +1,7 @@
 "use client";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { Link, usePathname } from "@/i18n/navigation";
 import { useSession, signOut } from "next-auth/react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import {
   LayoutDashboard,
   FileText,
@@ -17,21 +16,21 @@ import { LocaleSwitcher } from "@/components/LocaleSwitcher";
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
+  const locale = useLocale();
   const { data: session } = useSession();
   const t = useTranslations("admin");
   const tc = useTranslations("common");
 
   const navItems = [
-    { href: "/admin", label: t("dashboard"), icon: LayoutDashboard },
-    { href: "/admin/posts", label: t("posts"), icon: FileText },
-    { href: "/admin/categories", label: t("categories"), icon: FolderOpen },
-    { href: "/admin/tags", label: t("tags"), icon: Tag },
-    { href: "/admin/pages", label: t("pages"), icon: PanelLeft },
+    { href: "/admin" as const, label: t("dashboard"), icon: LayoutDashboard },
+    { href: "/admin/posts" as const, label: t("posts"), icon: FileText },
+    { href: "/admin/categories" as const, label: t("categories"), icon: FolderOpen },
+    { href: "/admin/tags" as const, label: t("tags"), icon: Tag },
+    { href: "/admin/pages" as const, label: t("pages"), icon: PanelLeft },
   ];
 
   return (
     <div className="min-h-screen flex">
-      {/* Sidebar */}
       <aside className="w-64 bg-gray-900 text-white flex flex-col">
         <div className="p-4">
           <Link href="/admin" className="text-xl font-bold">
@@ -67,7 +66,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
             variant="ghost"
             size="sm"
             className="w-full justify-start text-gray-400 hover:text-white hover:bg-gray-800"
-            onClick={() => signOut({ callbackUrl: "/login" })}
+            onClick={() => signOut({ callbackUrl: `/${locale}/login` })}
           >
             <LogOut className="h-4 w-4 mr-2" />
             {tc("logout")}
@@ -75,7 +74,6 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
         </div>
       </aside>
 
-      {/* Main content */}
       <main className="flex-1 bg-gray-50">
         <div className="p-8">
           {children}

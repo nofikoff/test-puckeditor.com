@@ -3,16 +3,16 @@ import { useEffect, useState } from "react";
 import { Render, Data } from "@measured/puck";
 import { config } from "@/lib/puck-config";
 import { getPage } from "@/data/demo-pages";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 
-export function PuckPage({ path }: { path: string }) {
+export function PuckPage({ path, locale = "en" }: { path: string; locale?: string }) {
   const [data, setData] = useState<Data | null>(null);
   const [notFound, setNotFound] = useState(false);
 
   useEffect(() => {
     async function loadPage() {
       try {
-        const res = await fetch(`/api/pages?path=${encodeURIComponent(path)}&locale=en`);
+        const res = await fetch(`/api/pages?path=${encodeURIComponent(path)}&locale=${locale}`);
         if (res.ok) {
           const page = await res.json();
           setData(page.data as Data);
@@ -28,7 +28,7 @@ export function PuckPage({ path }: { path: string }) {
       }
     }
     loadPage();
-  }, [path]);
+  }, [path, locale]);
 
   if (notFound) {
     return (

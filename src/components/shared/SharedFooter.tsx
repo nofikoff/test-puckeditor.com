@@ -1,11 +1,9 @@
 "use client";
-import { usePathname } from "next/navigation";
-import Link from "next/link";
+import { Link, usePathname } from "@/i18n/navigation";
 
 export function SharedFooter() {
   const pathname = usePathname();
 
-  // Hide in editor mode
   if (pathname === "/editor") {
     return null;
   }

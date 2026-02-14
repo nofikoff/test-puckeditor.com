@@ -1,6 +1,6 @@
 "use client";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { Link, usePathname } from "@/i18n/navigation";
+import { LocaleSwitcher } from "@/components/LocaleSwitcher";
 import React from "react";
 
 export type RootProps = {
@@ -65,14 +65,17 @@ export function PuckRoot({
               ))}
             </div>
 
-            {ctaText && (
-              <Link
-                href={editorLink}
-                className="px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition"
-              >
-                {ctaText}
-              </Link>
-            )}
+            <div className="flex items-center gap-2">
+              <LocaleSwitcher />
+              {ctaText && (
+                <Link
+                  href={editorLink}
+                  className="px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition"
+                >
+                  {ctaText}
+                </Link>
+              )}
+            </div>
           </div>
         </nav>
       </header>
