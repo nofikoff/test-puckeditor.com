@@ -65,7 +65,6 @@
 
   - Site: http://localhost:3078/en (redirects from / to /en)
   - Admin: http://localhost:3078/en/admin
-  - Login: admin@example.com / admin123
 
   10. Dynamic Pages (catch-all routing)
   - Replaced 5 static page routes (about, services, contact, demo, blog) with a single catch-all route [...puckPath]
