@@ -74,14 +74,27 @@ function EditorContent() {
         data={initialData}
         onPublish={handlePublish}
         headerTitle={`Editing: ${path} (${locale})`}
-        renderHeaderActions={() => (
-          <Link
-            href="/admin"
-            className="px-3 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 border rounded-md hover:bg-gray-50 transition-colors"
-          >
-            Admin Panel
-          </Link>
-        )}
+        overrides={{
+          headerActions: ({ children }) => (
+            <>
+              <Link
+                href="/admin"
+                style={{
+                  padding: "6px 12px",
+                  fontSize: "14px",
+                  fontWeight: 500,
+                  color: "#4b5563",
+                  border: "1px solid #d1d5db",
+                  borderRadius: "6px",
+                  textDecoration: "none",
+                }}
+              >
+                Admin Panel
+              </Link>
+              {children}
+            </>
+          ),
+        }}
       />
     </div>
   );

@@ -99,3 +99,22 @@
   - Updated Header, Footer, PuckRoot, PuckPage — use @/i18n/navigation imports
   - Deleted src/app/api/locale/route.ts — no longer needed
   - URLs: /en/about, /sr/about, /en/admin, /sr/blog/slug, etc.
+
+  14. Multilingual page content (EN + SR)
+  - Created prisma/seed-pages.ts — seeds 12 pages (6 EN + 6 SR) into DB
+  - All 6 demo pages fully translated to Serbian: /, /about, /services, /blog, /contact, /demo
+  - Translated: navigation, Hero, Features, Stats, Testimonials, Pricing, FAQ, CTA,
+    Timeline, Team, ContactForm, Newsletter, Accordion, Tabs, Alerts, footer
+  - Locale switcher (EN/SR) now shows different content per language
+  - Run: docker compose cp prisma/seed-pages.ts puckeditor-app:/app/prisma/seed-pages.ts
+         docker compose exec puckeditor-app npx tsx prisma/seed-pages.ts
+
+  15. Editor — Admin Panel link
+  - Added "Admin Panel" button to Puck editor header (via renderHeaderActions prop)
+  - Links back to /admin from the editor page
+
+  16. Database import script (import-db.sh)
+  - Updated to truncate all tables before importing (clean slate on production)
+  - Clears: users, pages, posts, categories, tags, _PostCategories, _PostTags
+  - Usage: ./import-db.sh [dump.sql]
+  - dump.sql contains full data dump (admin user, categories, tags, posts, all 12 pages)

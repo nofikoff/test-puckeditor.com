@@ -659,8 +659,8 @@ async function main() {
   for (const [path, { title, data }] of Object.entries(pagesEN)) {
     await prisma.page.upsert({
       where: { path_locale: { path, locale: "en" } },
-      update: { title, data: data as unknown as Record<string, unknown>, published: true },
-      create: { path, locale: "en", title, data: data as unknown as Record<string, unknown>, published: true },
+      update: { title, data: data as any, published: true },
+      create: { path, locale: "en", title, data: data as any, published: true },
     });
     console.log(`  [EN] ${path} — ${title}`);
   }
@@ -669,8 +669,8 @@ async function main() {
   for (const [path, { title, data }] of Object.entries(pagesSR)) {
     await prisma.page.upsert({
       where: { path_locale: { path, locale: "sr" } },
-      update: { title, data: data as unknown as Record<string, unknown>, published: true },
-      create: { path, locale: "sr", title, data: data as unknown as Record<string, unknown>, published: true },
+      update: { title, data: data as any, published: true },
+      create: { path, locale: "sr", title, data: data as any, published: true },
     });
     console.log(`  [SR] ${path} — ${title}`);
   }
