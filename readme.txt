@@ -64,3 +64,17 @@
   - Site: http://localhost:3000
   - Admin: http://localhost:3000/admin
   - Login: admin@example.com / admin123
+
+  10. Dynamic Pages (catch-all routing)
+  - Replaced 5 static page routes (about, services, contact, demo, blog) with a single catch-all route [...puckPath]
+  - New pages can be created from admin panel without code changes
+  - Admin /admin/pages: fetches pages from DB, "New Page" dialog, delete support
+  - API: GET /api/pages (no path param) returns all pages, DELETE /api/pages?id=... deletes a page
+  - PuckPage component shows 404 for pages not found in DB and not in demo-pages
+  - Demo pages (/, /about, /services, /blog, /contact, /demo) still render as fallback
+  - blog/[slug] route preserved for custom blog post rendering
+
+  11. Docker container naming
+  - Services renamed: app → puckeditor-app, postgres → puckeditor-postgres
+  - Container names: app.puckeditor, postgres.puckeditor
+  - Volume: puckeditor_postgres_data
