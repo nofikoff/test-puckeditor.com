@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { LocaleSwitcher } from "@/components/LocaleSwitcher";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -43,12 +44,15 @@ export function Header() {
             ))}
           </div>
 
-          <Link
-            href="/editor"
-            className="px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition"
-          >
-            Open Editor
-          </Link>
+          <div className="flex items-center gap-2">
+            <LocaleSwitcher />
+            <Link
+              href="/editor"
+              className="px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition"
+            >
+              Open Editor
+            </Link>
+          </div>
         </div>
       </nav>
     </header>
