@@ -6,6 +6,7 @@ import { getPage } from "@/data/demo-pages";
 import { useSearchParams, useParams } from "next/navigation";
 import { Suspense, useEffect, useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { Link } from "@/i18n/navigation";
 
 function EditorContent() {
   const searchParams = useSearchParams();
@@ -73,6 +74,14 @@ function EditorContent() {
         data={initialData}
         onPublish={handlePublish}
         headerTitle={`Editing: ${path} (${locale})`}
+        renderHeaderActions={() => (
+          <Link
+            href="/admin"
+            className="px-3 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 border rounded-md hover:bg-gray-50 transition-colors"
+          >
+            Admin Panel
+          </Link>
+        )}
       />
     </div>
   );
