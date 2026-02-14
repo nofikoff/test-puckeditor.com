@@ -19,9 +19,11 @@ export const Heading = ({
     h4: "text-xl md:text-2xl font-semibold",
   };
   return (
-    <Tag className={`${sizes[level]} text-${align} text-gray-900 leading-tight`}>
-      {text}
-    </Tag>
+    <div className="max-w-6xl mx-auto px-4">
+      <Tag className={`${sizes[level]} text-${align} text-gray-900 leading-tight`}>
+        {text}
+      </Tag>
+    </div>
   );
 };
 
@@ -40,9 +42,11 @@ export const Text = ({
     large: "text-lg",
   };
   return (
-    <p className={`${sizes[size]} text-${align} text-gray-600 leading-relaxed`}>
-      {text}
-    </p>
+    <div className="max-w-6xl mx-auto px-4">
+      <p className={`${sizes[size]} text-${align} text-gray-600 leading-relaxed`}>
+        {text}
+      </p>
+    </div>
   );
 };
 
@@ -61,9 +65,11 @@ export const Badge = ({
     error: "bg-red-100 text-red-800",
   };
   return (
-    <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${variants[variant]}`}>
-      {text}
-    </span>
+    <div className="max-w-6xl mx-auto px-4">
+      <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${variants[variant]}`}>
+        {text}
+      </span>
+    </div>
   );
 };
 
@@ -91,12 +97,14 @@ export const Button = ({
     large: "px-6 py-3 text-lg",
   };
   return (
-    <a
-      href={href}
-      className={`inline-flex items-center justify-center rounded-lg font-medium transition-colors ${variants[variant]} ${sizes[size]}`}
-    >
-      {text}
-    </a>
+    <div className="max-w-6xl mx-auto px-4">
+      <a
+        href={href}
+        className={`inline-flex items-center justify-center rounded-lg font-medium transition-colors ${variants[variant]} ${sizes[size]}`}
+      >
+        {text}
+      </a>
+    </div>
   );
 };
 
@@ -114,18 +122,20 @@ export const Card = ({
   linkText: string;
   linkHref: string;
 }) => (
-  <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-    {imageUrl && (
-      <img src={imageUrl} alt={title} className="w-full h-48 object-cover" />
-    )}
-    <div className="p-6">
-      <h3 className="text-xl font-semibold text-gray-900 mb-2">{title}</h3>
-      <p className="text-gray-600 mb-4">{description}</p>
-      {linkText && (
-        <a href={linkHref} className="text-blue-600 hover:text-blue-700 font-medium">
-          {linkText} &rarr;
-        </a>
+  <div className="max-w-6xl mx-auto px-4">
+    <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+      {imageUrl && (
+        <img src={imageUrl} alt={title} className="w-full h-48 object-cover" />
       )}
+      <div className="p-6">
+        <h3 className="text-xl font-semibold text-gray-900 mb-2">{title}</h3>
+        <p className="text-gray-600 mb-4">{description}</p>
+        {linkText && (
+          <a href={linkHref} className="text-blue-600 hover:text-blue-700 font-medium">
+            {linkText} &rarr;
+          </a>
+        )}
+      </div>
     </div>
   </div>
 );
@@ -535,7 +545,11 @@ export const Divider = ({
   color: "light" | "medium" | "dark";
 }) => {
   const colors = { light: "border-gray-200", medium: "border-gray-400", dark: "border-gray-600" };
-  return <hr className={`border-t ${style === "dashed" ? "border-dashed" : style === "dotted" ? "border-dotted" : ""} ${colors[color]} my-4`} />;
+  return (
+    <div className="max-w-6xl mx-auto px-4">
+      <hr className={`border-t ${style === "dashed" ? "border-dashed" : style === "dotted" ? "border-dotted" : ""} ${colors[color]} my-4`} />
+    </div>
+  );
 };
 
 // Media Components
@@ -607,12 +621,14 @@ export const Alert = ({
     error: "❌",
   };
   return (
-    <div className={`border-l-4 p-4 rounded-r-lg ${styles[type]}`}>
-      <div className="flex items-center mb-1">
-        <span className="mr-2">{icons[type]}</span>
-        <span className="font-semibold">{title}</span>
+    <div className="max-w-6xl mx-auto px-4">
+      <div className={`border-l-4 p-4 rounded-r-lg ${styles[type]}`}>
+        <div className="flex items-center mb-1">
+          <span className="mr-2">{icons[type]}</span>
+          <span className="font-semibold">{title}</span>
+        </div>
+        <p className="ml-6">{message}</p>
       </div>
-      <p className="ml-6">{message}</p>
     </div>
   );
 };
@@ -672,6 +688,7 @@ export const Accordion = ({
 }) => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
   return (
+    <div className="max-w-6xl mx-auto px-4">
     <div className="border rounded-lg divide-y">
       {items.map((item, i) => (
         <div key={i}>
@@ -695,6 +712,7 @@ export const Accordion = ({
         </div>
       ))}
     </div>
+    </div>
   );
 };
 
@@ -705,7 +723,7 @@ export const Tabs = ({
 }) => {
   const [activeTab, setActiveTab] = useState(0);
   return (
-    <div>
+    <div className="max-w-6xl mx-auto px-4">
       <div className="flex border-b">
         {tabs.map((tab, i) => (
           <button
