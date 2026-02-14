@@ -626,10 +626,14 @@ export const demoPages: Record<string, PageData> = {
   },
 };
 
-export const getPage = (path: string): PageData => {
-  return demoPages[path] || demoPages["/"];
+export const getPage = (path: string): PageData | null => {
+  return demoPages[path] || null;
 };
 
 export const getAllPaths = (): string[] => {
   return Object.keys(demoPages);
+};
+
+export const getDefaultPageData = (): PageData => {
+  return { root: { props: { ...defaultRootProps } }, content: [] };
 };
