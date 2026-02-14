@@ -16,13 +16,12 @@
   - GET/PUT /api/pages — Puck page data CRUD
   - GET/POST /api/posts + GET/PUT/DELETE /api/posts/[id] — full posts CRUD
   - GET/POST /api/categories and /api/tags
-  - POST /api/locale — locale switching
   - All write endpoints protected with NextAuth session check
 
   4. Authentication
   - NextAuth v4 with credentials provider
-  - Middleware protects /admin/* and /editor/*
-  - Login page at /login with shadcn/ui components
+  - Middleware protects /{locale}/admin/* and /{locale}/editor/*
+  - Login page at /{locale}/login with shadcn/ui components
   - Default admin: admin@example.com / admin123
 
   5. Editor saves to DB
@@ -43,10 +42,13 @@
   - TipTap edits in HTML, saves as Markdown in DB
   - On load, Markdown is converted back to HTML for TipTap
 
-  8. i18n (EN / SR)
-  - next-intl v4 with cookie-based locale
+  8. i18n (EN / SR) — URL-prefix routing
+  - next-intl v4 with URL-prefix locale routing: /en/xxx, /sr/xxx
+  - All page routes under [locale] dynamic segment
+  - Locale-aware navigation (Link, useRouter, usePathname) from @/i18n/navigation
+  - Middleware combines next-intl locale routing with NextAuth protection
+  - LocaleSwitcher in site header — switches locale via URL navigation
   - Translation files: messages/en.json, messages/sr.json
-  - LocaleSwitcher component
   - All DB content has locale field
 
   9. Docker
@@ -61,8 +63,8 @@
   npx prisma migrate dev        # Create tables
   npx tsx prisma/seed.ts        # Seed admin + categories + tags
 
-  - Site: http://localhost:3000
-  - Admin: http://localhost:3000/admin
+  - Site: http://localhost:3078/en (redirects from / to /en)
+  - Admin: http://localhost:3078/en/admin
   - Login: admin@example.com / admin123
 
   10. Dynamic Pages (catch-all routing)
@@ -78,3 +80,22 @@
   - Services renamed: app → puckeditor-app, postgres → puckeditor-postgres
   - Container names: app.puckeditor, postgres.puckeditor
   - Volume: puckeditor_postgres_data
+
+  12. Puck component styling
+  - Added container wrapper (max-w-6xl mx-auto px-4) to atomic components:
+    Heading, Text, Badge, Button, Card, Alert, Accordion, Tabs, Divider
+  - Ensures consistent padding and max-width across all page sections
+
+  13. URL-prefix locale routing migration
+  - Replaced cookie-based locale (no URL prefix) with URL-prefix routing
+  - Created src/i18n/routing.ts — defineRouting with locales ["en", "sr"], localePrefix "always"
+  - Created src/i18n/navigation.ts — locale-aware Link, useRouter, usePathname, redirect
+  - Rewrote src/i18n/request.ts — routing-based locale resolution instead of cookie
+  - Rewrote src/middleware.ts — combines next-intl createMiddleware with NextAuth JWT check
+  - Moved all routes under src/app/[locale]/ (admin, editor, login, blog, catch-all, home)
+  - Created src/app/[locale]/layout.tsx — NextIntlClientProvider, setRequestLocale, locale validation
+  - Simplified src/app/layout.tsx — minimal root (no i18n providers)
+  - Updated LocaleSwitcher — navigates via router.replace instead of cookie API
+  - Updated Header, Footer, PuckRoot, PuckPage — use @/i18n/navigation imports
+  - Deleted src/app/api/locale/route.ts — no longer needed
+  - URLs: /en/about, /sr/about, /en/admin, /sr/blog/slug, etc.
