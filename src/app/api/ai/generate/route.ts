@@ -1,14 +1,21 @@
+export const dynamic = "force-dynamic";
+
 import { NextResponse } from "next/server";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/auth";
 import OpenAI from "openai";
 import { buildSystemPrompt } from "@/lib/ai/prompt";
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
+let openai: OpenAI | null = null;
 
-const model = process.env.OPENAI_MODEL || "gpt-4o-mini";
+function getOpenAIClient(): OpenAI {
+  if (!openai) {
+    openai = new OpenAI({
+      apiKey: process.env.OPENAI_API_KEY,
+    });
+  }
+  return openai;
+}
 
 type BlockData = {
   type: string;
@@ -45,7 +52,8 @@ export async function POST(request: Request) {
         ? `\n\nCurrent page already has these blocks: ${currentBlocks.join(", ")}. Consider this context when generating new blocks.`
         : "";
 
-    const completion = await openai.chat.completions.create({
+    const model = process.env.OPENAI_MODEL || "gpt-4o-mini";
+    const completion = await getOpenAIClient().chat.completions.create({
       model,
       messages: [
         { role: "system", content: systemPrompt },
