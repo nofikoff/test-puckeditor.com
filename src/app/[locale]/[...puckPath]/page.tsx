@@ -1,12 +1,34 @@
-"use client";
-import { useParams } from "next/navigation";
-import { PuckPage } from "@/components/PuckPage";
+import { Metadata } from "next";
+import { Data } from "@measured/puck";
+import { notFound } from "next/navigation";
+import { PuckRenderer } from "@/components/PuckRenderer";
+import { getPageByPath } from "@/lib/data";
+import { getPage } from "@/data/demo-pages";
 
-export default function DynamicPuckPage() {
-  const params = useParams();
-  const segments = params.puckPath as string[];
-  const locale = params.locale as string;
-  const path = "/" + segments.join("/");
+export const dynamic = "force-dynamic";
 
-  return <PuckPage path={path} locale={locale} />;
+type Props = {
+  params: Promise<{ locale: string; puckPath: string[] }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale, puckPath } = await params;
+  const path = "/" + puckPath.join("/");
+  const dbPage = await getPageByPath(path, locale);
+  const title = dbPage?.title || puckPath[puckPath.length - 1] || "Page";
+  return { title };
+}
+
+export default async function DynamicPuckPage({ params }: Props) {
+  const { locale, puckPath } = await params;
+  const path = "/" + puckPath.join("/");
+
+  const dbPage = await getPageByPath(path, locale);
+  const data = (dbPage?.data as Data) ?? (getPage(path) as Data);
+
+  if (!data) {
+    notFound();
+  }
+
+  return <PuckRenderer data={data} />;
 }

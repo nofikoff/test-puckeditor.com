@@ -1,5 +1,6 @@
 "use client";
-import { useEffect, useState } from "react";
+
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -16,74 +17,64 @@ import {
 } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 import { TipTapFieldEditor } from "@/components/puck-components/TipTapEditor";
-import { htmlToMarkdown, markdownToHtml } from "@/lib/markdown";
+import { htmlToMarkdown } from "@/lib/markdown";
 import { ArrowLeft, Save, Eye, EyeOff, Star } from "lucide-react";
 
 type Category = { id: string; slug: string; name: string };
 type Tag = { id: string; slug: string; name: string };
 
-export function PostEditor({ postId }: { postId?: string }) {
+type InitialPost = {
+  id: string;
+  slug: string;
+  locale: string;
+  title: string;
+  excerpt: string;
+  content: string;
+  coverImage: string;
+  published: boolean;
+  featured: boolean;
+  categoryIds: string[];
+  tagIds: string[];
+};
+
+export function PostEditor({
+  postId,
+  initialPost,
+  initialEditorHtml,
+  initialCategories,
+  initialTags,
+}: {
+  postId?: string;
+  initialPost?: InitialPost;
+  initialEditorHtml?: string;
+  initialCategories?: Category[];
+  initialTags?: Tag[];
+}) {
   const router = useRouter();
   const { toast } = useToast();
   const isEditing = !!postId;
 
-  const [loading, setLoading] = useState(isEditing);
   const [saving, setSaving] = useState(false);
-  const [categories, setCategories] = useState<Category[]>([]);
-  const [tags, setTags] = useState<Tag[]>([]);
+  const [categories] = useState<Category[]>(initialCategories ?? []);
+  const [tags] = useState<Tag[]>(initialTags ?? []);
 
   const [form, setForm] = useState({
-    slug: "",
-    locale: "en",
-    title: "",
-    excerpt: "",
-    content: "",
-    coverImage: "",
-    published: false,
-    featured: false,
-    categoryIds: [] as string[],
-    tagIds: [] as string[],
+    slug: initialPost?.slug ?? "",
+    locale: initialPost?.locale ?? "en",
+    title: initialPost?.title ?? "",
+    excerpt: initialPost?.excerpt ?? "",
+    content: initialPost?.content ?? "",
+    coverImage: initialPost?.coverImage ?? "",
+    published: initialPost?.published ?? false,
+    featured: initialPost?.featured ?? false,
+    categoryIds: initialPost?.categoryIds ?? ([] as string[]),
+    tagIds: initialPost?.tagIds ?? ([] as string[]),
   });
 
-  // HTML content for TipTap editor (converted from markdown)
-  const [editorHtml, setEditorHtml] = useState("");
-
-  useEffect(() => {
-    Promise.all([
-      fetch("/api/categories").then((r) => r.json()),
-      fetch("/api/tags").then((r) => r.json()),
-    ]).then(([cats, tgs]) => {
-      setCategories(cats || []);
-      setTags(tgs || []);
-    });
-  }, []);
-
-  useEffect(() => {
-    if (!postId) return;
-    fetch(`/api/posts/${postId}`)
-      .then((r) => r.json())
-      .then((post) => {
-        setForm({
-          slug: post.slug,
-          locale: post.locale,
-          title: post.title,
-          excerpt: post.excerpt,
-          content: post.content,
-          coverImage: post.coverImage,
-          published: post.published,
-          featured: post.featured,
-          categoryIds: post.categories.map((c: Category) => c.id),
-          tagIds: post.tags.map((t: Tag) => t.id),
-        });
-        // Convert stored markdown to HTML for TipTap
-        setEditorHtml(markdownToHtml(post.content));
-        setLoading(false);
-      });
-  }, [postId]);
+  const [editorHtml, setEditorHtml] = useState(initialEditorHtml ?? "");
 
   const handleEditorChange = (html: string) => {
     setEditorHtml(html);
-    // Convert HTML from TipTap to markdown for storage
     setForm((prev) => ({ ...prev, content: htmlToMarkdown(html) }));
   };
 
@@ -147,10 +138,6 @@ export function PostEditor({ postId }: { postId?: string }) {
     }));
   };
 
-  if (loading) {
-    return <div className="text-center py-8 text-gray-500">Loading...</div>;
-  }
-
   return (
     <div>
       <div className="flex items-center justify-between mb-6">
@@ -183,7 +170,6 @@ export function PostEditor({ postId }: { postId?: string }) {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        {/* Main content */}
         <div className="lg:col-span-2 space-y-6">
           <Card>
             <CardHeader>
@@ -240,7 +226,6 @@ export function PostEditor({ postId }: { postId?: string }) {
           </Card>
         </div>
 
-        {/* Sidebar */}
         <div className="space-y-6">
           <Card>
             <CardHeader>
