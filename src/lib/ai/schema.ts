@@ -15,7 +15,7 @@ type BlockSchema = {
 };
 
 export function extractBlockSchemas(): BlockSchema[] {
-  return generatedSchemas as BlockSchema[];
+  return generatedSchemas as unknown as BlockSchema[];
 }
 
 export function buildBlockSchemaPrompt(): string {
