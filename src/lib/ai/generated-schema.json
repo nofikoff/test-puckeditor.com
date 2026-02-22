@@ -1,0 +1,4630 @@
+[
+  {
+    "type": "ShadcnHero1",
+    "label": "SB: Hero — Split Image",
+    "fields": {
+      "badge": {
+        "type": "text"
+      },
+      "heading": {
+        "type": "text"
+      },
+      "description": {
+        "type": "textarea"
+      },
+      "primaryBtnText": {
+        "type": "text"
+      },
+      "primaryBtnUrl": {
+        "type": "text"
+      },
+      "secondaryBtnText": {
+        "type": "text"
+      },
+      "secondaryBtnUrl": {
+        "type": "text"
+      },
+      "imageSrc": {
+        "type": "text"
+      },
+      "imageAlt": {
+        "type": "text"
+      }
+    },
+    "defaultProps": {
+      "badge": "Your Website Builder",
+      "heading": "Blocks Built With Shadcn & Tailwind",
+      "description": "Finely crafted components built with React, Tailwind and Shadcn UI. Developers can copy and paste these blocks directly into their project.",
+      "primaryBtnText": "Discover all components",
+      "primaryBtnUrl": "#",
+      "secondaryBtnText": "View on GitHub",
+      "secondaryBtnUrl": "#",
+      "imageSrc": "https://placehold.co/800x600",
+      "imageAlt": "Hero image"
+    }
+  },
+  {
+    "type": "ShadcnHero3",
+    "label": "SB: Hero — Avatars & Reviews",
+    "fields": {
+      "heading": {
+        "type": "text"
+      },
+      "description": {
+        "type": "textarea"
+      },
+      "primaryBtnText": {
+        "type": "text"
+      },
+      "primaryBtnUrl": {
+        "type": "text"
+      },
+      "secondaryBtnText": {
+        "type": "text"
+      },
+      "secondaryBtnUrl": {
+        "type": "text"
+      },
+      "reviewCount": {
+        "type": "number"
+      },
+      "reviewRating": {
+        "type": "number"
+      },
+      "imageSrc": {
+        "type": "text"
+      }
+    },
+    "defaultProps": {
+      "heading": "Blocks built with Shadcn & Tailwind",
+      "description": "Finely crafted components built with React, Tailwind and Shadcn UI. Developers can copy and paste these blocks directly into their project.",
+      "primaryBtnText": "Sign Up",
+      "primaryBtnUrl": "#",
+      "secondaryBtnText": "Get Started",
+      "secondaryBtnUrl": "#",
+      "reviewCount": 200,
+      "reviewRating": 5,
+      "imageSrc": "https://placehold.co/800x600"
+    }
+  },
+  {
+    "type": "ShadcnHero7",
+    "label": "SB: Hero — Centered with Reviews",
+    "fields": {
+      "heading": {
+        "type": "text"
+      },
+      "description": {
+        "type": "textarea"
+      },
+      "btnText": {
+        "type": "text"
+      },
+      "btnUrl": {
+        "type": "text"
+      },
+      "reviewCount": {
+        "type": "number"
+      },
+      "reviewRating": {
+        "type": "number"
+      }
+    },
+    "defaultProps": {
+      "heading": "A Collection of Components Built With Shadcn & Tailwind",
+      "description": "Finely crafted components built with React, Tailwind and Shadcn UI. Developers can copy and paste these blocks directly into their project.",
+      "btnText": "Discover all components",
+      "btnUrl": "#",
+      "reviewCount": 200,
+      "reviewRating": 5
+    }
+  },
+  {
+    "type": "ShadcnHero12",
+    "label": "SB: Hero — Logo Grid with Pattern",
+    "fields": {
+      "heading": {
+        "type": "text"
+      },
+      "headingHighlight": {
+        "type": "text"
+      },
+      "description": {
+        "type": "textarea"
+      },
+      "primaryBtnText": {
+        "type": "text"
+      },
+      "secondaryBtnText": {
+        "type": "text"
+      },
+      "logoSrc": {
+        "type": "text"
+      },
+      "imageSrc": {
+        "type": "text"
+      }
+    },
+    "defaultProps": {
+      "heading": "Build your next project with ",
+      "headingHighlight": "Blocks",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Elig doloremque mollitia fugiat omnis! Porro facilis quo animi consequatur. Explicabo.",
+      "primaryBtnText": "Get Started",
+      "secondaryBtnText": "Learn more",
+      "logoSrc": "https://placehold.co/120x64",
+      "imageSrc": "https://placehold.co/1200x800"
+    }
+  },
+  {
+    "type": "ShadcnHero34",
+    "label": "SB: Hero — Muted Background",
+    "fields": {
+      "badge": {
+        "type": "text"
+      },
+      "heading": {
+        "type": "text"
+      },
+      "description": {
+        "type": "textarea"
+      },
+      "primaryBtnText": {
+        "type": "text"
+      },
+      "secondaryBtnText": {
+        "type": "text"
+      },
+      "imageSrc": {
+        "type": "text"
+      }
+    },
+    "defaultProps": {
+      "badge": "New Release",
+      "heading": "Welcome to Our Website",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Elig doloremque mollitia fugiat omnis! Porro facilis quo animi consequatur. Explicabo.",
+      "primaryBtnText": "Primary",
+      "secondaryBtnText": "Secondary",
+      "imageSrc": "https://placehold.co/800x600"
+    }
+  },
+  {
+    "type": "ShadcnHero45",
+    "label": "SB: Hero — Feature Icons",
+    "fields": {
+      "badge": {
+        "type": "text"
+      },
+      "heading": {
+        "type": "text"
+      },
+      "imageSrc": {
+        "type": "text"
+      },
+      "imageAlt": {
+        "type": "text"
+      },
+      "feature1Title": {
+        "type": "text"
+      },
+      "feature1Description": {
+        "type": "textarea"
+      },
+      "feature2Title": {
+        "type": "text"
+      },
+      "feature2Description": {
+        "type": "textarea"
+      },
+      "feature3Title": {
+        "type": "text"
+      },
+      "feature3Description": {
+        "type": "textarea"
+      }
+    },
+    "defaultProps": {
+      "badge": "shadcnblocks.com",
+      "heading": "Blocks built with Shadcn & Tailwind",
+      "imageSrc": "https://placehold.co/800x500",
+      "imageAlt": "Hero image",
+      "feature1Title": "Flexible Support",
+      "feature1Description": "Benefit from around-the-clock assistance to keep your business running smoothly.",
+      "feature2Title": "Collaborative Tools",
+      "feature2Description": "Enhance teamwork with tools designed to simplify project management and communication.",
+      "feature3Title": "Lightning Fast Speed",
+      "feature3Description": "Experience the fastest load times with our high performance servers."
+    }
+  },
+  {
+    "type": "ShadcnHero47",
+    "label": "SB: Hero — Phone Mockup",
+    "fields": {
+      "heading": {
+        "type": "text"
+      },
+      "subheading": {
+        "type": "text"
+      },
+      "description": {
+        "type": "textarea"
+      },
+      "primaryBtnText": {
+        "type": "text"
+      },
+      "primaryBtnUrl": {
+        "type": "text"
+      },
+      "secondaryBtnText": {
+        "type": "text"
+      },
+      "secondaryBtnUrl": {
+        "type": "text"
+      },
+      "imageSrc": {
+        "type": "text"
+      },
+      "imageAlt": {
+        "type": "text"
+      }
+    },
+    "defaultProps": {
+      "heading": "Epic Blocks",
+      "subheading": " built with shadcn/ui & Tailwind",
+      "description": "Finely crafted components built with React, Tailwind and Shadcn UI. Developers can copy and paste these blocks directly into their project.",
+      "primaryBtnText": "Get Started",
+      "primaryBtnUrl": "#",
+      "secondaryBtnText": "Read the docs",
+      "secondaryBtnUrl": "#",
+      "imageSrc": "https://placehold.co/450x800",
+      "imageAlt": "Phone screen preview"
+    }
+  },
+  {
+    "type": "ShadcnHero67",
+    "label": "SB: Hero — Centered CTA with Avatars",
+    "fields": {
+      "heading": {
+        "type": "text"
+      },
+      "description": {
+        "type": "textarea"
+      },
+      "btnText": {
+        "type": "text"
+      },
+      "logoSrc": {
+        "type": "text"
+      },
+      "imageSrc": {
+        "type": "text"
+      },
+      "trustText": {
+        "type": "text"
+      }
+    },
+    "defaultProps": {
+      "heading": "Build Exceptional Online Experiences",
+      "description": "Create a website that captures attention, drives engagement, and aligns with your goals, all in a matter of days.",
+      "btnText": "Get Started Today",
+      "logoSrc": "https://placehold.co/120x56",
+      "imageSrc": "https://placehold.co/1200x700",
+      "trustText": "Trusted by industry leaders"
+    }
+  },
+  {
+    "type": "ShadcnHero78",
+    "label": "SB: Hero — Fullscreen Background Image",
+    "fields": {
+      "heading": {
+        "type": "text"
+      },
+      "description": {
+        "type": "textarea"
+      },
+      "btnText": {
+        "type": "text"
+      },
+      "backgroundImageUrl": {
+        "type": "text"
+      }
+    },
+    "defaultProps": {
+      "heading": "Explore the wonders of science.",
+      "description": "From stunning skyscrapers to intricate bridges and innovative architectural marvels, each photo invites you to explore the artificial wonders of the world.",
+      "btnText": "See all photos",
+      "backgroundImageUrl": "https://placehold.co/1920x1080"
+    }
+  },
+  {
+    "type": "ShadcnFeature1",
+    "label": "SB: Feature — Image Right",
+    "fields": {
+      "title": {
+        "type": "text"
+      },
+      "description": {
+        "type": "textarea"
+      },
+      "imageSrc": {
+        "type": "text"
+      },
+      "imageAlt": {
+        "type": "text"
+      },
+      "primaryBtnText": {
+        "type": "text"
+      },
+      "primaryBtnUrl": {
+        "type": "text"
+      },
+      "secondaryBtnText": {
+        "type": "text"
+      },
+      "secondaryBtnUrl": {
+        "type": "text"
+      }
+    },
+    "defaultProps": {
+      "title": "Blocks built with Shadcn & Tailwind",
+      "description": "Hundreds of finely crafted components built with React, Tailwind and Shadcn UI. Developers can copy and paste these blocks directly into their project.",
+      "imageSrc": "https://placehold.co/600x400",
+      "imageAlt": "Feature image",
+      "primaryBtnText": "Get Started",
+      "primaryBtnUrl": "#",
+      "secondaryBtnText": "Learn More",
+      "secondaryBtnUrl": "#"
+    }
+  },
+  {
+    "type": "ShadcnFeature2",
+    "label": "SB: Feature — Image Left",
+    "fields": {
+      "title": {
+        "type": "text"
+      },
+      "description": {
+        "type": "textarea"
+      },
+      "imageSrc": {
+        "type": "text"
+      },
+      "imageAlt": {
+        "type": "text"
+      },
+      "primaryBtnText": {
+        "type": "text"
+      },
+      "primaryBtnUrl": {
+        "type": "text"
+      },
+      "secondaryBtnText": {
+        "type": "text"
+      },
+      "secondaryBtnUrl": {
+        "type": "text"
+      }
+    },
+    "defaultProps": {
+      "title": "Blocks built with Shadcn & Tailwind",
+      "description": "Hundreds of finely crafted components built with React, Tailwind and Shadcn UI. Developers can copy and paste these blocks directly into their project.",
+      "imageSrc": "https://placehold.co/600x400",
+      "imageAlt": "Feature image",
+      "primaryBtnText": "Get Started",
+      "primaryBtnUrl": "#",
+      "secondaryBtnText": "Learn More",
+      "secondaryBtnUrl": "#"
+    }
+  },
+  {
+    "type": "ShadcnFeature3",
+    "label": "SB: Feature — Six Icon Cards Grid",
+    "fields": {
+      "heading": {
+        "type": "text"
+      },
+      "cards": {
+        "type": "array",
+        "arrayFields": {
+          "title": {
+            "type": "text"
+          },
+          "description": {
+            "type": "textarea"
+          },
+          "imageSrc": {
+            "type": "text"
+          },
+          "imageAlt": {
+            "type": "text"
+          }
+        }
+      }
+    },
+    "defaultProps": {
+      "heading": "This is where your feature goes",
+      "cards": [
+        {
+          "title": "Code Components",
+          "description": "Build reusable components with clean, maintainable code.",
+          "imageSrc": "https://placehold.co/400x200",
+          "imageAlt": "Code components"
+        },
+        {
+          "title": "Live Preview",
+          "description": "See your changes instantly with real-time preview.",
+          "imageSrc": "https://placehold.co/400x200",
+          "imageAlt": "Live preview"
+        },
+        {
+          "title": "Version Control",
+          "description": "Track changes and collaborate with your team.",
+          "imageSrc": "https://placehold.co/400x200",
+          "imageAlt": "Version control"
+        },
+        {
+          "title": "Organized Structure",
+          "description": "Keep your project well-organized and easy to navigate.",
+          "imageSrc": "https://placehold.co/400x200",
+          "imageAlt": "Organized structure"
+        },
+        {
+          "title": "Magic Editing",
+          "description": "Edit your content with powerful visual tools.",
+          "imageSrc": "https://placehold.co/400x200",
+          "imageAlt": "Magic editing"
+        },
+        {
+          "title": "AI-Powered",
+          "description": "Leverage AI to enhance your workflow and productivity.",
+          "imageSrc": "https://placehold.co/400x200",
+          "imageAlt": "AI powered"
+        }
+      ]
+    }
+  },
+  {
+    "type": "ShadcnFeature13",
+    "label": "SB: Feature — Image Grid with Labels",
+    "fields": {
+      "title": {
+        "type": "text"
+      },
+      "features": {
+        "type": "array",
+        "arrayFields": {
+          "heading": {
+            "type": "text"
+          },
+          "label": {
+            "type": "text"
+          },
+          "description": {
+            "type": "textarea"
+          },
+          "image": {
+            "type": "text"
+          },
+          "url": {
+            "type": "text"
+          }
+        }
+      }
+    },
+    "defaultProps": {
+      "title": "A collection of extra blocks for Shadcn UI & Tailwind",
+      "features": [
+        {
+          "heading": "Design System Approved",
+          "label": "FOR DESIGNERS",
+          "description": "Hundreds of finely crafted components available in Figma. Easily modify the design system to your brand.",
+          "image": "https://placehold.co/400x300/1a1a2e/eaeaea",
+          "url": "#"
+        },
+        {
+          "heading": "Copy-Paste Code Blocks",
+          "label": "FOR DEVELOPERS",
+          "description": "Finely crafted components built with React, Tailwind and Shadcn UI. Copy and paste directly into your project.",
+          "image": "https://placehold.co/400x300/16213e/eaeaea",
+          "url": "#"
+        },
+        {
+          "heading": "Product-First Approach",
+          "label": "FOR PRODUCT TEAMS",
+          "description": "Components designed with user experience in mind. Every block is tested for usability and optimized for conversion.",
+          "image": "https://placehold.co/400x300/0f3460/eaeaea",
+          "url": "#"
+        },
+        {
+          "heading": "Marketing-Ready Templates",
+          "label": "FOR MARKETING",
+          "description": "High-converting landing pages and marketing components that drive engagement and boost your campaigns.",
+          "image": "https://placehold.co/400x300/533483/eaeaea",
+          "url": "#"
+        }
+      ]
+    }
+  },
+  {
+    "type": "ShadcnFeature15",
+    "label": "SB: Feature — Accent Cards with Icons",
+    "fields": {
+      "tagline": {
+        "type": "text"
+      },
+      "heading": {
+        "type": "text"
+      },
+      "description": {
+        "type": "textarea"
+      },
+      "cards": {
+        "type": "array",
+        "arrayFields": {
+          "title": {
+            "type": "text"
+          },
+          "description": {
+            "type": "textarea"
+          }
+        }
+      }
+    },
+    "defaultProps": {
+      "tagline": "WHY WE ARE UNIQUE",
+      "heading": "Bringing the best to you by the best in the industry",
+      "description": "We combine cutting-edge technology with years of experience to deliver solutions that exceed expectations. Our team is dedicated to quality and innovation.",
+      "cards": [
+        {
+          "title": "Quality",
+          "description": "We maintain the highest standards in everything we build, ensuring reliable and performant solutions."
+        },
+        {
+          "title": "Innovation",
+          "description": "Staying ahead of the curve with modern technologies and creative approaches to problem-solving."
+        },
+        {
+          "title": "Customer Support",
+          "description": "Dedicated support team available to help you every step of the way, from onboarding to scaling."
+        },
+        {
+          "title": "Reliability",
+          "description": "Battle-tested infrastructure and processes that you can depend on for your critical applications."
+        }
+      ]
+    }
+  },
+  {
+    "type": "ShadcnFeature16",
+    "label": "SB: Feature — Three Column Values",
+    "fields": {
+      "tagline": {
+        "type": "text"
+      },
+      "heading": {
+        "type": "text"
+      },
+      "cards": {
+        "type": "array",
+        "arrayFields": {
+          "title": {
+            "type": "text"
+          },
+          "description": {
+            "type": "textarea"
+          }
+        }
+      }
+    },
+    "defaultProps": {
+      "tagline": "OUR VALUES",
+      "heading": "Why Choose Us?",
+      "cards": [
+        {
+          "title": "Performance",
+          "description": "Optimized for speed and efficiency, ensuring your applications run smoothly at any scale."
+        },
+        {
+          "title": "Quality",
+          "description": "Every component is thoroughly tested and built following industry best practices and standards."
+        },
+        {
+          "title": "Innovation",
+          "description": "Cutting-edge solutions that keep you ahead of the competition with modern technologies."
+        }
+      ]
+    }
+  },
+  {
+    "type": "ShadcnFeature17",
+    "label": "SB: Feature — Badge with Six Icons & CTA",
+    "fields": {
+      "label": {
+        "type": "text"
+      },
+      "title": {
+        "type": "text"
+      },
+      "features": {
+        "type": "array",
+        "arrayFields": {
+          "heading": {
+            "type": "text"
+          },
+          "description": {
+            "type": "textarea"
+          }
+        }
+      },
+      "buttonText": {
+        "type": "text"
+      },
+      "buttonUrl": {
+        "type": "text"
+      }
+    },
+    "defaultProps": {
+      "label": "Features",
+      "title": "Fully featured components for Shadcn UI & Tailwind",
+      "features": [
+        {
+          "heading": "Quality",
+          "description": "Built with attention to detail and best practices. Every component is thoroughly tested and follows modern React patterns."
+        },
+        {
+          "heading": "Experience",
+          "description": "Crafted with user experience in mind. Designed to be intuitive, accessible, and provide smooth interactions."
+        },
+        {
+          "heading": "Support",
+          "description": "Comprehensive documentation and community support. Get help with detailed guides and examples."
+        },
+        {
+          "heading": "Innovation",
+          "description": "Cutting-edge design patterns and modern web technologies. Stay ahead with the latest trends."
+        },
+        {
+          "heading": "Results",
+          "description": "Proven track record of successful implementations. Battle-tested in real-world applications."
+        },
+        {
+          "heading": "Efficiency",
+          "description": "Optimized for performance and developer productivity. Lightweight, fast-loading components."
+        }
+      ],
+      "buttonText": "More Features",
+      "buttonUrl": "#"
+    }
+  },
+  {
+    "type": "ShadcnFeature42",
+    "label": "SB: Feature — Values Grid with Side Title",
+    "fields": {
+      "heading": {
+        "type": "text"
+      },
+      "cards": {
+        "type": "array",
+        "arrayFields": {
+          "title": {
+            "type": "text"
+          },
+          "description": {
+            "type": "textarea"
+          }
+        }
+      }
+    },
+    "defaultProps": {
+      "heading": "Our Values and Principles",
+      "cards": [
+        {
+          "title": "Team Spirit",
+          "description": "We believe in collaboration and teamwork. Together we achieve more and build stronger solutions."
+        },
+        {
+          "title": "Innovation",
+          "description": "Constantly pushing boundaries with creative solutions and embracing new technologies."
+        },
+        {
+          "title": "Quality",
+          "description": "Committed to delivering excellence in every line of code and every interaction."
+        },
+        {
+          "title": "Integrity",
+          "description": "Building trust through transparency, honesty, and ethical business practices."
+        }
+      ]
+    }
+  },
+  {
+    "type": "ShadcnFeature43",
+    "label": "SB: Feature — Icon Grid with CTA",
+    "fields": {
+      "title": {
+        "type": "text"
+      },
+      "features": {
+        "type": "array",
+        "arrayFields": {
+          "heading": {
+            "type": "text"
+          },
+          "description": {
+            "type": "textarea"
+          }
+        }
+      },
+      "buttonText": {
+        "type": "text"
+      },
+      "buttonUrl": {
+        "type": "text"
+      }
+    },
+    "defaultProps": {
+      "title": "Fully featured components for Shadcn UI & Tailwind",
+      "features": [
+        {
+          "heading": "Quality",
+          "description": "Built with attention to detail and best practices. Every component is thoroughly tested and follows modern React patterns."
+        },
+        {
+          "heading": "Experience",
+          "description": "Crafted with user experience in mind. Designed to be intuitive, accessible, and provide smooth interactions."
+        },
+        {
+          "heading": "Support",
+          "description": "Comprehensive documentation and community support. Get help with detailed guides and examples."
+        },
+        {
+          "heading": "Innovation",
+          "description": "Cutting-edge design patterns and modern web technologies. Stay ahead with the latest trends."
+        },
+        {
+          "heading": "Results",
+          "description": "Proven track record of successful implementations. Battle-tested in real-world applications."
+        },
+        {
+          "heading": "Efficiency",
+          "description": "Optimized for performance and developer productivity. Lightweight, fast-loading components."
+        }
+      ],
+      "buttonText": "More Features",
+      "buttonUrl": "#"
+    }
+  },
+  {
+    "type": "ShadcnPricing2",
+    "label": "SB: Pricing — Cards with Monthly/Yearly Toggle",
+    "fields": {
+      "heading": {
+        "type": "text"
+      },
+      "description": {
+        "type": "text"
+      },
+      "plans": {
+        "type": "array",
+        "arrayFields": {
+          "name": {
+            "type": "text"
+          },
+          "description": {
+            "type": "text"
+          },
+          "monthlyPrice": {
+            "type": "text"
+          },
+          "yearlyPrice": {
+            "type": "text"
+          },
+          "features": {
+            "type": "textarea"
+          },
+          "buttonText": {
+            "type": "text"
+          },
+          "buttonUrl": {
+            "type": "text"
+          }
+        }
+      }
+    },
+    "defaultProps": {
+      "heading": "Pricing",
+      "description": "Check out our affordable pricing plans",
+      "plans": [
+        {
+          "name": "Plus",
+          "description": "For personal use",
+          "monthlyPrice": "$19",
+          "yearlyPrice": "$179",
+          "features": "Up to 5 team members\nBasic components library\nCommunity support\n1GB storage space",
+          "buttonText": "Purchase",
+          "buttonUrl": "#"
+        },
+        {
+          "name": "Pro",
+          "description": "For professionals",
+          "monthlyPrice": "$49",
+          "yearlyPrice": "$359",
+          "features": "Unlimited team members\nAdvanced components\nPriority support\nUnlimited storage",
+          "buttonText": "Purchase",
+          "buttonUrl": "#"
+        }
+      ]
+    }
+  },
+  {
+    "type": "ShadcnPricing4",
+    "label": "SB: Pricing — Columns with Radio Toggle",
+    "fields": {
+      "title": {
+        "type": "text"
+      },
+      "description": {
+        "type": "text"
+      },
+      "plans": {
+        "type": "array",
+        "arrayFields": {
+          "name": {
+            "type": "text"
+          },
+          "badge": {
+            "type": "text"
+          },
+          "monthlyPrice": {
+            "type": "text"
+          },
+          "yearlyPrice": {
+            "type": "text"
+          },
+          "features": {
+            "type": "textarea"
+          },
+          "buttonText": {
+            "type": "text"
+          },
+          "isPopular": {
+            "type": "radio",
+            "options": [
+              {
+                "label": "Yes",
+                "value": "true"
+              },
+              {
+                "label": "No",
+                "value": "false"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "defaultProps": {
+      "title": "Pricing",
+      "description": "Check out our affordable pricing plans.",
+      "plans": [
+        {
+          "name": "Free",
+          "badge": "Free",
+          "monthlyPrice": "$0",
+          "yearlyPrice": "$0",
+          "features": "Unlimited Integrations\nWindows, Linux, Mac support\n24/7 Support\nFree updates",
+          "buttonText": "Get Started",
+          "isPopular": "false"
+        },
+        {
+          "name": "Pro",
+          "badge": "Pro",
+          "monthlyPrice": "$29",
+          "yearlyPrice": "$249",
+          "features": "Everything in FREE\nLive call support every month\nUnlimited Storage",
+          "buttonText": "Purchase",
+          "isPopular": "false"
+        },
+        {
+          "name": "Elite",
+          "badge": "Elite",
+          "monthlyPrice": "$59",
+          "yearlyPrice": "$549",
+          "features": "Everything in PRO\nAdvanced analytics\nCustom branding\nUnlimited users",
+          "buttonText": "Purchase",
+          "isPopular": "true"
+        }
+      ]
+    }
+  },
+  {
+    "type": "ShadcnPricing6",
+    "label": "SB: Pricing — Single Plan Card",
+    "fields": {
+      "heading": {
+        "type": "text"
+      },
+      "description": {
+        "type": "text"
+      },
+      "price": {
+        "type": "text"
+      },
+      "priceSuffix": {
+        "type": "text"
+      },
+      "features": {
+        "type": "textarea"
+      },
+      "buttonText": {
+        "type": "text"
+      }
+    },
+    "defaultProps": {
+      "heading": "Pricing",
+      "description": "Simple pricing with a free 7 day trial.",
+      "price": "29",
+      "priceSuffix": "/mo",
+      "features": "Unlimited\nIntegrations\n24/7 support\n\nLive collaborations\nUnlimited storage\n30-day money back\n\nUnlimited members\nCustomization\nUnlimited users",
+      "buttonText": "Start free trial"
+    }
+  },
+  {
+    "type": "ShadcnPricing11",
+    "label": "SB: Pricing — Feature Comparison Table",
+    "fields": {
+      "heading": {
+        "type": "text"
+      },
+      "description": {
+        "type": "text"
+      },
+      "plans": {
+        "type": "array",
+        "arrayFields": {
+          "title": {
+            "type": "text"
+          },
+          "monthlyPrice": {
+            "type": "text"
+          },
+          "yearlyPrice": {
+            "type": "text"
+          },
+          "isRecommended": {
+            "type": "radio",
+            "options": [
+              {
+                "label": "Yes",
+                "value": "true"
+              },
+              {
+                "label": "No",
+                "value": "false"
+              }
+            ]
+          }
+        }
+      },
+      "featureCategories": {
+        "type": "array",
+        "arrayFields": {
+          "title": {
+            "type": "text"
+          },
+          "features": {
+            "type": "array",
+            "arrayFields": {
+              "title": {
+                "type": "text"
+              },
+              "info": {
+                "type": "text"
+              },
+              "inclusions": {
+                "type": "textarea"
+              }
+            }
+          }
+        }
+      },
+      "caveatText": {
+        "type": "text"
+      }
+    },
+    "defaultProps": {
+      "heading": "Pricing Plans",
+      "description": "Choose the plan that works best for you.",
+      "plans": [
+        {
+          "title": "Free",
+          "monthlyPrice": "$9",
+          "yearlyPrice": "$9",
+          "isRecommended": "false"
+        },
+        {
+          "title": "Basic",
+          "monthlyPrice": "$50",
+          "yearlyPrice": "$45",
+          "isRecommended": "false"
+        },
+        {
+          "title": "Team",
+          "monthlyPrice": "$100",
+          "yearlyPrice": "$90",
+          "isRecommended": "true"
+        },
+        {
+          "title": "Enterprise",
+          "monthlyPrice": "$200",
+          "yearlyPrice": "$160",
+          "isRecommended": "false"
+        }
+      ],
+      "featureCategories": [
+        {
+          "title": "Overview",
+          "features": [
+            {
+              "title": "Number of products",
+              "info": "How many products you can manage",
+              "inclusions": "1\n1\n3\n5"
+            },
+            {
+              "title": "Number of transactions",
+              "info": "Monthly transaction limit",
+              "inclusions": "30 monthly\nUnlimited\nUnlimited\nUnlimited"
+            }
+          ]
+        },
+        {
+          "title": "Other features",
+          "features": [
+            {
+              "title": "Basic feature",
+              "info": "",
+              "inclusions": "[check]\n[check]\n[check]\n[check]"
+            },
+            {
+              "title": "Enterprise feature",
+              "info": "Available only for enterprise",
+              "inclusions": "[x]\n[x]\n[x]\n[check]"
+            },
+            {
+              "title": "Optional feature",
+              "info": "Can be added as an add-on",
+              "inclusions": "[x]\n[x]\n[badge]Add-on\n[badge]Add-on"
+            }
+          ]
+        }
+      ],
+      "caveatText": "* Caveats and other conditions"
+    }
+  },
+  {
+    "type": "ShadcnTestimonial4",
+    "label": "SB: Testimonial — Hero Image with Cards",
+    "fields": {
+      "heroImageUrl": {
+        "type": "text"
+      },
+      "heroImageAlt": {
+        "type": "text"
+      },
+      "heroQuote": {
+        "type": "textarea"
+      },
+      "heroAuthorName": {
+        "type": "text"
+      },
+      "heroAuthorRole": {
+        "type": "text"
+      },
+      "cards": {
+        "type": "array",
+        "arrayFields": {
+          "quote": {
+            "type": "textarea"
+          },
+          "authorName": {
+            "type": "text"
+          },
+          "authorRole": {
+            "type": "text"
+          },
+          "avatarUrl": {
+            "type": "text"
+          }
+        }
+      }
+    },
+    "defaultProps": {
+      "heroImageUrl": "https://placehold.co/600x400/e2e8f0/475569?text=Testimonial",
+      "heroImageAlt": "Featured testimonial",
+      "heroQuote": "This platform has completely transformed our workflow and boosted our team productivity.",
+      "heroAuthorName": "John Doe",
+      "heroAuthorRole": "CEO, Company Name",
+      "cards": [
+        {
+          "quote": "An excellent tool that makes our daily operations much smoother and more efficient.",
+          "authorName": "Jane Smith",
+          "authorRole": "CTO, TechCorp",
+          "avatarUrl": "https://i.pravatar.cc/100?img=1"
+        },
+        {
+          "quote": "The best investment we made this year. Highly recommended for any growing team.",
+          "authorName": "Alex Johnson",
+          "authorRole": "Product Manager, StartupXYZ",
+          "avatarUrl": "https://i.pravatar.cc/100?img=2"
+        },
+        {
+          "quote": "Incredible support and a product that truly delivers on its promises.",
+          "authorName": "Emily Davis",
+          "authorRole": "Designer, InnovateCo",
+          "avatarUrl": "https://i.pravatar.cc/100?img=3"
+        }
+      ]
+    }
+  },
+  {
+    "type": "ShadcnTestimonial8",
+    "label": "SB: Testimonial — Masonry Grid",
+    "fields": {
+      "heading": {
+        "type": "text"
+      },
+      "description": {
+        "type": "text"
+      },
+      "testimonials": {
+        "type": "array",
+        "arrayFields": {
+          "name": {
+            "type": "text"
+          },
+          "role": {
+            "type": "text"
+          },
+          "avatar": {
+            "type": "text"
+          },
+          "content": {
+            "type": "textarea"
+          }
+        }
+      }
+    },
+    "defaultProps": {
+      "heading": "What Our Clients Say",
+      "description": "Discover how our customers are using our products to build their businesses",
+      "testimonials": [
+        {
+          "name": "Sarah Chen",
+          "role": "CEO & Founder",
+          "avatar": "https://i.pravatar.cc/100?img=1",
+          "content": "This platform has completely transformed how we manage our projects. The intuitive interface and powerful features have increased our team's productivity by 40%."
+        },
+        {
+          "name": "Marcus Rodriguez",
+          "role": "CTO",
+          "avatar": "https://i.pravatar.cc/100?img=3",
+          "content": "Outstanding integration capabilities. We've connected all our existing tools seamlessly, and the real-time collaboration features have revolutionized our development workflow."
+        },
+        {
+          "name": "Emily Watson",
+          "role": "Product Manager",
+          "avatar": "https://i.pravatar.cc/100?img=5",
+          "content": "As a product manager, I need tools that help me stay organized and communicate effectively with my team. This platform delivers on both fronts with its comprehensive project management features and clear reporting dashboards."
+        },
+        {
+          "name": "David Kim",
+          "role": "COO",
+          "avatar": "https://i.pravatar.cc/100?img=7",
+          "content": "The analytics and reporting features have given us unprecedented visibility into our operations. We can now make data-driven decisions with confidence."
+        },
+        {
+          "name": "Lisa Thompson",
+          "role": "Tech Lead",
+          "avatar": "https://i.pravatar.cc/100?img=9",
+          "content": "Exceptional developer experience. The API is well-documented, the SDKs are robust."
+        },
+        {
+          "name": "Alex Johnson",
+          "role": "Designer",
+          "avatar": "https://i.pravatar.cc/100?img=11",
+          "content": "The design system and component library have streamlined our design process. We can now create consistent, beautiful interfaces much faster."
+        },
+        {
+          "name": "Michael Brown",
+          "role": "Developer",
+          "avatar": "https://i.pravatar.cc/100?img=13",
+          "content": "The code quality and performance are top-notch. The platform handles our scale effortlessly, and the developer tools make debugging and optimization a breeze."
+        },
+        {
+          "name": "Rachel Green",
+          "role": "Marketing Director",
+          "avatar": "https://i.pravatar.cc/100?img=15",
+          "content": "Game-changing marketing automation. We've seen a 60% increase in engagement rates and significantly improved ROI."
+        }
+      ]
+    }
+  },
+  {
+    "type": "ShadcnTestimonial10",
+    "label": "SB: Testimonial — Centered Single Quote",
+    "fields": {
+      "quote": {
+        "type": "textarea"
+      },
+      "authorName": {
+        "type": "text"
+      },
+      "authorRole": {
+        "type": "text"
+      },
+      "avatarSrc": {
+        "type": "text"
+      },
+      "avatarAlt": {
+        "type": "text"
+      }
+    },
+    "defaultProps": {
+      "quote": "This product has completely transformed our workflow. The intuitive interface and powerful features make it an indispensable tool for our team.",
+      "authorName": "Customer Name",
+      "authorRole": "CEO, Company",
+      "avatarSrc": "https://i.pravatar.cc/100?img=1",
+      "avatarAlt": "Customer Name"
+    }
+  },
+  {
+    "type": "ShadcnCta4",
+    "label": "SB: CTA — Split with Checklist",
+    "fields": {
+      "title": {
+        "type": "text"
+      },
+      "description": {
+        "type": "textarea"
+      },
+      "buttonText": {
+        "type": "text"
+      },
+      "buttonUrl": {
+        "type": "text"
+      },
+      "items": {
+        "type": "textarea"
+      }
+    },
+    "defaultProps": {
+      "title": "Call to Action",
+      "description": "Start building faster with our collection of pre-built components and blocks.",
+      "buttonText": "Get Started",
+      "buttonUrl": "#",
+      "items": "Easy Integration\n24/7 Support\nCustomizable Design\nScalable Performance\nHundreds of Blocks"
+    }
+  },
+  {
+    "type": "ShadcnCta10",
+    "label": "SB: CTA — Accent Card with Buttons",
+    "fields": {
+      "heading": {
+        "type": "text"
+      },
+      "description": {
+        "type": "textarea"
+      },
+      "primaryButtonText": {
+        "type": "text"
+      },
+      "primaryButtonUrl": {
+        "type": "text"
+      },
+      "secondaryButtonText": {
+        "type": "text"
+      },
+      "secondaryButtonUrl": {
+        "type": "text"
+      }
+    },
+    "defaultProps": {
+      "heading": "Call to Action",
+      "description": "Build faster with our collection of pre-built blocks. Speed up your development and ship features in record time.",
+      "primaryButtonText": "Buy Now",
+      "primaryButtonUrl": "#",
+      "secondaryButtonText": "",
+      "secondaryButtonUrl": "#"
+    }
+  },
+  {
+    "type": "ShadcnCta11",
+    "label": "SB: CTA — Accent Card with Image",
+    "fields": {
+      "heading": {
+        "type": "text"
+      },
+      "description": {
+        "type": "textarea"
+      },
+      "imageSrc": {
+        "type": "text"
+      },
+      "imageAlt": {
+        "type": "text"
+      }
+    },
+    "defaultProps": {
+      "heading": "Call to Action",
+      "description": "Build faster with our collection of pre-built blocks. Speed up your development and ship features in record time.",
+      "imageSrc": "https://placehold.co/200x200/1a1a2e/e0e0e0?text=CTA",
+      "imageAlt": "Call to action image"
+    }
+  },
+  {
+    "type": "ShadcnCta13",
+    "label": "SB: CTA — Large Accent Banner",
+    "fields": {
+      "heading": {
+        "type": "text"
+      },
+      "description": {
+        "type": "textarea"
+      },
+      "primaryButtonText": {
+        "type": "text"
+      },
+      "primaryButtonUrl": {
+        "type": "text"
+      },
+      "secondaryButtonText": {
+        "type": "text"
+      },
+      "secondaryButtonUrl": {
+        "type": "text"
+      }
+    },
+    "defaultProps": {
+      "heading": "Call to Action",
+      "description": "Build faster with our collection of pre-built blocks. Speed up your development and ship features in record time.",
+      "primaryButtonText": "Buy Now",
+      "primaryButtonUrl": "#",
+      "secondaryButtonText": "Contact Us",
+      "secondaryButtonUrl": "#"
+    }
+  },
+  {
+    "type": "ShadcnFaq1",
+    "label": "SB: FAQ — Accordion (Simple)",
+    "fields": {
+      "heading": {
+        "type": "text"
+      },
+      "items": {
+        "type": "array",
+        "arrayFields": {
+          "question": {
+            "type": "text"
+          },
+          "answer": {
+            "type": "textarea"
+          }
+        }
+      }
+    },
+    "defaultProps": {
+      "heading": "Frequently asked questions",
+      "items": [
+        {
+          "question": "What is a FAQ?",
+          "answer": "A FAQ is a list of frequently asked questions and answers on a particular topic."
+        },
+        {
+          "question": "What is the purpose of a FAQ?",
+          "answer": "The purpose of a FAQ is to provide answers to common questions and help users find the information they need quickly and easily."
+        },
+        {
+          "question": "How do I create a FAQ?",
+          "answer": "To create a FAQ, you need to compile a list of common questions and answers on a particular topic and organize them in a clear and easy-to-navigate format."
+        },
+        {
+          "question": "What are the benefits of a FAQ?",
+          "answer": "The benefits of a FAQ include providing quick and easy access to information, reducing the number of support requests, and improving the overall user experience."
+        },
+        {
+          "question": "How should I organize my FAQ?",
+          "answer": "You should organize your FAQ in a logical manner, grouping related questions together and ordering them from most basic to more advanced topics."
+        }
+      ]
+    }
+  },
+  {
+    "type": "ShadcnFaq3",
+    "label": "SB: FAQ — Accordion (with Description)",
+    "fields": {
+      "heading": {
+        "type": "text"
+      },
+      "description": {
+        "type": "textarea"
+      },
+      "items": {
+        "type": "array",
+        "arrayFields": {
+          "question": {
+            "type": "text"
+          },
+          "answer": {
+            "type": "textarea"
+          }
+        }
+      }
+    },
+    "defaultProps": {
+      "heading": "Frequently asked questions",
+      "description": "Find answers to common questions about our products. Can't find what you're looking for? Contact our support team.",
+      "items": [
+        {
+          "question": "What is a FAQ?",
+          "answer": "A FAQ is a list of frequently asked questions and answers on a particular topic."
+        },
+        {
+          "question": "What is the purpose of a FAQ?",
+          "answer": "The purpose of a FAQ is to provide answers to common questions and help users find the information they need quickly and easily."
+        },
+        {
+          "question": "How do I create a FAQ?",
+          "answer": "To create a FAQ, you need to compile a list of common questions and answers on a particular topic and organize them in a clear and easy-to-navigate format."
+        },
+        {
+          "question": "What are the benefits of a FAQ?",
+          "answer": "The benefits of a FAQ include providing quick and easy access to information, reducing the number of support requests, and improving the overall user experience."
+        },
+        {
+          "question": "How should I organize my FAQ?",
+          "answer": "You should organize your FAQ in a logical manner, grouping related questions together and ordering them from most basic to more advanced topics."
+        }
+      ]
+    }
+  },
+  {
+    "type": "ShadcnFaq5",
+    "label": "SB: FAQ — Numbered List (with Badge)",
+    "fields": {
+      "badge": {
+        "type": "text"
+      },
+      "heading": {
+        "type": "text"
+      },
+      "description": {
+        "type": "textarea"
+      },
+      "faqs": {
+        "type": "array",
+        "arrayFields": {
+          "question": {
+            "type": "text"
+          },
+          "answer": {
+            "type": "textarea"
+          }
+        }
+      }
+    },
+    "defaultProps": {
+      "badge": "FAQ",
+      "heading": "Common Questions & Answers",
+      "description": "Find out all the essential details about our platform and how it can serve your needs.",
+      "faqs": [
+        {
+          "question": "What is a FAQ and why is it important?",
+          "answer": "FAQ stands for Frequently Asked Questions. It is a list that provides answers to common questions people may have about a specific product, service, or topic."
+        },
+        {
+          "question": "Why should I use a FAQ on my website or app?",
+          "answer": "Utilizing a FAQ section on your website or app is a practical way to offer instant assistance to your users or customers. Instead of waiting for customer support responses, they can find quick answers to commonly asked questions."
+        },
+        {
+          "question": "How do I effectively create a FAQ section?",
+          "answer": "Creating a FAQ section starts with gathering the most frequent questions you receive from your users or customers. Once you have a list, you need to write clear, detailed, and helpful answers to each question."
+        },
+        {
+          "question": "What are the benefits of having a well-maintained FAQ section?",
+          "answer": "There are numerous advantages to maintaining a robust FAQ section. Firstly, it provides immediate answers to common queries, which improves the user experience."
+        }
+      ]
+    }
+  },
+  {
+    "type": "ShadcnStats6",
+    "label": "SB: Stats — With CTA Buttons",
+    "fields": {
+      "heading": {
+        "type": "text"
+      },
+      "primaryButtonText": {
+        "type": "text"
+      },
+      "primaryButtonUrl": {
+        "type": "text"
+      },
+      "secondaryButtonText": {
+        "type": "text"
+      },
+      "secondaryButtonUrl": {
+        "type": "text"
+      },
+      "stats": {
+        "type": "array",
+        "arrayFields": {
+          "value": {
+            "type": "text"
+          },
+          "label": {
+            "type": "text"
+          }
+        }
+      }
+    },
+    "defaultProps": {
+      "heading": "Platform Performance Insights",
+      "primaryButtonText": "Get Started",
+      "primaryButtonUrl": "#",
+      "secondaryButtonText": "Learn More",
+      "secondaryButtonUrl": "#",
+      "stats": [
+        {
+          "value": "90%",
+          "label": "Metric 1"
+        },
+        {
+          "value": "200+",
+          "label": "Metric 2"
+        },
+        {
+          "value": "99%",
+          "label": "Metric 3"
+        },
+        {
+          "value": "150+",
+          "label": "Metric 4"
+        }
+      ]
+    }
+  },
+  {
+    "type": "ShadcnStats8",
+    "label": "SB: Stats — With Link",
+    "fields": {
+      "heading": {
+        "type": "text"
+      },
+      "description": {
+        "type": "textarea"
+      },
+      "linkText": {
+        "type": "text"
+      },
+      "linkUrl": {
+        "type": "text"
+      },
+      "stats": {
+        "type": "array",
+        "arrayFields": {
+          "value": {
+            "type": "text"
+          },
+          "label": {
+            "type": "text"
+          }
+        }
+      }
+    },
+    "defaultProps": {
+      "heading": "Platform performance insights",
+      "description": "Ensuring stability and scalability for all users",
+      "linkText": "Read the full impact report",
+      "linkUrl": "#",
+      "stats": [
+        {
+          "value": "250%+",
+          "label": "average growth in user engagement"
+        },
+        {
+          "value": "$2.5m",
+          "label": "annual savings per enterprise partner"
+        },
+        {
+          "value": "200+",
+          "label": "integrations with top industry platforms"
+        },
+        {
+          "value": "99.9%",
+          "label": "customer satisfaction over the last year"
+        }
+      ]
+    }
+  },
+  {
+    "type": "ShadcnTeam1",
+    "label": "SB: Team — Avatars Grid",
+    "fields": {
+      "heading": {
+        "type": "text"
+      },
+      "description": {
+        "type": "textarea"
+      },
+      "members": {
+        "type": "array",
+        "arrayFields": {
+          "name": {
+            "type": "text"
+          },
+          "role": {
+            "type": "text"
+          },
+          "avatar": {
+            "type": "text"
+          }
+        }
+      }
+    },
+    "defaultProps": {
+      "heading": "Team",
+      "description": "Our diverse team of experts brings together decades of experience in design, engineering, and product development.",
+      "members": [
+        {
+          "name": "Sarah Chen",
+          "role": "CEO & Founder",
+          "avatar": "https://i.pravatar.cc/150?img=1"
+        },
+        {
+          "name": "Marcus Rodriguez",
+          "role": "CTO",
+          "avatar": "https://i.pravatar.cc/150?img=3"
+        },
+        {
+          "name": "Emily Watson",
+          "role": "Head of Design",
+          "avatar": "https://i.pravatar.cc/150?img=5"
+        },
+        {
+          "name": "David Kim",
+          "role": "Lead Engineer",
+          "avatar": "https://i.pravatar.cc/150?img=8"
+        },
+        {
+          "name": "Lisa Thompson",
+          "role": "Product Manager",
+          "avatar": "https://i.pravatar.cc/150?img=9"
+        },
+        {
+          "name": "Alex Johnson",
+          "role": "UX Designer",
+          "avatar": "https://i.pravatar.cc/150?img=12"
+        }
+      ]
+    }
+  },
+  {
+    "type": "ShadcnTeam2",
+    "label": "SB: Team — Avatars with Social Links",
+    "fields": {
+      "heading": {
+        "type": "text"
+      },
+      "description": {
+        "type": "textarea"
+      },
+      "members": {
+        "type": "array",
+        "arrayFields": {
+          "name": {
+            "type": "text"
+          },
+          "role": {
+            "type": "text"
+          },
+          "avatar": {
+            "type": "text"
+          },
+          "github": {
+            "type": "text"
+          },
+          "twitter": {
+            "type": "text"
+          },
+          "linkedin": {
+            "type": "text"
+          }
+        }
+      }
+    },
+    "defaultProps": {
+      "heading": "Team",
+      "description": "Our diverse team of experts brings together decades of experience in design, engineering, and product development.",
+      "members": [
+        {
+          "name": "Sarah Chen",
+          "role": "CEO & Founder",
+          "avatar": "https://i.pravatar.cc/150?img=1",
+          "github": "#",
+          "twitter": "#",
+          "linkedin": "#"
+        },
+        {
+          "name": "Marcus Rodriguez",
+          "role": "CTO",
+          "avatar": "https://i.pravatar.cc/150?img=3",
+          "github": "#",
+          "twitter": "#",
+          "linkedin": "#"
+        },
+        {
+          "name": "Emily Watson",
+          "role": "Head of Design",
+          "avatar": "https://i.pravatar.cc/150?img=5",
+          "github": "#",
+          "twitter": "#",
+          "linkedin": "#"
+        },
+        {
+          "name": "David Kim",
+          "role": "Lead Engineer",
+          "avatar": "https://i.pravatar.cc/150?img=8",
+          "github": "#",
+          "twitter": "#",
+          "linkedin": "#"
+        },
+        {
+          "name": "Lisa Thompson",
+          "role": "Product Manager",
+          "avatar": "https://i.pravatar.cc/150?img=9",
+          "github": "#",
+          "twitter": "#",
+          "linkedin": "#"
+        },
+        {
+          "name": "Alex Johnson",
+          "role": "UX Designer",
+          "avatar": "https://i.pravatar.cc/150?img=12",
+          "github": "#",
+          "twitter": "#",
+          "linkedin": "#"
+        }
+      ]
+    }
+  },
+  {
+    "type": "ShadcnBlog7",
+    "label": "SB: Blog — Card Grid (with Badge)",
+    "fields": {
+      "tagline": {
+        "type": "text"
+      },
+      "heading": {
+        "type": "text"
+      },
+      "description": {
+        "type": "textarea"
+      },
+      "buttonText": {
+        "type": "text"
+      },
+      "buttonUrl": {
+        "type": "text"
+      },
+      "posts": {
+        "type": "array",
+        "arrayFields": {
+          "title": {
+            "type": "text"
+          },
+          "summary": {
+            "type": "textarea"
+          },
+          "label": {
+            "type": "text"
+          },
+          "author": {
+            "type": "text"
+          },
+          "published": {
+            "type": "text"
+          },
+          "url": {
+            "type": "text"
+          },
+          "image": {
+            "type": "text"
+          }
+        }
+      }
+    },
+    "defaultProps": {
+      "tagline": "Latest Updates",
+      "heading": "Blog Posts",
+      "description": "Discover the latest trends, tips, and best practices in modern web development. From UI components to design systems, stay updated with our expert insights.",
+      "buttonText": "View all articles",
+      "buttonUrl": "#",
+      "posts": [
+        {
+          "title": "Getting Started with shadcn/ui Components",
+          "summary": "Learn how to quickly integrate and customize shadcn/ui components in your Next.js projects. We'll cover installation, theming, and best practices for building modern interfaces.",
+          "label": "Tutorial",
+          "author": "Sarah Chen",
+          "published": "1 Jan 2024",
+          "url": "#",
+          "image": "https://placehold.co/600x400/1a1a2e/ffffff?text=Blog+Post+1"
+        },
+        {
+          "title": "Building Accessible Web Applications",
+          "summary": "Explore how to create inclusive web experiences using shadcn/ui's accessible components. Discover practical tips for implementing ARIA labels, keyboard navigation, and semantic HTML.",
+          "label": "Accessibility",
+          "author": "Marcus Rodriguez",
+          "published": "1 Jan 2024",
+          "url": "#",
+          "image": "https://placehold.co/600x400/16213e/ffffff?text=Blog+Post+2"
+        },
+        {
+          "title": "Modern Design Systems with Tailwind CSS",
+          "summary": "Dive into creating scalable design systems using Tailwind CSS and shadcn/ui. Learn how to maintain consistency while building flexible and maintainable component libraries.",
+          "label": "Design Systems",
+          "author": "Emma Thompson",
+          "published": "1 Jan 2024",
+          "url": "#",
+          "image": "https://placehold.co/600x400/0f3460/ffffff?text=Blog+Post+3"
+        }
+      ]
+    }
+  },
+  {
+    "type": "ShadcnBlog8",
+    "label": "SB: Blog — Side-by-Side Layout",
+    "fields": {
+      "heading": {
+        "type": "text"
+      },
+      "description": {
+        "type": "textarea"
+      },
+      "posts": {
+        "type": "array",
+        "arrayFields": {
+          "title": {
+            "type": "text"
+          },
+          "summary": {
+            "type": "textarea"
+          },
+          "label": {
+            "type": "text"
+          },
+          "author": {
+            "type": "text"
+          },
+          "published": {
+            "type": "text"
+          },
+          "url": {
+            "type": "text"
+          },
+          "image": {
+            "type": "text"
+          },
+          "tags": {
+            "type": "text"
+          }
+        }
+      }
+    },
+    "defaultProps": {
+      "heading": "Blog Posts",
+      "description": "Discover the latest insights and tutorials about modern web development, UI design, and component-driven architecture.",
+      "posts": [
+        {
+          "title": "Building Modern UIs: A Deep Dive into Shadcn and React Components",
+          "summary": "Join us for an in-depth exploration of building modern user interfaces using shadcn/ui and React. Learn best practices and advanced techniques.",
+          "label": "Web Design",
+          "author": "Sarah Chen",
+          "published": "15 Feb 2024",
+          "url": "#",
+          "image": "https://placehold.co/600x400/1a1a2e/ffffff?text=Blog+Post+1",
+          "tags": "Web Design, UI Development"
+        },
+        {
+          "title": "Mastering Tailwind CSS: From Basics to Advanced Techniques",
+          "summary": "Discover how to leverage the full power of Tailwind CSS to create beautiful, responsive websites with clean and maintainable code.",
+          "label": "Web Design",
+          "author": "Michael Park",
+          "published": "22 Feb 2024",
+          "url": "#",
+          "image": "https://placehold.co/600x400/16213e/ffffff?text=Blog+Post+2",
+          "tags": "Web Design, CSS"
+        }
+      ]
+    }
+  },
+  {
+    "type": "ShadcnGallery4",
+    "label": "SB: Gallery — Carousel with Overlay Cards",
+    "fields": {
+      "title": {
+        "type": "text"
+      },
+      "description": {
+        "type": "textarea"
+      },
+      "items": {
+        "type": "array",
+        "arrayFields": {
+          "id": {
+            "type": "text"
+          },
+          "title": {
+            "type": "text"
+          },
+          "description": {
+            "type": "textarea"
+          },
+          "href": {
+            "type": "text"
+          },
+          "image": {
+            "type": "text"
+          }
+        }
+      }
+    },
+    "defaultProps": {
+      "title": "Case Studies",
+      "description": "Discover how leading companies and developers are leveraging modern web technologies to build exceptional digital experiences.",
+      "items": [
+        {
+          "id": "item-1",
+          "title": "Building a Modern Component Library",
+          "description": "Explore how to revolutionize React component libraries by providing a unique approach to component distribution and customization.",
+          "href": "#",
+          "image": "https://placehold.co/600x400/1a1a2e/ffffff?text=Project+1"
+        },
+        {
+          "id": "item-2",
+          "title": "The Utility-First CSS Revolution",
+          "description": "Discover how utility-first CSS transformed the way developers style applications, offering speed and design flexibility.",
+          "href": "#",
+          "image": "https://placehold.co/600x400/16213e/ffffff?text=Project+2"
+        },
+        {
+          "id": "item-3",
+          "title": "The All-in-One Web Framework",
+          "description": "Learn how innovative architecture and zero-JS-by-default approach helps developers build faster websites.",
+          "href": "#",
+          "image": "https://placehold.co/600x400/0f3460/ffffff?text=Project+3"
+        },
+        {
+          "id": "item-4",
+          "title": "Pioneering Component-Based UI",
+          "description": "See how component-based architecture enables developers to build complex user interfaces with reusable code.",
+          "href": "#",
+          "image": "https://placehold.co/600x400/533483/ffffff?text=Project+4"
+        },
+        {
+          "id": "item-5",
+          "title": "The React Framework for Production",
+          "description": "Explore the go-to framework for building full-stack applications with server components and automatic optimization.",
+          "href": "#",
+          "image": "https://placehold.co/600x400/e94560/ffffff?text=Project+5"
+        }
+      ]
+    }
+  },
+  {
+    "type": "ShadcnGallery6",
+    "label": "SB: Gallery — Carousel with Cards Below",
+    "fields": {
+      "heading": {
+        "type": "text"
+      },
+      "demoUrl": {
+        "type": "text"
+      },
+      "items": {
+        "type": "array",
+        "arrayFields": {
+          "id": {
+            "type": "text"
+          },
+          "title": {
+            "type": "text"
+          },
+          "summary": {
+            "type": "textarea"
+          },
+          "url": {
+            "type": "text"
+          },
+          "image": {
+            "type": "text"
+          }
+        }
+      }
+    },
+    "defaultProps": {
+      "heading": "Gallery",
+      "demoUrl": "#",
+      "items": [
+        {
+          "id": "item-1",
+          "title": "Build Modern UIs",
+          "summary": "Create stunning user interfaces with our comprehensive design system.",
+          "url": "#",
+          "image": "https://placehold.co/600x400/1a1a2e/ffffff?text=Slide+1"
+        },
+        {
+          "id": "item-2",
+          "title": "Computer Vision Technology",
+          "summary": "Powerful image recognition and processing capabilities that allow AI systems to analyze and interpret visual information.",
+          "url": "#",
+          "image": "https://placehold.co/600x400/16213e/ffffff?text=Slide+2"
+        },
+        {
+          "id": "item-3",
+          "title": "Machine Learning Automation",
+          "summary": "Self-improving algorithms that learn from data patterns to automate complex tasks and make intelligent decisions.",
+          "url": "#",
+          "image": "https://placehold.co/600x400/0f3460/ffffff?text=Slide+3"
+        },
+        {
+          "id": "item-4",
+          "title": "Predictive Analytics",
+          "summary": "Advanced forecasting capabilities that analyze historical data to predict future trends and outcomes.",
+          "url": "#",
+          "image": "https://placehold.co/600x400/533483/ffffff?text=Slide+4"
+        },
+        {
+          "id": "item-5",
+          "title": "Neural Network Architecture",
+          "summary": "Sophisticated AI models inspired by human brain structure, capable of solving complex problems through deep learning.",
+          "url": "#",
+          "image": "https://placehold.co/600x400/e94560/ffffff?text=Slide+5"
+        }
+      ]
+    }
+  },
+  {
+    "type": "ShadcnContact2",
+    "label": "SB: Contact — Form with Details Sidebar",
+    "fields": {
+      "title": {
+        "type": "text"
+      },
+      "description": {
+        "type": "textarea"
+      },
+      "phone": {
+        "type": "text"
+      },
+      "email": {
+        "type": "text"
+      },
+      "web": {
+        "type": "object",
+        "objectFields": {
+          "label": {
+            "type": "text"
+          },
+          "url": {
+            "type": "text"
+          }
+        }
+      }
+    },
+    "defaultProps": {
+      "title": "Contact Us",
+      "description": "We are available for questions, feedback, or collaboration opportunities. Let us know how we can help!",
+      "phone": "(123) 34567890",
+      "email": "email@example.com",
+      "web": {
+        "label": "example.com",
+        "url": "https://example.com"
+      }
+    }
+  },
+  {
+    "type": "ShadcnContact7",
+    "label": "SB: Contact — Info Cards Grid",
+    "fields": {
+      "title": {
+        "type": "text"
+      },
+      "description": {
+        "type": "textarea"
+      },
+      "emailLabel": {
+        "type": "text"
+      },
+      "emailDescription": {
+        "type": "text"
+      },
+      "email": {
+        "type": "text"
+      },
+      "officeLabel": {
+        "type": "text"
+      },
+      "officeDescription": {
+        "type": "text"
+      },
+      "officeAddress": {
+        "type": "text"
+      },
+      "phoneLabel": {
+        "type": "text"
+      },
+      "phoneDescription": {
+        "type": "text"
+      },
+      "phone": {
+        "type": "text"
+      },
+      "chatLabel": {
+        "type": "text"
+      },
+      "chatDescription": {
+        "type": "text"
+      },
+      "chatLink": {
+        "type": "text"
+      }
+    },
+    "defaultProps": {
+      "title": "Contact Us",
+      "description": "Contact the support team.",
+      "emailLabel": "Email",
+      "emailDescription": "We respond to all emails within 24 hours.",
+      "email": "support@example.com",
+      "officeLabel": "Office",
+      "officeDescription": "Drop by our office for a chat.",
+      "officeAddress": "123 Main Street, Suite 100",
+      "phoneLabel": "Phone",
+      "phoneDescription": "We're available Mon-Fri, 9am-5pm.",
+      "phone": "+123 456 7890",
+      "chatLabel": "Live Chat",
+      "chatDescription": "Get instant help from our support team.",
+      "chatLink": "Start Chat"
+    }
+  },
+  {
+    "type": "ShadcnFooter2",
+    "label": "SB: Footer — Multi-Column with Logo",
+    "fields": {
+      "logo": {
+        "type": "object",
+        "objectFields": {
+          "url": {
+            "type": "text"
+          },
+          "src": {
+            "type": "text"
+          },
+          "alt": {
+            "type": "text"
+          },
+          "title": {
+            "type": "text"
+          }
+        }
+      },
+      "tagline": {
+        "type": "text"
+      },
+      "menuItems": {
+        "type": "array",
+        "arrayFields": {
+          "title": {
+            "type": "text"
+          },
+          "links": {
+            "type": "array",
+            "arrayFields": {
+              "text": {
+                "type": "text"
+              },
+              "url": {
+                "type": "text"
+              }
+            }
+          }
+        }
+      },
+      "copyright": {
+        "type": "text"
+      },
+      "bottomLinks": {
+        "type": "array",
+        "arrayFields": {
+          "text": {
+            "type": "text"
+          },
+          "url": {
+            "type": "text"
+          }
+        }
+      }
+    },
+    "defaultProps": {
+      "logo": {
+        "src": "https://placehold.co/40x40/333/fff?text=L",
+        "alt": "Company logo",
+        "title": "Company",
+        "url": "#"
+      },
+      "tagline": "Components made easy.",
+      "menuItems": [
+        {
+          "title": "Product",
+          "links": [
+            {
+              "text": "Overview",
+              "url": "#"
+            },
+            {
+              "text": "Pricing",
+              "url": "#"
+            },
+            {
+              "text": "Marketplace",
+              "url": "#"
+            },
+            {
+              "text": "Features",
+              "url": "#"
+            },
+            {
+              "text": "Integrations",
+              "url": "#"
+            }
+          ]
+        },
+        {
+          "title": "Company",
+          "links": [
+            {
+              "text": "About",
+              "url": "#"
+            },
+            {
+              "text": "Team",
+              "url": "#"
+            },
+            {
+              "text": "Blog",
+              "url": "#"
+            },
+            {
+              "text": "Careers",
+              "url": "#"
+            },
+            {
+              "text": "Contact",
+              "url": "#"
+            }
+          ]
+        },
+        {
+          "title": "Resources",
+          "links": [
+            {
+              "text": "Help",
+              "url": "#"
+            },
+            {
+              "text": "Sales",
+              "url": "#"
+            },
+            {
+              "text": "Advertise",
+              "url": "#"
+            }
+          ]
+        },
+        {
+          "title": "Social",
+          "links": [
+            {
+              "text": "Twitter",
+              "url": "#"
+            },
+            {
+              "text": "Instagram",
+              "url": "#"
+            },
+            {
+              "text": "LinkedIn",
+              "url": "#"
+            }
+          ]
+        }
+      ],
+      "copyright": "© 2024 Company. All rights reserved.",
+      "bottomLinks": [
+        {
+          "text": "Terms and Conditions",
+          "url": "#"
+        },
+        {
+          "text": "Privacy Policy",
+          "url": "#"
+        }
+      ]
+    }
+  },
+  {
+    "type": "ShadcnFooter7",
+    "label": "SB: Footer — Social Icons with Columns",
+    "fields": {
+      "logoTitle": {
+        "type": "text"
+      },
+      "logoSrc": {
+        "type": "text"
+      },
+      "logoUrl": {
+        "type": "text"
+      },
+      "description": {
+        "type": "textarea"
+      },
+      "sections": {
+        "type": "array",
+        "arrayFields": {
+          "title": {
+            "type": "text"
+          },
+          "links": {
+            "type": "array",
+            "arrayFields": {
+              "name": {
+                "type": "text"
+              },
+              "href": {
+                "type": "text"
+              }
+            }
+          }
+        }
+      },
+      "socialLinks": {
+        "type": "array",
+        "arrayFields": {
+          "platform": {
+            "type": "select",
+            "options": [
+              {
+                "label": "Instagram",
+                "value": "instagram"
+              },
+              {
+                "label": "Facebook",
+                "value": "facebook"
+              },
+              {
+                "label": "Twitter",
+                "value": "twitter"
+              },
+              {
+                "label": "LinkedIn",
+                "value": "linkedin"
+              }
+            ]
+          },
+          "href": {
+            "type": "text"
+          }
+        }
+      },
+      "copyright": {
+        "type": "text"
+      },
+      "legalLinks": {
+        "type": "array",
+        "arrayFields": {
+          "name": {
+            "type": "text"
+          },
+          "href": {
+            "type": "text"
+          }
+        }
+      }
+    },
+    "defaultProps": {
+      "logoTitle": "Company",
+      "logoSrc": "https://placehold.co/32x32/333/fff?text=L",
+      "logoUrl": "#",
+      "description": "A collection of components for your startup business or side project.",
+      "sections": [
+        {
+          "title": "Product",
+          "links": [
+            {
+              "name": "Overview",
+              "href": "#"
+            },
+            {
+              "name": "Pricing",
+              "href": "#"
+            },
+            {
+              "name": "Marketplace",
+              "href": "#"
+            },
+            {
+              "name": "Features",
+              "href": "#"
+            }
+          ]
+        },
+        {
+          "title": "Company",
+          "links": [
+            {
+              "name": "About",
+              "href": "#"
+            },
+            {
+              "name": "Team",
+              "href": "#"
+            },
+            {
+              "name": "Blog",
+              "href": "#"
+            },
+            {
+              "name": "Careers",
+              "href": "#"
+            }
+          ]
+        },
+        {
+          "title": "Resources",
+          "links": [
+            {
+              "name": "Help",
+              "href": "#"
+            },
+            {
+              "name": "Sales",
+              "href": "#"
+            },
+            {
+              "name": "Advertise",
+              "href": "#"
+            },
+            {
+              "name": "Privacy",
+              "href": "#"
+            }
+          ]
+        }
+      ],
+      "socialLinks": [
+        {
+          "platform": "instagram",
+          "href": "#"
+        },
+        {
+          "platform": "facebook",
+          "href": "#"
+        },
+        {
+          "platform": "twitter",
+          "href": "#"
+        },
+        {
+          "platform": "linkedin",
+          "href": "#"
+        }
+      ],
+      "copyright": "© 2024 Company. All rights reserved.",
+      "legalLinks": [
+        {
+          "name": "Terms and Conditions",
+          "href": "#"
+        },
+        {
+          "name": "Privacy Policy",
+          "href": "#"
+        }
+      ]
+    }
+  },
+  {
+    "type": "ShadcnNavbar1",
+    "label": "SB: Navbar — Mega Menu with Sub-items",
+    "fields": {
+      "logoTitle": {
+        "type": "text"
+      },
+      "logoSrc": {
+        "type": "text"
+      },
+      "logoUrl": {
+        "type": "text"
+      },
+      "menu": {
+        "type": "array",
+        "arrayFields": {
+          "title": {
+            "type": "text"
+          },
+          "url": {
+            "type": "text"
+          },
+          "items": {
+            "type": "array",
+            "arrayFields": {
+              "title": {
+                "type": "text"
+              },
+              "description": {
+                "type": "text"
+              },
+              "icon": {
+                "type": "select",
+                "options": [
+                  {
+                    "label": "Book",
+                    "value": "Book"
+                  },
+                  {
+                    "label": "Trees",
+                    "value": "Trees"
+                  },
+                  {
+                    "label": "Sunset",
+                    "value": "Sunset"
+                  },
+                  {
+                    "label": "Zap",
+                    "value": "Zap"
+                  }
+                ]
+              },
+              "url": {
+                "type": "text"
+              }
+            }
+          }
+        }
+      },
+      "loginTitle": {
+        "type": "text"
+      },
+      "loginUrl": {
+        "type": "text"
+      },
+      "signupTitle": {
+        "type": "text"
+      },
+      "signupUrl": {
+        "type": "text"
+      }
+    },
+    "defaultProps": {
+      "logoTitle": "Company",
+      "logoSrc": "https://placehold.co/32x32/333/fff?text=L",
+      "logoUrl": "#",
+      "menu": [
+        {
+          "title": "Home",
+          "url": "#",
+          "items": []
+        },
+        {
+          "title": "Products",
+          "url": "#",
+          "items": [
+            {
+              "title": "Blog",
+              "description": "The latest industry news, updates, and info",
+              "icon": "Book",
+              "url": "#"
+            },
+            {
+              "title": "Company",
+              "description": "Our mission is to innovate and empower the world",
+              "icon": "Trees",
+              "url": "#"
+            },
+            {
+              "title": "Careers",
+              "description": "Browse job listing and discover our workspace",
+              "icon": "Sunset",
+              "url": "#"
+            },
+            {
+              "title": "Support",
+              "description": "Get in touch with our support team or visit our community forums",
+              "icon": "Zap",
+              "url": "#"
+            }
+          ]
+        },
+        {
+          "title": "Resources",
+          "url": "#",
+          "items": [
+            {
+              "title": "Help Center",
+              "description": "Get all the answers you need right here",
+              "icon": "Zap",
+              "url": "#"
+            },
+            {
+              "title": "Contact Us",
+              "description": "We are here to help you with any questions you have",
+              "icon": "Sunset",
+              "url": "#"
+            },
+            {
+              "title": "Status",
+              "description": "Check the current status of our services and APIs",
+              "icon": "Trees",
+              "url": "#"
+            },
+            {
+              "title": "Terms of Service",
+              "description": "Our terms and conditions for using our services",
+              "icon": "Book",
+              "url": "#"
+            }
+          ]
+        },
+        {
+          "title": "Pricing",
+          "url": "#",
+          "items": []
+        },
+        {
+          "title": "Blog",
+          "url": "#",
+          "items": []
+        }
+      ],
+      "loginTitle": "Login",
+      "loginUrl": "#",
+      "signupTitle": "Sign up",
+      "signupUrl": "#"
+    }
+  },
+  {
+    "type": "ShadcnNavbar5",
+    "label": "SB: Navbar — Features Dropdown with Top Sheet",
+    "fields": {
+      "logoTitle": {
+        "type": "text"
+      },
+      "logoSrc": {
+        "type": "text"
+      },
+      "logoUrl": {
+        "type": "text"
+      },
+      "features": {
+        "type": "array",
+        "arrayFields": {
+          "title": {
+            "type": "text"
+          },
+          "description": {
+            "type": "text"
+          },
+          "href": {
+            "type": "text"
+          }
+        }
+      },
+      "navLinks": {
+        "type": "array",
+        "arrayFields": {
+          "title": {
+            "type": "text"
+          },
+          "href": {
+            "type": "text"
+          }
+        }
+      },
+      "signInText": {
+        "type": "text"
+      },
+      "ctaText": {
+        "type": "text"
+      }
+    },
+    "defaultProps": {
+      "logoTitle": "Company",
+      "logoSrc": "https://placehold.co/32x32/333/fff?text=L",
+      "logoUrl": "#",
+      "features": [
+        {
+          "title": "Dashboard",
+          "description": "Overview of your activity",
+          "href": "#"
+        },
+        {
+          "title": "Analytics",
+          "description": "Track your performance",
+          "href": "#"
+        },
+        {
+          "title": "Settings",
+          "description": "Configure your preferences",
+          "href": "#"
+        },
+        {
+          "title": "Integrations",
+          "description": "Connect with other tools",
+          "href": "#"
+        },
+        {
+          "title": "Storage",
+          "description": "Manage your files",
+          "href": "#"
+        },
+        {
+          "title": "Support",
+          "description": "Get help when needed",
+          "href": "#"
+        }
+      ],
+      "navLinks": [
+        {
+          "title": "Products",
+          "href": "#"
+        },
+        {
+          "title": "Resources",
+          "href": "#"
+        },
+        {
+          "title": "Contact",
+          "href": "#"
+        }
+      ],
+      "signInText": "Sign in",
+      "ctaText": "Start for free"
+    }
+  },
+  {
+    "type": "ShadcnTimeline3",
+    "label": "SB: Timeline — Sticky Sidebar with Cards",
+    "fields": {
+      "heading": {
+        "type": "text"
+      },
+      "description": {
+        "type": "textarea"
+      },
+      "buttons": {
+        "type": "object",
+        "objectFields": {
+          "primary": {
+            "type": "object",
+            "objectFields": {
+              "text": {
+                "type": "text"
+              },
+              "url": {
+                "type": "text"
+              }
+            }
+          },
+          "secondary": {
+            "type": "object",
+            "objectFields": {
+              "text": {
+                "type": "text"
+              },
+              "url": {
+                "type": "text"
+              }
+            }
+          }
+        }
+      },
+      "features": {
+        "type": "array",
+        "arrayFields": {
+          "image": {
+            "type": "text"
+          },
+          "title": {
+            "type": "text"
+          },
+          "description": {
+            "type": "textarea"
+          }
+        }
+      }
+    },
+    "defaultProps": {
+      "heading": "Experience the difference with us",
+      "description": "We believe in creating lasting partnerships with our clients, focusing on long-term success through collaborative innovation and dedicated support.",
+      "buttons": {
+        "primary": {
+          "text": "Start Now",
+          "url": "#"
+        },
+        "secondary": {
+          "text": "Book a demo",
+          "url": "#"
+        }
+      },
+      "features": [
+        {
+          "image": "https://placehold.co/600x400/e2e8f0/475569?text=Dedicated+Support",
+          "title": "Dedicated Support",
+          "description": "Expanded operations to 5 new countries, reaching millions of new users."
+        },
+        {
+          "image": "https://placehold.co/600x400/e2e8f0/475569?text=Series+B+Funding",
+          "title": "Series B Funding",
+          "description": "Secured $50M in Series B funding to accelerate product development."
+        },
+        {
+          "image": "https://placehold.co/600x400/e2e8f0/475569?text=Product+Launch",
+          "title": "Product Launch",
+          "description": "Successfully launched our flagship product to market."
+        },
+        {
+          "image": "https://placehold.co/600x400/e2e8f0/475569?text=Company+Founded",
+          "title": "Company Founded",
+          "description": "Started with a vision to revolutionize the industry."
+        }
+      ]
+    }
+  },
+  {
+    "type": "ShadcnTimeline9",
+    "label": "SB: Timeline — Vertical Line with Cards",
+    "fields": {
+      "heading": {
+        "type": "text"
+      },
+      "entries": {
+        "type": "array",
+        "arrayFields": {
+          "date": {
+            "type": "text"
+          },
+          "title": {
+            "type": "text"
+          },
+          "content": {
+            "type": "textarea"
+          }
+        }
+      }
+    },
+    "defaultProps": {
+      "heading": "The History of Artificial Intelligence",
+      "entries": [
+        {
+          "date": "1956",
+          "title": "The Birth of AI",
+          "content": "The term 'Artificial Intelligence' was coined at the Dartmouth Conference, marking the official beginning of AI as a field."
+        },
+        {
+          "date": "1966-1973",
+          "title": "Early Optimism and First AI Winter",
+          "content": "The early years saw significant optimism with programs like ELIZA and SHRDLU. However, by the early 1970s, funding dried up as researchers faced limitations of early computing power."
+        },
+        {
+          "date": "1980-1987",
+          "title": "Expert Systems and Revival",
+          "content": "AI experienced a revival with the development of expert systems like MYCIN and DENDRAL, leading to renewed interest and funding in AI research."
+        },
+        {
+          "date": "1997",
+          "title": "Deep Blue Defeats Chess Champion",
+          "content": "IBM's Deep Blue became the first computer system to defeat a reigning world chess champion, demonstrating AI's potential in complex strategic games."
+        }
+      ]
+    }
+  },
+  {
+    "type": "ShadcnLogos3",
+    "label": "SB: Logos — Auto-Scroll Carousel",
+    "fields": {
+      "heading": {
+        "type": "text"
+      },
+      "logos": {
+        "type": "array",
+        "arrayFields": {
+          "id": {
+            "type": "text"
+          },
+          "description": {
+            "type": "text"
+          },
+          "image": {
+            "type": "text"
+          },
+          "className": {
+            "type": "text"
+          }
+        }
+      }
+    },
+    "defaultProps": {
+      "heading": "Trusted by these companies",
+      "logos": [
+        {
+          "id": "logo-1",
+          "description": "Partner 1",
+          "image": "https://placehold.co/120x40/e2e8f0/475569?text=Partner+1",
+          "className": "h-7 w-auto"
+        },
+        {
+          "id": "logo-2",
+          "description": "Partner 2",
+          "image": "https://placehold.co/120x40/e2e8f0/475569?text=Partner+2",
+          "className": "h-7 w-auto"
+        },
+        {
+          "id": "logo-3",
+          "description": "Partner 3",
+          "image": "https://placehold.co/120x40/e2e8f0/475569?text=Partner+3",
+          "className": "h-7 w-auto"
+        },
+        {
+          "id": "logo-4",
+          "description": "Partner 4",
+          "image": "https://placehold.co/120x40/e2e8f0/475569?text=Partner+4",
+          "className": "h-7 w-auto"
+        },
+        {
+          "id": "logo-5",
+          "description": "Partner 5",
+          "image": "https://placehold.co/120x40/e2e8f0/475569?text=Partner+5",
+          "className": "h-7 w-auto"
+        },
+        {
+          "id": "logo-6",
+          "description": "Partner 6",
+          "image": "https://placehold.co/120x40/e2e8f0/475569?text=Partner+6",
+          "className": "h-7 w-auto"
+        },
+        {
+          "id": "logo-7",
+          "description": "Partner 7",
+          "image": "https://placehold.co/120x40/e2e8f0/475569?text=Partner+7",
+          "className": "h-4 w-auto"
+        },
+        {
+          "id": "logo-8",
+          "description": "Partner 8",
+          "image": "https://placehold.co/120x40/e2e8f0/475569?text=Partner+8",
+          "className": "h-7 w-auto"
+        }
+      ]
+    }
+  },
+  {
+    "type": "ShadcnLogos8",
+    "label": "SB: Logos — Static Grid with Subtitle",
+    "fields": {
+      "title": {
+        "type": "text"
+      },
+      "subtitle": {
+        "type": "text"
+      },
+      "logos": {
+        "type": "array",
+        "arrayFields": {
+          "name": {
+            "type": "text"
+          },
+          "logo": {
+            "type": "text"
+          },
+          "className": {
+            "type": "text"
+          }
+        }
+      }
+    },
+    "defaultProps": {
+      "title": "Trusted by these companies",
+      "subtitle": "Used by the world's leading companies",
+      "logos": [
+        {
+          "name": "Company A",
+          "logo": "https://placehold.co/120x40/e2e8f0/475569?text=Company+A",
+          "className": "h-7 w-auto"
+        },
+        {
+          "name": "Company B",
+          "logo": "https://placehold.co/120x40/e2e8f0/475569?text=Company+B",
+          "className": "h-5 w-auto"
+        },
+        {
+          "name": "Company C",
+          "logo": "https://placehold.co/120x40/e2e8f0/475569?text=Company+C",
+          "className": "h-6 w-auto"
+        },
+        {
+          "name": "Company D",
+          "logo": "https://placehold.co/120x40/e2e8f0/475569?text=Company+D",
+          "className": "h-5 w-auto"
+        },
+        {
+          "name": "Company E",
+          "logo": "https://placehold.co/120x40/e2e8f0/475569?text=Company+E",
+          "className": "h-6 w-auto"
+        }
+      ]
+    }
+  },
+  {
+    "type": "Heading",
+    "label": "Heading",
+    "fields": {
+      "text": {
+        "type": "text"
+      },
+      "level": {
+        "type": "select",
+        "options": [
+          {
+            "label": "H1",
+            "value": "h1"
+          },
+          {
+            "label": "H2",
+            "value": "h2"
+          },
+          {
+            "label": "H3",
+            "value": "h3"
+          },
+          {
+            "label": "H4",
+            "value": "h4"
+          }
+        ]
+      },
+      "align": {
+        "type": "radio",
+        "options": [
+          {
+            "label": "Left",
+            "value": "left"
+          },
+          {
+            "label": "Center",
+            "value": "center"
+          },
+          {
+            "label": "Right",
+            "value": "right"
+          }
+        ]
+      }
+    },
+    "defaultProps": {
+      "text": "Heading",
+      "level": "h2",
+      "align": "left"
+    }
+  },
+  {
+    "type": "Text",
+    "label": "Text",
+    "fields": {
+      "text": {
+        "type": "textarea"
+      },
+      "size": {
+        "type": "select",
+        "options": [
+          {
+            "label": "Small",
+            "value": "small"
+          },
+          {
+            "label": "Medium",
+            "value": "medium"
+          },
+          {
+            "label": "Large",
+            "value": "large"
+          }
+        ]
+      },
+      "align": {
+        "type": "radio",
+        "options": [
+          {
+            "label": "Left",
+            "value": "left"
+          },
+          {
+            "label": "Center",
+            "value": "center"
+          },
+          {
+            "label": "Right",
+            "value": "right"
+          }
+        ]
+      }
+    },
+    "defaultProps": {
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "size": "medium",
+      "align": "left"
+    }
+  },
+  {
+    "type": "Button",
+    "label": "Button",
+    "fields": {
+      "text": {
+        "type": "text"
+      },
+      "href": {
+        "type": "text"
+      },
+      "variant": {
+        "type": "select",
+        "options": [
+          {
+            "label": "Primary",
+            "value": "primary"
+          },
+          {
+            "label": "Secondary",
+            "value": "secondary"
+          },
+          {
+            "label": "Outline",
+            "value": "outline"
+          },
+          {
+            "label": "Ghost",
+            "value": "ghost"
+          }
+        ]
+      },
+      "size": {
+        "type": "select",
+        "options": [
+          {
+            "label": "Small",
+            "value": "small"
+          },
+          {
+            "label": "Medium",
+            "value": "medium"
+          },
+          {
+            "label": "Large",
+            "value": "large"
+          }
+        ]
+      }
+    },
+    "defaultProps": {
+      "text": "Click me",
+      "href": "#",
+      "variant": "primary",
+      "size": "medium"
+    }
+  },
+  {
+    "type": "Card",
+    "label": "Card",
+    "fields": {
+      "title": {
+        "type": "text"
+      },
+      "description": {
+        "type": "textarea"
+      },
+      "imageUrl": {
+        "type": "text"
+      },
+      "linkText": {
+        "type": "text"
+      },
+      "linkHref": {
+        "type": "text"
+      }
+    },
+    "defaultProps": {
+      "title": "Card Title",
+      "description": "This is a card description with some example text.",
+      "imageUrl": "https://picsum.photos/400/200",
+      "linkText": "Learn more",
+      "linkHref": "#"
+    }
+  },
+  {
+    "type": "Hero",
+    "label": "Hero Section",
+    "fields": {
+      "title": {
+        "type": "text"
+      },
+      "subtitle": {
+        "type": "textarea"
+      },
+      "primaryButtonText": {
+        "type": "text"
+      },
+      "primaryButtonHref": {
+        "type": "text"
+      },
+      "secondaryButtonText": {
+        "type": "text"
+      },
+      "secondaryButtonHref": {
+        "type": "text"
+      },
+      "backgroundImage": {
+        "type": "text"
+      },
+      "alignment": {
+        "type": "radio",
+        "options": [
+          {
+            "label": "Left",
+            "value": "left"
+          },
+          {
+            "label": "Center",
+            "value": "center"
+          }
+        ]
+      }
+    },
+    "defaultProps": {
+      "title": "Build Amazing Websites",
+      "subtitle": "Create stunning pages with our visual editor. No coding required.",
+      "primaryButtonText": "Get Started",
+      "primaryButtonHref": "#",
+      "secondaryButtonText": "Learn More",
+      "secondaryButtonHref": "#",
+      "backgroundImage": "",
+      "alignment": "center"
+    }
+  },
+  {
+    "type": "Features",
+    "label": "Features",
+    "fields": {
+      "title": {
+        "type": "text"
+      },
+      "subtitle": {
+        "type": "textarea"
+      },
+      "columns": {
+        "type": "select",
+        "options": [
+          {
+            "label": "2 Columns",
+            "value": "2"
+          },
+          {
+            "label": "3 Columns",
+            "value": "3"
+          },
+          {
+            "label": "4 Columns",
+            "value": "4"
+          }
+        ]
+      },
+      "features": {
+        "type": "array",
+        "arrayFields": {
+          "icon": {
+            "type": "text"
+          },
+          "title": {
+            "type": "text"
+          },
+          "description": {
+            "type": "textarea"
+          }
+        }
+      }
+    },
+    "defaultProps": {
+      "title": "Our Features",
+      "subtitle": "Everything you need to build amazing products",
+      "columns": "3",
+      "features": [
+        {
+          "icon": "⚡",
+          "title": "Lightning Fast",
+          "description": "Optimized for speed and performance"
+        },
+        {
+          "icon": "🔒",
+          "title": "Secure",
+          "description": "Enterprise-grade security built-in"
+        },
+        {
+          "icon": "🎨",
+          "title": "Beautiful Design",
+          "description": "Stunning UI components out of the box"
+        },
+        {
+          "icon": "📱",
+          "title": "Responsive",
+          "description": "Works perfectly on all devices"
+        },
+        {
+          "icon": "🔧",
+          "title": "Customizable",
+          "description": "Fully customizable to your needs"
+        },
+        {
+          "icon": "💬",
+          "title": "24/7 Support",
+          "description": "Round-the-clock customer support"
+        }
+      ]
+    }
+  },
+  {
+    "type": "Testimonials",
+    "label": "Testimonials",
+    "fields": {
+      "title": {
+        "type": "text"
+      },
+      "testimonials": {
+        "type": "array",
+        "arrayFields": {
+          "quote": {
+            "type": "textarea"
+          },
+          "author": {
+            "type": "text"
+          },
+          "role": {
+            "type": "text"
+          },
+          "company": {
+            "type": "text"
+          },
+          "avatar": {
+            "type": "text"
+          }
+        }
+      }
+    },
+    "defaultProps": {
+      "title": "What Our Customers Say",
+      "testimonials": [
+        {
+          "quote": "This product has completely transformed our workflow. Highly recommended!",
+          "author": "Sarah Johnson",
+          "role": "CEO",
+          "company": "TechCorp",
+          "avatar": "https://i.pravatar.cc/100?img=1"
+        },
+        {
+          "quote": "The best investment we've made this year. Our team productivity has doubled.",
+          "author": "Michael Chen",
+          "role": "CTO",
+          "company": "StartupXYZ",
+          "avatar": "https://i.pravatar.cc/100?img=2"
+        },
+        {
+          "quote": "Incredible support team and amazing product. Five stars!",
+          "author": "Emily Davis",
+          "role": "Product Manager",
+          "company": "InnovateCo",
+          "avatar": "https://i.pravatar.cc/100?img=3"
+        }
+      ]
+    }
+  },
+  {
+    "type": "Stats",
+    "label": "Statistics",
+    "fields": {
+      "title": {
+        "type": "text"
+      },
+      "stats": {
+        "type": "array",
+        "arrayFields": {
+          "value": {
+            "type": "text"
+          },
+          "label": {
+            "type": "text"
+          },
+          "suffix": {
+            "type": "text"
+          }
+        }
+      }
+    },
+    "defaultProps": {
+      "title": "Our Impact",
+      "stats": [
+        {
+          "value": "10",
+          "label": "Years Experience",
+          "suffix": "+"
+        },
+        {
+          "value": "500",
+          "label": "Happy Clients",
+          "suffix": "+"
+        },
+        {
+          "value": "1000",
+          "label": "Projects Completed",
+          "suffix": "+"
+        },
+        {
+          "value": "99",
+          "label": "Satisfaction Rate",
+          "suffix": "%"
+        }
+      ]
+    }
+  },
+  {
+    "type": "Pricing",
+    "label": "Pricing",
+    "fields": {
+      "title": {
+        "type": "text"
+      },
+      "subtitle": {
+        "type": "textarea"
+      },
+      "plans": {
+        "type": "array",
+        "arrayFields": {
+          "name": {
+            "type": "text"
+          },
+          "price": {
+            "type": "text"
+          },
+          "period": {
+            "type": "text"
+          },
+          "description": {
+            "type": "text"
+          },
+          "features": {
+            "type": "textarea"
+          },
+          "highlighted": {
+            "type": "radio",
+            "options": [
+              {
+                "label": "Yes",
+                "value": "true"
+              },
+              {
+                "label": "No",
+                "value": "false"
+              }
+            ]
+          },
+          "buttonText": {
+            "type": "text"
+          }
+        }
+      }
+    },
+    "defaultProps": {
+      "title": "Simple Pricing",
+      "subtitle": "Choose the plan that fits your needs",
+      "plans": [
+        {
+          "name": "Starter",
+          "price": "$9",
+          "period": "/month",
+          "description": "Perfect for individuals",
+          "features": "5 projects\n10GB storage\nEmail support\nBasic analytics",
+          "highlighted": "false",
+          "buttonText": "Get Started"
+        },
+        {
+          "name": "Professional",
+          "price": "$29",
+          "period": "/month",
+          "description": "Best for growing teams",
+          "features": "Unlimited projects\n100GB storage\nPriority support\nAdvanced analytics\nCustom domain",
+          "highlighted": "true",
+          "buttonText": "Get Started"
+        },
+        {
+          "name": "Enterprise",
+          "price": "$99",
+          "period": "/month",
+          "description": "For large organizations",
+          "features": "Everything in Pro\nUnlimited storage\nDedicated support\nSLA guarantee\nCustom integrations",
+          "highlighted": "false",
+          "buttonText": "Contact Sales"
+        }
+      ]
+    }
+  },
+  {
+    "type": "Team",
+    "label": "Team",
+    "fields": {
+      "title": {
+        "type": "text"
+      },
+      "subtitle": {
+        "type": "textarea"
+      },
+      "members": {
+        "type": "array",
+        "arrayFields": {
+          "name": {
+            "type": "text"
+          },
+          "role": {
+            "type": "text"
+          },
+          "bio": {
+            "type": "textarea"
+          },
+          "avatar": {
+            "type": "text"
+          }
+        }
+      }
+    },
+    "defaultProps": {
+      "title": "Meet Our Team",
+      "subtitle": "The people behind our success",
+      "members": [
+        {
+          "name": "John Smith",
+          "role": "Founder & CEO",
+          "bio": "10+ years of experience in tech leadership",
+          "avatar": "https://i.pravatar.cc/200?img=11"
+        },
+        {
+          "name": "Jane Doe",
+          "role": "CTO",
+          "bio": "Expert in scalable architecture",
+          "avatar": "https://i.pravatar.cc/200?img=5"
+        },
+        {
+          "name": "Bob Wilson",
+          "role": "Lead Designer",
+          "bio": "Award-winning UX designer",
+          "avatar": "https://i.pravatar.cc/200?img=12"
+        },
+        {
+          "name": "Alice Brown",
+          "role": "Head of Marketing",
+          "bio": "Growth specialist with global experience",
+          "avatar": "https://i.pravatar.cc/200?img=9"
+        }
+      ]
+    }
+  },
+  {
+    "type": "FAQ",
+    "label": "FAQ",
+    "fields": {
+      "title": {
+        "type": "text"
+      },
+      "questions": {
+        "type": "array",
+        "arrayFields": {
+          "question": {
+            "type": "text"
+          },
+          "answer": {
+            "type": "textarea"
+          }
+        }
+      }
+    },
+    "defaultProps": {
+      "title": "Frequently Asked Questions",
+      "questions": [
+        {
+          "question": "How do I get started?",
+          "answer": "Simply sign up for an account and follow our quick start guide. You'll be up and running in minutes."
+        },
+        {
+          "question": "What payment methods do you accept?",
+          "answer": "We accept all major credit cards, PayPal, and bank transfers for enterprise accounts."
+        },
+        {
+          "question": "Can I cancel my subscription?",
+          "answer": "Yes, you can cancel anytime. No questions asked, no hidden fees."
+        },
+        {
+          "question": "Do you offer a free trial?",
+          "answer": "Yes! We offer a 14-day free trial with full access to all features."
+        },
+        {
+          "question": "Is my data secure?",
+          "answer": "Absolutely. We use industry-standard encryption and comply with GDPR and SOC 2 requirements."
+        }
+      ]
+    }
+  },
+  {
+    "type": "CTA",
+    "label": "Call to Action",
+    "fields": {
+      "title": {
+        "type": "text"
+      },
+      "subtitle": {
+        "type": "textarea"
+      },
+      "buttonText": {
+        "type": "text"
+      },
+      "buttonHref": {
+        "type": "text"
+      },
+      "variant": {
+        "type": "select",
+        "options": [
+          {
+            "label": "Primary",
+            "value": "primary"
+          },
+          {
+            "label": "Secondary",
+            "value": "secondary"
+          },
+          {
+            "label": "Gradient",
+            "value": "gradient"
+          }
+        ]
+      }
+    },
+    "defaultProps": {
+      "title": "Ready to Get Started?",
+      "subtitle": "Join thousands of satisfied customers today",
+      "buttonText": "Start Free Trial",
+      "buttonHref": "#",
+      "variant": "primary"
+    }
+  },
+  {
+    "type": "Footer",
+    "label": "Footer",
+    "fields": {
+      "companyName": {
+        "type": "text"
+      },
+      "description": {
+        "type": "textarea"
+      },
+      "links": {
+        "type": "array",
+        "arrayFields": {
+          "title": {
+            "type": "text"
+          },
+          "items": {
+            "type": "textarea"
+          }
+        }
+      },
+      "copyright": {
+        "type": "text"
+      }
+    },
+    "defaultProps": {
+      "companyName": "Acme Inc",
+      "description": "Building amazing products for the modern web.",
+      "links": [
+        {
+          "title": "Product",
+          "items": "Features\nPricing\nDocumentation\nChangelog"
+        },
+        {
+          "title": "Company",
+          "items": "About\nBlog\nCareers\nPress"
+        },
+        {
+          "title": "Legal",
+          "items": "Privacy\nTerms\nCookies\nLicenses"
+        }
+      ],
+      "copyright": "© 2024 Acme Inc. All rights reserved."
+    }
+  },
+  {
+    "type": "ImageBlock",
+    "label": "Image",
+    "fields": {
+      "src": {
+        "type": "text"
+      },
+      "alt": {
+        "type": "text"
+      },
+      "caption": {
+        "type": "text"
+      },
+      "rounded": {
+        "type": "radio",
+        "options": [
+          {
+            "label": "None",
+            "value": "none"
+          },
+          {
+            "label": "Small",
+            "value": "small"
+          },
+          {
+            "label": "Large",
+            "value": "large"
+          },
+          {
+            "label": "Full",
+            "value": "full"
+          }
+        ]
+      }
+    },
+    "defaultProps": {
+      "src": "https://picsum.photos/800/400",
+      "alt": "Image description",
+      "caption": "",
+      "rounded": "small"
+    }
+  },
+  {
+    "type": "Columns",
+    "label": "Columns",
+    "fields": {
+      "columns": {
+        "type": "select",
+        "options": [
+          {
+            "label": "2 Columns",
+            "value": "2"
+          },
+          {
+            "label": "3 Columns",
+            "value": "3"
+          },
+          {
+            "label": "4 Columns",
+            "value": "4"
+          }
+        ]
+      },
+      "gap": {
+        "type": "select",
+        "options": [
+          {
+            "label": "Small",
+            "value": "small"
+          },
+          {
+            "label": "Medium",
+            "value": "medium"
+          },
+          {
+            "label": "Large",
+            "value": "large"
+          }
+        ]
+      }
+    },
+    "defaultProps": {
+      "columns": "2",
+      "gap": "medium"
+    }
+  },
+  {
+    "type": "Spacer",
+    "label": "Spacer",
+    "fields": {
+      "size": {
+        "type": "select",
+        "options": [
+          {
+            "label": "Extra Small",
+            "value": "xs"
+          },
+          {
+            "label": "Small",
+            "value": "sm"
+          },
+          {
+            "label": "Medium",
+            "value": "md"
+          },
+          {
+            "label": "Large",
+            "value": "lg"
+          },
+          {
+            "label": "Extra Large",
+            "value": "xl"
+          }
+        ]
+      }
+    },
+    "defaultProps": {
+      "size": "md"
+    }
+  },
+  {
+    "type": "Divider",
+    "label": "Divider",
+    "fields": {
+      "style": {
+        "type": "select",
+        "options": [
+          {
+            "label": "Solid",
+            "value": "solid"
+          },
+          {
+            "label": "Dashed",
+            "value": "dashed"
+          },
+          {
+            "label": "Dotted",
+            "value": "dotted"
+          }
+        ]
+      },
+      "color": {
+        "type": "select",
+        "options": [
+          {
+            "label": "Light",
+            "value": "light"
+          },
+          {
+            "label": "Medium",
+            "value": "medium"
+          },
+          {
+            "label": "Dark",
+            "value": "dark"
+          }
+        ]
+      }
+    },
+    "defaultProps": {
+      "style": "solid",
+      "color": "light"
+    }
+  },
+  {
+    "type": "VideoEmbed",
+    "label": "Video Embed",
+    "fields": {
+      "url": {
+        "type": "text"
+      },
+      "title": {
+        "type": "text"
+      },
+      "aspectRatio": {
+        "type": "select",
+        "options": [
+          {
+            "label": "16:9",
+            "value": "16/9"
+          },
+          {
+            "label": "4:3",
+            "value": "4/3"
+          },
+          {
+            "label": "1:1",
+            "value": "1/1"
+          }
+        ]
+      }
+    },
+    "defaultProps": {
+      "url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "title": "Video",
+      "aspectRatio": "16/9"
+    }
+  },
+  {
+    "type": "CodeBlock",
+    "label": "Code Block",
+    "fields": {
+      "code": {
+        "type": "textarea"
+      },
+      "language": {
+        "type": "select",
+        "options": [
+          {
+            "label": "JavaScript",
+            "value": "javascript"
+          },
+          {
+            "label": "TypeScript",
+            "value": "typescript"
+          },
+          {
+            "label": "Python",
+            "value": "python"
+          },
+          {
+            "label": "HTML",
+            "value": "html"
+          },
+          {
+            "label": "CSS",
+            "value": "css"
+          },
+          {
+            "label": "Bash",
+            "value": "bash"
+          }
+        ]
+      },
+      "showLineNumbers": {
+        "type": "radio",
+        "options": [
+          {
+            "label": "Yes",
+            "value": "true"
+          },
+          {
+            "label": "No",
+            "value": "false"
+          }
+        ]
+      }
+    },
+    "defaultProps": {
+      "code": "const greeting = \"Hello, World!\";\nconsole.log(greeting);",
+      "language": "javascript",
+      "showLineNumbers": "true"
+    }
+  },
+  {
+    "type": "Alert",
+    "label": "Alert",
+    "fields": {
+      "title": {
+        "type": "text"
+      },
+      "message": {
+        "type": "textarea"
+      },
+      "type": {
+        "type": "select",
+        "options": [
+          {
+            "label": "Info",
+            "value": "info"
+          },
+          {
+            "label": "Success",
+            "value": "success"
+          },
+          {
+            "label": "Warning",
+            "value": "warning"
+          },
+          {
+            "label": "Error",
+            "value": "error"
+          }
+        ]
+      }
+    },
+    "defaultProps": {
+      "title": "Information",
+      "message": "This is an informational message.",
+      "type": "info"
+    }
+  },
+  {
+    "type": "Badge",
+    "label": "Badge",
+    "fields": {
+      "text": {
+        "type": "text"
+      },
+      "variant": {
+        "type": "select",
+        "options": [
+          {
+            "label": "Default",
+            "value": "default"
+          },
+          {
+            "label": "Primary",
+            "value": "primary"
+          },
+          {
+            "label": "Success",
+            "value": "success"
+          },
+          {
+            "label": "Warning",
+            "value": "warning"
+          },
+          {
+            "label": "Error",
+            "value": "error"
+          }
+        ]
+      }
+    },
+    "defaultProps": {
+      "text": "New",
+      "variant": "primary"
+    }
+  },
+  {
+    "type": "Avatar",
+    "label": "Avatar",
+    "fields": {
+      "src": {
+        "type": "text"
+      },
+      "name": {
+        "type": "text"
+      },
+      "size": {
+        "type": "select",
+        "options": [
+          {
+            "label": "Small",
+            "value": "small"
+          },
+          {
+            "label": "Medium",
+            "value": "medium"
+          },
+          {
+            "label": "Large",
+            "value": "large"
+          }
+        ]
+      }
+    },
+    "defaultProps": {
+      "src": "https://i.pravatar.cc/100",
+      "name": "John Doe",
+      "size": "medium"
+    }
+  },
+  {
+    "type": "ProgressBar",
+    "label": "Progress Bar",
+    "fields": {
+      "value": {
+        "type": "number"
+      },
+      "label": {
+        "type": "text"
+      },
+      "showValue": {
+        "type": "radio",
+        "options": [
+          {
+            "label": "Yes",
+            "value": "true"
+          },
+          {
+            "label": "No",
+            "value": "false"
+          }
+        ]
+      },
+      "color": {
+        "type": "select",
+        "options": [
+          {
+            "label": "Primary",
+            "value": "primary"
+          },
+          {
+            "label": "Success",
+            "value": "success"
+          },
+          {
+            "label": "Warning",
+            "value": "warning"
+          },
+          {
+            "label": "Error",
+            "value": "error"
+          }
+        ]
+      }
+    },
+    "defaultProps": {
+      "value": 65,
+      "label": "Progress",
+      "showValue": "true",
+      "color": "primary"
+    }
+  },
+  {
+    "type": "Accordion",
+    "label": "Accordion",
+    "fields": {
+      "items": {
+        "type": "array",
+        "arrayFields": {
+          "title": {
+            "type": "text"
+          },
+          "content": {
+            "type": "textarea"
+          }
+        }
+      }
+    },
+    "defaultProps": {
+      "items": [
+        {
+          "title": "Section 1",
+          "content": "Content for section 1 goes here."
+        },
+        {
+          "title": "Section 2",
+          "content": "Content for section 2 goes here."
+        },
+        {
+          "title": "Section 3",
+          "content": "Content for section 3 goes here."
+        }
+      ]
+    }
+  },
+  {
+    "type": "Tabs",
+    "label": "Tabs",
+    "fields": {
+      "tabs": {
+        "type": "array",
+        "arrayFields": {
+          "title": {
+            "type": "text"
+          },
+          "content": {
+            "type": "textarea"
+          }
+        }
+      }
+    },
+    "defaultProps": {
+      "tabs": [
+        {
+          "title": "Tab 1",
+          "content": "Content for tab 1"
+        },
+        {
+          "title": "Tab 2",
+          "content": "Content for tab 2"
+        },
+        {
+          "title": "Tab 3",
+          "content": "Content for tab 3"
+        }
+      ]
+    }
+  },
+  {
+    "type": "Timeline",
+    "label": "Timeline",
+    "fields": {
+      "title": {
+        "type": "text"
+      },
+      "events": {
+        "type": "array",
+        "arrayFields": {
+          "date": {
+            "type": "text"
+          },
+          "title": {
+            "type": "text"
+          },
+          "description": {
+            "type": "textarea"
+          }
+        }
+      }
+    },
+    "defaultProps": {
+      "title": "Our Journey",
+      "events": [
+        {
+          "date": "2020",
+          "title": "Company Founded",
+          "description": "Started with a vision to change the world"
+        },
+        {
+          "date": "2021",
+          "title": "First Product Launch",
+          "description": "Released our flagship product"
+        },
+        {
+          "date": "2022",
+          "title": "Series A Funding",
+          "description": "Raised $10M to accelerate growth"
+        },
+        {
+          "date": "2023",
+          "title": "Global Expansion",
+          "description": "Expanded to 50+ countries"
+        },
+        {
+          "date": "2024",
+          "title": "1M Users",
+          "description": "Reached one million active users"
+        }
+      ]
+    }
+  },
+  {
+    "type": "Gallery",
+    "label": "Gallery",
+    "fields": {
+      "images": {
+        "type": "array",
+        "arrayFields": {
+          "src": {
+            "type": "text"
+          },
+          "alt": {
+            "type": "text"
+          }
+        }
+      },
+      "columns": {
+        "type": "select",
+        "options": [
+          {
+            "label": "2 Columns",
+            "value": "2"
+          },
+          {
+            "label": "3 Columns",
+            "value": "3"
+          },
+          {
+            "label": "4 Columns",
+            "value": "4"
+          }
+        ]
+      }
+    },
+    "defaultProps": {
+      "images": [
+        {
+          "src": "https://picsum.photos/400/300?random=1",
+          "alt": "Gallery image 1"
+        },
+        {
+          "src": "https://picsum.photos/400/300?random=2",
+          "alt": "Gallery image 2"
+        },
+        {
+          "src": "https://picsum.photos/400/300?random=3",
+          "alt": "Gallery image 3"
+        },
+        {
+          "src": "https://picsum.photos/400/300?random=4",
+          "alt": "Gallery image 4"
+        },
+        {
+          "src": "https://picsum.photos/400/300?random=5",
+          "alt": "Gallery image 5"
+        },
+        {
+          "src": "https://picsum.photos/400/300?random=6",
+          "alt": "Gallery image 6"
+        }
+      ],
+      "columns": "3"
+    }
+  },
+  {
+    "type": "Newsletter",
+    "label": "Newsletter",
+    "fields": {
+      "title": {
+        "type": "text"
+      },
+      "subtitle": {
+        "type": "textarea"
+      },
+      "buttonText": {
+        "type": "text"
+      },
+      "placeholder": {
+        "type": "text"
+      }
+    },
+    "defaultProps": {
+      "title": "Subscribe to Our Newsletter",
+      "subtitle": "Get the latest news and updates delivered to your inbox.",
+      "buttonText": "Subscribe",
+      "placeholder": "Enter your email"
+    }
+  },
+  {
+    "type": "ContactForm",
+    "label": "Contact Form",
+    "fields": {
+      "title": {
+        "type": "text"
+      },
+      "subtitle": {
+        "type": "textarea"
+      },
+      "buttonText": {
+        "type": "text"
+      }
+    },
+    "defaultProps": {
+      "title": "Get in Touch",
+      "subtitle": "We'd love to hear from you. Send us a message!",
+      "buttonText": "Send Message"
+    }
+  },
+  {
+    "type": "SocialLinks",
+    "label": "Social Links",
+    "fields": {
+      "facebook": {
+        "type": "text"
+      },
+      "twitter": {
+        "type": "text"
+      },
+      "instagram": {
+        "type": "text"
+      },
+      "linkedin": {
+        "type": "text"
+      },
+      "youtube": {
+        "type": "text"
+      },
+      "github": {
+        "type": "text"
+      }
+    },
+    "defaultProps": {
+      "facebook": "https://facebook.com",
+      "twitter": "https://twitter.com",
+      "instagram": "https://instagram.com",
+      "linkedin": "https://linkedin.com",
+      "youtube": "",
+      "github": "https://github.com"
+    }
+  },
+  {
+    "type": "LogoCloud",
+    "label": "Logo Cloud",
+    "fields": {
+      "title": {
+        "type": "text"
+      },
+      "logos": {
+        "type": "array",
+        "arrayFields": {
+          "name": {
+            "type": "text"
+          },
+          "url": {
+            "type": "text"
+          }
+        }
+      }
+    },
+    "defaultProps": {
+      "title": "Trusted by Leading Companies",
+      "logos": [
+        {
+          "name": "Google",
+          "url": ""
+        },
+        {
+          "name": "Microsoft",
+          "url": ""
+        },
+        {
+          "name": "Amazon",
+          "url": ""
+        },
+        {
+          "name": "Meta",
+          "url": ""
+        },
+        {
+          "name": "Apple",
+          "url": ""
+        }
+      ]
+    }
+  },
+  {
+    "type": "Breadcrumbs",
+    "label": "Breadcrumbs",
+    "fields": {
+      "items": {
+        "type": "array",
+        "arrayFields": {
+          "label": {
+            "type": "text"
+          },
+          "href": {
+            "type": "text"
+          }
+        }
+      }
+    },
+    "defaultProps": {
+      "items": [
+        {
+          "label": "Home",
+          "href": "/"
+        },
+        {
+          "label": "Products",
+          "href": "/products"
+        },
+        {
+          "label": "Current Page",
+          "href": ""
+        }
+      ]
+    }
+  },
+  {
+    "type": "BlogList",
+    "label": "Blog List",
+    "fields": {
+      "title": {
+        "type": "text"
+      },
+      "subtitle": {
+        "type": "textarea"
+      },
+      "showCategories": {
+        "type": "radio",
+        "options": [
+          {
+            "label": "Yes",
+            "value": "true"
+          },
+          {
+            "label": "No",
+            "value": "false"
+          }
+        ]
+      },
+      "showFeatured": {
+        "type": "radio",
+        "options": [
+          {
+            "label": "Yes",
+            "value": "true"
+          },
+          {
+            "label": "No",
+            "value": "false"
+          }
+        ]
+      },
+      "postsPerPage": {
+        "type": "number"
+      },
+      "layout": {
+        "type": "radio",
+        "options": [
+          {
+            "label": "Grid",
+            "value": "grid"
+          },
+          {
+            "label": "List",
+            "value": "list"
+          }
+        ]
+      }
+    },
+    "defaultProps": {
+      "title": "Latest Articles",
+      "subtitle": "Insights and tutorials from our team",
+      "showCategories": "true",
+      "showFeatured": "true",
+      "postsPerPage": 6,
+      "layout": "grid"
+    }
+  },
+  {
+    "type": "RichTextBlock",
+    "label": "Rich Text",
+    "fields": {
+      "maxWidth": {
+        "type": "select",
+        "options": [
+          {
+            "label": "Small (36rem)",
+            "value": "small"
+          },
+          {
+            "label": "Medium (48rem)",
+            "value": "medium"
+          },
+          {
+            "label": "Large (64rem)",
+            "value": "large"
+          },
+          {
+            "label": "Full Width",
+            "value": "full"
+          }
+        ]
+      },
+      "padding": {
+        "type": "select",
+        "options": [
+          {
+            "label": "None",
+            "value": "none"
+          },
+          {
+            "label": "Small",
+            "value": "small"
+          },
+          {
+            "label": "Medium",
+            "value": "medium"
+          },
+          {
+            "label": "Large",
+            "value": "large"
+          }
+        ]
+      }
+    },
+    "defaultProps": {
+      "content": "<p>Start writing your content here...</p>",
+      "maxWidth": "medium",
+      "padding": "medium"
+    }
+  }
+]

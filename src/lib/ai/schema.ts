@@ -1,4 +1,4 @@
-import { config } from "@/lib/puck-config";
+import generatedSchemas from "./generated-schema.json";
 
 type FieldSchema = {
   type: string;
@@ -14,64 +14,8 @@ type BlockSchema = {
   defaultProps: Record<string, unknown>;
 };
 
-function extractFieldSchema(field: Record<string, unknown>): FieldSchema {
-  const schema: FieldSchema = {
-    type: field.type as string,
-  };
-
-  if (field.options) {
-    schema.options = field.options as Array<{ label: string; value: string }>;
-  }
-
-  if (field.arrayFields) {
-    schema.arrayFields = {};
-    for (const [key, subField] of Object.entries(
-      field.arrayFields as Record<string, Record<string, unknown>>
-    )) {
-      schema.arrayFields[key] = extractFieldSchema(subField);
-    }
-  }
-
-  if (field.objectFields) {
-    schema.objectFields = {};
-    for (const [key, subField] of Object.entries(
-      field.objectFields as Record<string, Record<string, unknown>>
-    )) {
-      schema.objectFields[key] = extractFieldSchema(subField);
-    }
-  }
-
-  return schema;
-}
-
 export function extractBlockSchemas(): BlockSchema[] {
-  const schemas: BlockSchema[] = [];
-
-  for (const [name, component] of Object.entries(config.components)) {
-    const comp = component as {
-      label?: string;
-      fields?: Record<string, Record<string, unknown>>;
-      defaultProps?: Record<string, unknown>;
-    };
-
-    const fields: Record<string, FieldSchema> = {};
-    if (comp.fields) {
-      for (const [fieldName, field] of Object.entries(comp.fields)) {
-        // Skip custom fields (like RichTextField) — AI cannot fill them reliably
-        if (field.type === "custom") continue;
-        fields[fieldName] = extractFieldSchema(field);
-      }
-    }
-
-    schemas.push({
-      type: name,
-      label: comp.label || name,
-      fields,
-      defaultProps: (comp.defaultProps || {}) as Record<string, unknown>,
-    });
-  }
-
-  return schemas;
+  return generatedSchemas as BlockSchema[];
 }
 
 export function buildBlockSchemaPrompt(): string {

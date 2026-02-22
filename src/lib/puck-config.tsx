@@ -40,7 +40,62 @@ import { BlogListProps } from "@/components/puck-components/BlogList";
 import { RichTextBlockProps } from "@/components/puck-components/TipTapEditor";
 import { RichTextField } from "@/components/puck-fields/RichTextField";
 
+// Shadcn Blocks imports
+import {
+  ShadcnHero1Config,
+  ShadcnHero3Config,
+  ShadcnHero7Config,
+  ShadcnHero12Config,
+  ShadcnHero34Config,
+  ShadcnHero45Config,
+  ShadcnHero47Config,
+  ShadcnHero67Config,
+  ShadcnHero78Config,
+  ShadcnFeature1Config,
+  ShadcnFeature2Config,
+  ShadcnFeature3Config,
+  ShadcnFeature13Config,
+  ShadcnFeature15Config,
+  ShadcnFeature16Config,
+  ShadcnFeature17Config,
+  ShadcnFeature42Config,
+  ShadcnFeature43Config,
+  ShadcnPricing2Config,
+  ShadcnPricing4Config,
+  ShadcnPricing6Config,
+  ShadcnPricing11Config,
+  ShadcnTestimonial4Config,
+  ShadcnTestimonial8Config,
+  ShadcnTestimonial10Config,
+  ShadcnCta4Config,
+  ShadcnCta10Config,
+  ShadcnCta11Config,
+  ShadcnCta13Config,
+  ShadcnFaq1Config,
+  ShadcnFaq3Config,
+  ShadcnFaq5Config,
+  ShadcnStats6Config,
+  ShadcnStats8Config,
+  ShadcnTeam1Config,
+  ShadcnTeam2Config,
+  ShadcnBlog7Config,
+  ShadcnBlog8Config,
+  ShadcnGallery4Config,
+  ShadcnGallery6Config,
+  ShadcnContact2Config,
+  ShadcnContact7Config,
+  ShadcnFooter2Config,
+  ShadcnFooter7Config,
+  ShadcnNavbar1Config,
+  ShadcnNavbar5Config,
+  ShadcnTimeline3Config,
+  ShadcnTimeline9Config,
+  ShadcnLogos3Config,
+  ShadcnLogos8Config,
+} from "@/components/shadcn-blocks/registry";
+
 type Props = {
+  // Legacy blocks
   Heading: React.ComponentProps<typeof Heading>;
   Text: React.ComponentProps<typeof Text>;
   Button: React.ComponentProps<typeof Button>;
@@ -75,6 +130,8 @@ type Props = {
   Breadcrumbs: React.ComponentProps<typeof Breadcrumbs>;
   BlogList: BlogListProps;
   RichTextBlock: RichTextBlockProps;
+  // Shadcn blocks use index signature for flexibility
+  [key: string]: any;
 };
 
 export const config: Config<Props> = {
@@ -160,48 +217,205 @@ export const config: Config<Props> = {
     render: PuckRoot,
   },
   categories: {
+    // --- Shadcn Blocks categories ---
+    sbHero: {
+      title: "SB: Hero Sections",
+      components: [
+        "ShadcnHero1", "ShadcnHero3", "ShadcnHero7", "ShadcnHero12",
+        "ShadcnHero34", "ShadcnHero45", "ShadcnHero47", "ShadcnHero67",
+        "ShadcnHero78",
+      ],
+    },
+    sbFeature: {
+      title: "SB: Features",
+      components: [
+        "ShadcnFeature1", "ShadcnFeature2", "ShadcnFeature3", "ShadcnFeature13",
+        "ShadcnFeature15", "ShadcnFeature16", "ShadcnFeature17", "ShadcnFeature42",
+        "ShadcnFeature43",
+      ],
+    },
+    sbPricing: {
+      title: "SB: Pricing",
+      components: ["ShadcnPricing2", "ShadcnPricing4", "ShadcnPricing6", "ShadcnPricing11"],
+    },
+    sbTestimonial: {
+      title: "SB: Testimonials",
+      components: ["ShadcnTestimonial4", "ShadcnTestimonial8", "ShadcnTestimonial10"],
+    },
+    sbCta: {
+      title: "SB: Call to Action",
+      components: ["ShadcnCta4", "ShadcnCta10", "ShadcnCta11", "ShadcnCta13"],
+    },
+    sbFaq: {
+      title: "SB: FAQ",
+      components: ["ShadcnFaq1", "ShadcnFaq3", "ShadcnFaq5"],
+    },
+    sbStats: {
+      title: "SB: Statistics",
+      components: ["ShadcnStats6", "ShadcnStats8"],
+    },
+    sbTeam: {
+      title: "SB: Team",
+      components: ["ShadcnTeam1", "ShadcnTeam2"],
+    },
+    sbBlog: {
+      title: "SB: Blog",
+      components: ["ShadcnBlog7", "ShadcnBlog8"],
+    },
+    sbGallery: {
+      title: "SB: Gallery",
+      components: ["ShadcnGallery4", "ShadcnGallery6"],
+    },
+    sbContact: {
+      title: "SB: Contact",
+      components: ["ShadcnContact2", "ShadcnContact7"],
+    },
+    sbFooter: {
+      title: "SB: Footer",
+      components: ["ShadcnFooter2", "ShadcnFooter7"],
+    },
+    sbNavbar: {
+      title: "SB: Navbar",
+      components: ["ShadcnNavbar1", "ShadcnNavbar5"],
+    },
+    sbTimeline: {
+      title: "SB: Timeline",
+      components: ["ShadcnTimeline3", "ShadcnTimeline9"],
+    },
+    sbLogos: {
+      title: "SB: Logo Cloud",
+      components: ["ShadcnLogos3", "ShadcnLogos8"],
+    },
+    // --- Legacy categories ---
     typography: {
-      title: "Typography",
+      title: "Typography (Legacy)",
       components: ["Heading", "Text", "Badge", "RichTextBlock"],
     },
     layout: {
-      title: "Layout",
+      title: "Layout (Legacy)",
       components: ["Columns", "Spacer", "Divider"],
     },
     media: {
-      title: "Media",
+      title: "Media (Legacy)",
       components: ["ImageBlock", "VideoEmbed", "Gallery"],
     },
     interactive: {
-      title: "Interactive",
+      title: "Interactive (Legacy)",
       components: ["Button", "Accordion", "Tabs"],
     },
     cards: {
-      title: "Cards & Blocks",
+      title: "Cards & Blocks (Legacy)",
       components: ["Card", "Alert", "CodeBlock"],
     },
     sections: {
-      title: "Sections",
+      title: "Sections (Legacy)",
       components: ["Hero", "Features", "Testimonials", "Stats", "Pricing", "Team", "FAQ", "CTA", "Timeline"],
     },
     forms: {
-      title: "Forms",
+      title: "Forms (Legacy)",
       components: ["Newsletter", "ContactForm"],
     },
     navigation: {
-      title: "Navigation & Social",
+      title: "Navigation & Social (Legacy)",
       components: ["Footer", "SocialLinks", "LogoCloud", "Breadcrumbs"],
     },
     misc: {
-      title: "Misc",
+      title: "Misc (Legacy)",
       components: ["Avatar", "ProgressBar"],
     },
     blog: {
-      title: "Blog",
+      title: "Blog (Legacy)",
       components: ["BlogList"],
     },
   },
   components: {
+    // ==========================================
+    // Shadcn Blocks
+    // ==========================================
+
+    // Hero
+    ShadcnHero1: ShadcnHero1Config as any,
+    ShadcnHero3: ShadcnHero3Config as any,
+    ShadcnHero7: ShadcnHero7Config as any,
+    ShadcnHero12: ShadcnHero12Config as any,
+    ShadcnHero34: ShadcnHero34Config as any,
+    ShadcnHero45: ShadcnHero45Config as any,
+    ShadcnHero47: ShadcnHero47Config as any,
+    ShadcnHero67: ShadcnHero67Config as any,
+    ShadcnHero78: ShadcnHero78Config as any,
+
+    // Feature
+    ShadcnFeature1: ShadcnFeature1Config as any,
+    ShadcnFeature2: ShadcnFeature2Config as any,
+    ShadcnFeature3: ShadcnFeature3Config as any,
+    ShadcnFeature13: ShadcnFeature13Config as any,
+    ShadcnFeature15: ShadcnFeature15Config as any,
+    ShadcnFeature16: ShadcnFeature16Config as any,
+    ShadcnFeature17: ShadcnFeature17Config as any,
+    ShadcnFeature42: ShadcnFeature42Config as any,
+    ShadcnFeature43: ShadcnFeature43Config as any,
+
+    // Pricing
+    ShadcnPricing2: ShadcnPricing2Config as any,
+    ShadcnPricing4: ShadcnPricing4Config as any,
+    ShadcnPricing6: ShadcnPricing6Config as any,
+    ShadcnPricing11: ShadcnPricing11Config as any,
+
+    // Testimonial
+    ShadcnTestimonial4: ShadcnTestimonial4Config as any,
+    ShadcnTestimonial8: ShadcnTestimonial8Config as any,
+    ShadcnTestimonial10: ShadcnTestimonial10Config as any,
+
+    // CTA
+    ShadcnCta4: ShadcnCta4Config as any,
+    ShadcnCta10: ShadcnCta10Config as any,
+    ShadcnCta11: ShadcnCta11Config as any,
+    ShadcnCta13: ShadcnCta13Config as any,
+
+    // FAQ
+    ShadcnFaq1: ShadcnFaq1Config as any,
+    ShadcnFaq3: ShadcnFaq3Config as any,
+    ShadcnFaq5: ShadcnFaq5Config as any,
+
+    // Stats
+    ShadcnStats6: ShadcnStats6Config as any,
+    ShadcnStats8: ShadcnStats8Config as any,
+
+    // Team
+    ShadcnTeam1: ShadcnTeam1Config as any,
+    ShadcnTeam2: ShadcnTeam2Config as any,
+
+    // Blog
+    ShadcnBlog7: ShadcnBlog7Config as any,
+    ShadcnBlog8: ShadcnBlog8Config as any,
+
+    // Gallery
+    ShadcnGallery4: ShadcnGallery4Config as any,
+    ShadcnGallery6: ShadcnGallery6Config as any,
+
+    // Contact
+    ShadcnContact2: ShadcnContact2Config as any,
+    ShadcnContact7: ShadcnContact7Config as any,
+
+    // Footer
+    ShadcnFooter2: ShadcnFooter2Config as any,
+    ShadcnFooter7: ShadcnFooter7Config as any,
+
+    // Navbar
+    ShadcnNavbar1: ShadcnNavbar1Config as any,
+    ShadcnNavbar5: ShadcnNavbar5Config as any,
+
+    // Timeline
+    ShadcnTimeline3: ShadcnTimeline3Config as any,
+    ShadcnTimeline9: ShadcnTimeline9Config as any,
+
+    // Logos
+    ShadcnLogos3: ShadcnLogos3Config as any,
+    ShadcnLogos8: ShadcnLogos8Config as any,
+
+    // ==========================================
+    // Legacy blocks
+    // ==========================================
     Heading: {
       label: "Heading",
       fields: {
@@ -393,27 +607,9 @@ export const config: Config<Props> = {
       defaultProps: {
         title: "What Our Customers Say",
         testimonials: [
-          {
-            quote: "This product has completely transformed our workflow. Highly recommended!",
-            author: "Sarah Johnson",
-            role: "CEO",
-            company: "TechCorp",
-            avatar: "https://i.pravatar.cc/100?img=1",
-          },
-          {
-            quote: "The best investment we've made this year. Our team productivity has doubled.",
-            author: "Michael Chen",
-            role: "CTO",
-            company: "StartupXYZ",
-            avatar: "https://i.pravatar.cc/100?img=2",
-          },
-          {
-            quote: "Incredible support team and amazing product. Five stars!",
-            author: "Emily Davis",
-            role: "Product Manager",
-            company: "InnovateCo",
-            avatar: "https://i.pravatar.cc/100?img=3",
-          },
+          { quote: "This product has completely transformed our workflow. Highly recommended!", author: "Sarah Johnson", role: "CEO", company: "TechCorp", avatar: "https://i.pravatar.cc/100?img=1" },
+          { quote: "The best investment we've made this year. Our team productivity has doubled.", author: "Michael Chen", role: "CTO", company: "StartupXYZ", avatar: "https://i.pravatar.cc/100?img=2" },
+          { quote: "Incredible support team and amazing product. Five stars!", author: "Emily Davis", role: "Product Manager", company: "InnovateCo", avatar: "https://i.pravatar.cc/100?img=3" },
         ],
       },
       render: Testimonials,
@@ -455,13 +651,7 @@ export const config: Config<Props> = {
             period: { type: "text" },
             description: { type: "text" },
             features: { type: "textarea" },
-            highlighted: {
-              type: "radio",
-              options: [
-                { label: "Yes", value: "true" },
-                { label: "No", value: "false" },
-              ],
-            },
+            highlighted: { type: "radio", options: [{ label: "Yes", value: "true" }, { label: "No", value: "false" }] },
             buttonText: { type: "text" },
           },
         },
@@ -470,33 +660,9 @@ export const config: Config<Props> = {
         title: "Simple Pricing",
         subtitle: "Choose the plan that fits your needs",
         plans: [
-          {
-            name: "Starter",
-            price: "$9",
-            period: "/month",
-            description: "Perfect for individuals",
-            features: "5 projects\n10GB storage\nEmail support\nBasic analytics",
-            highlighted: "false",
-            buttonText: "Get Started",
-          },
-          {
-            name: "Professional",
-            price: "$29",
-            period: "/month",
-            description: "Best for growing teams",
-            features: "Unlimited projects\n100GB storage\nPriority support\nAdvanced analytics\nCustom domain",
-            highlighted: "true",
-            buttonText: "Get Started",
-          },
-          {
-            name: "Enterprise",
-            price: "$99",
-            period: "/month",
-            description: "For large organizations",
-            features: "Everything in Pro\nUnlimited storage\nDedicated support\nSLA guarantee\nCustom integrations",
-            highlighted: "false",
-            buttonText: "Contact Sales",
-          },
+          { name: "Starter", price: "$9", period: "/month", description: "Perfect for individuals", features: "5 projects\n10GB storage\nEmail support\nBasic analytics", highlighted: "false", buttonText: "Get Started" },
+          { name: "Professional", price: "$29", period: "/month", description: "Best for growing teams", features: "Unlimited projects\n100GB storage\nPriority support\nAdvanced analytics\nCustom domain", highlighted: "true", buttonText: "Get Started" },
+          { name: "Enterprise", price: "$99", period: "/month", description: "For large organizations", features: "Everything in Pro\nUnlimited storage\nDedicated support\nSLA guarantee\nCustom integrations", highlighted: "false", buttonText: "Contact Sales" },
         ],
       },
       render: Pricing,
@@ -520,30 +686,10 @@ export const config: Config<Props> = {
         title: "Meet Our Team",
         subtitle: "The people behind our success",
         members: [
-          {
-            name: "John Smith",
-            role: "Founder & CEO",
-            bio: "10+ years of experience in tech leadership",
-            avatar: "https://i.pravatar.cc/200?img=11",
-          },
-          {
-            name: "Jane Doe",
-            role: "CTO",
-            bio: "Expert in scalable architecture",
-            avatar: "https://i.pravatar.cc/200?img=5",
-          },
-          {
-            name: "Bob Wilson",
-            role: "Lead Designer",
-            bio: "Award-winning UX designer",
-            avatar: "https://i.pravatar.cc/200?img=12",
-          },
-          {
-            name: "Alice Brown",
-            role: "Head of Marketing",
-            bio: "Growth specialist with global experience",
-            avatar: "https://i.pravatar.cc/200?img=9",
-          },
+          { name: "John Smith", role: "Founder & CEO", bio: "10+ years of experience in tech leadership", avatar: "https://i.pravatar.cc/200?img=11" },
+          { name: "Jane Doe", role: "CTO", bio: "Expert in scalable architecture", avatar: "https://i.pravatar.cc/200?img=5" },
+          { name: "Bob Wilson", role: "Lead Designer", bio: "Award-winning UX designer", avatar: "https://i.pravatar.cc/200?img=12" },
+          { name: "Alice Brown", role: "Head of Marketing", bio: "Growth specialist with global experience", avatar: "https://i.pravatar.cc/200?img=9" },
         ],
       },
       render: Team,
@@ -563,26 +709,11 @@ export const config: Config<Props> = {
       defaultProps: {
         title: "Frequently Asked Questions",
         questions: [
-          {
-            question: "How do I get started?",
-            answer: "Simply sign up for an account and follow our quick start guide. You'll be up and running in minutes.",
-          },
-          {
-            question: "What payment methods do you accept?",
-            answer: "We accept all major credit cards, PayPal, and bank transfers for enterprise accounts.",
-          },
-          {
-            question: "Can I cancel my subscription?",
-            answer: "Yes, you can cancel anytime. No questions asked, no hidden fees.",
-          },
-          {
-            question: "Do you offer a free trial?",
-            answer: "Yes! We offer a 14-day free trial with full access to all features.",
-          },
-          {
-            question: "Is my data secure?",
-            answer: "Absolutely. We use industry-standard encryption and comply with GDPR and SOC 2 requirements.",
-          },
+          { question: "How do I get started?", answer: "Simply sign up for an account and follow our quick start guide. You'll be up and running in minutes." },
+          { question: "What payment methods do you accept?", answer: "We accept all major credit cards, PayPal, and bank transfers for enterprise accounts." },
+          { question: "Can I cancel my subscription?", answer: "Yes, you can cancel anytime. No questions asked, no hidden fees." },
+          { question: "Do you offer a free trial?", answer: "Yes! We offer a 14-day free trial with full access to all features." },
+          { question: "Is my data secure?", answer: "Absolutely. We use industry-standard encryption and comply with GDPR and SOC 2 requirements." },
         ],
       },
       render: FAQ,
@@ -682,10 +813,7 @@ export const config: Config<Props> = {
           ],
         },
       },
-      defaultProps: {
-        columns: "2",
-        gap: "medium",
-      },
+      defaultProps: { columns: "2", gap: "medium" },
       render: Columns,
     },
     Spacer: {
@@ -702,9 +830,7 @@ export const config: Config<Props> = {
           ],
         },
       },
-      defaultProps: {
-        size: "md",
-      },
+      defaultProps: { size: "md" },
       render: Spacer,
     },
     Divider: {
@@ -727,10 +853,7 @@ export const config: Config<Props> = {
           ],
         },
       },
-      defaultProps: {
-        style: "solid",
-        color: "light",
-      },
+      defaultProps: { style: "solid", color: "light" },
       render: Divider,
     },
     VideoEmbed: {
@@ -747,11 +870,7 @@ export const config: Config<Props> = {
           ],
         },
       },
-      defaultProps: {
-        url: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-        title: "Video",
-        aspectRatio: "16/9",
-      },
+      defaultProps: { url: "https://www.youtube.com/embed/dQw4w9WgXcQ", title: "Video", aspectRatio: "16/9" },
       render: VideoEmbed,
     },
     CodeBlock: {
@@ -777,11 +896,7 @@ export const config: Config<Props> = {
           ],
         },
       },
-      defaultProps: {
-        code: 'const greeting = "Hello, World!";\nconsole.log(greeting);',
-        language: "javascript",
-        showLineNumbers: "true",
-      },
+      defaultProps: { code: 'const greeting = "Hello, World!";\nconsole.log(greeting);', language: "javascript", showLineNumbers: "true" },
       render: CodeBlock,
     },
     Alert: {
@@ -799,11 +914,7 @@ export const config: Config<Props> = {
           ],
         },
       },
-      defaultProps: {
-        title: "Information",
-        message: "This is an informational message.",
-        type: "info",
-      },
+      defaultProps: { title: "Information", message: "This is an informational message.", type: "info" },
       render: Alert,
     },
     Badge: {
@@ -821,10 +932,7 @@ export const config: Config<Props> = {
           ],
         },
       },
-      defaultProps: {
-        text: "New",
-        variant: "primary",
-      },
+      defaultProps: { text: "New", variant: "primary" },
       render: Badge,
     },
     Avatar: {
@@ -841,11 +949,7 @@ export const config: Config<Props> = {
           ],
         },
       },
-      defaultProps: {
-        src: "https://i.pravatar.cc/100",
-        name: "John Doe",
-        size: "medium",
-      },
+      defaultProps: { src: "https://i.pravatar.cc/100", name: "John Doe", size: "medium" },
       render: Avatar,
     },
     ProgressBar: {
@@ -853,13 +957,7 @@ export const config: Config<Props> = {
       fields: {
         value: { type: "number" },
         label: { type: "text" },
-        showValue: {
-          type: "radio",
-          options: [
-            { label: "Yes", value: "true" },
-            { label: "No", value: "false" },
-          ],
-        },
+        showValue: { type: "radio", options: [{ label: "Yes", value: "true" }, { label: "No", value: "false" }] },
         color: {
           type: "select",
           options: [
@@ -870,12 +968,7 @@ export const config: Config<Props> = {
           ],
         },
       },
-      defaultProps: {
-        value: 65,
-        label: "Progress",
-        showValue: "true",
-        color: "primary",
-      },
+      defaultProps: { value: 65, label: "Progress", showValue: "true", color: "primary" },
       render: ProgressBar,
     },
     Accordion: {
@@ -883,10 +976,7 @@ export const config: Config<Props> = {
       fields: {
         items: {
           type: "array",
-          arrayFields: {
-            title: { type: "text" },
-            content: { type: "textarea" },
-          },
+          arrayFields: { title: { type: "text" }, content: { type: "textarea" } },
         },
       },
       defaultProps: {
@@ -903,10 +993,7 @@ export const config: Config<Props> = {
       fields: {
         tabs: {
           type: "array",
-          arrayFields: {
-            title: { type: "text" },
-            content: { type: "textarea" },
-          },
+          arrayFields: { title: { type: "text" }, content: { type: "textarea" } },
         },
       },
       defaultProps: {
@@ -924,11 +1011,7 @@ export const config: Config<Props> = {
         title: { type: "text" },
         events: {
           type: "array",
-          arrayFields: {
-            date: { type: "text" },
-            title: { type: "text" },
-            description: { type: "textarea" },
-          },
+          arrayFields: { date: { type: "text" }, title: { type: "text" }, description: { type: "textarea" } },
         },
       },
       defaultProps: {
@@ -948,10 +1031,7 @@ export const config: Config<Props> = {
       fields: {
         images: {
           type: "array",
-          arrayFields: {
-            src: { type: "text" },
-            alt: { type: "text" },
-          },
+          arrayFields: { src: { type: "text" }, alt: { type: "text" } },
         },
         columns: {
           type: "select",
@@ -983,12 +1063,7 @@ export const config: Config<Props> = {
         buttonText: { type: "text" },
         placeholder: { type: "text" },
       },
-      defaultProps: {
-        title: "Subscribe to Our Newsletter",
-        subtitle: "Get the latest news and updates delivered to your inbox.",
-        buttonText: "Subscribe",
-        placeholder: "Enter your email",
-      },
+      defaultProps: { title: "Subscribe to Our Newsletter", subtitle: "Get the latest news and updates delivered to your inbox.", buttonText: "Subscribe", placeholder: "Enter your email" },
       render: Newsletter,
     },
     ContactForm: {
@@ -998,11 +1073,7 @@ export const config: Config<Props> = {
         subtitle: { type: "textarea" },
         buttonText: { type: "text" },
       },
-      defaultProps: {
-        title: "Get in Touch",
-        subtitle: "We'd love to hear from you. Send us a message!",
-        buttonText: "Send Message",
-      },
+      defaultProps: { title: "Get in Touch", subtitle: "We'd love to hear from you. Send us a message!", buttonText: "Send Message" },
       render: ContactForm,
     },
     SocialLinks: {
@@ -1015,14 +1086,7 @@ export const config: Config<Props> = {
         youtube: { type: "text" },
         github: { type: "text" },
       },
-      defaultProps: {
-        facebook: "https://facebook.com",
-        twitter: "https://twitter.com",
-        instagram: "https://instagram.com",
-        linkedin: "https://linkedin.com",
-        youtube: "",
-        github: "https://github.com",
-      },
+      defaultProps: { facebook: "https://facebook.com", twitter: "https://twitter.com", instagram: "https://instagram.com", linkedin: "https://linkedin.com", youtube: "", github: "https://github.com" },
       render: SocialLinks,
     },
     LogoCloud: {
@@ -1031,10 +1095,7 @@ export const config: Config<Props> = {
         title: { type: "text" },
         logos: {
           type: "array",
-          arrayFields: {
-            name: { type: "text" },
-            url: { type: "text" },
-          },
+          arrayFields: { name: { type: "text" }, url: { type: "text" } },
         },
       },
       defaultProps: {
@@ -1054,10 +1115,7 @@ export const config: Config<Props> = {
       fields: {
         items: {
           type: "array",
-          arrayFields: {
-            label: { type: "text" },
-            href: { type: "text" },
-          },
+          arrayFields: { label: { type: "text" }, href: { type: "text" } },
         },
       },
       defaultProps: {
@@ -1074,47 +1132,18 @@ export const config: Config<Props> = {
       fields: {
         title: { type: "text" },
         subtitle: { type: "textarea" },
-        showCategories: {
-          type: "radio",
-          options: [
-            { label: "Yes", value: "true" },
-            { label: "No", value: "false" },
-          ],
-        },
-        showFeatured: {
-          type: "radio",
-          options: [
-            { label: "Yes", value: "true" },
-            { label: "No", value: "false" },
-          ],
-        },
+        showCategories: { type: "radio", options: [{ label: "Yes", value: "true" }, { label: "No", value: "false" }] },
+        showFeatured: { type: "radio", options: [{ label: "Yes", value: "true" }, { label: "No", value: "false" }] },
         postsPerPage: { type: "number" },
-        layout: {
-          type: "radio",
-          options: [
-            { label: "Grid", value: "grid" },
-            { label: "List", value: "list" },
-          ],
-        },
+        layout: { type: "radio", options: [{ label: "Grid", value: "grid" }, { label: "List", value: "list" }] },
       },
-      defaultProps: {
-        title: "Latest Articles",
-        subtitle: "Insights and tutorials from our team",
-        showCategories: "true",
-        showFeatured: "true",
-        postsPerPage: 6,
-        layout: "grid",
-      },
+      defaultProps: { title: "Latest Articles", subtitle: "Insights and tutorials from our team", showCategories: "true", showFeatured: "true", postsPerPage: 6, layout: "grid" },
       render: BlogList,
     },
     RichTextBlock: {
       label: "Rich Text",
       fields: {
-        content: {
-          type: "custom",
-          label: "Content",
-          render: RichTextField,
-        },
+        content: { type: "custom", label: "Content", render: RichTextField },
         maxWidth: {
           type: "select",
           label: "Max Width",
@@ -1136,11 +1165,7 @@ export const config: Config<Props> = {
           ],
         },
       },
-      defaultProps: {
-        content: "<p>Start writing your content here...</p>",
-        maxWidth: "medium",
-        padding: "medium",
-      },
+      defaultProps: { content: "<p>Start writing your content here...</p>", maxWidth: "medium", padding: "medium" },
       render: RichTextBlock,
     },
   },

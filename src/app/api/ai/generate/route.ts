@@ -53,18 +53,19 @@ export async function POST(request: Request) {
         : "";
 
     const model = process.env.OPENAI_MODEL || "gpt-4o-mini";
-    const completion = await getOpenAIClient().chat.completions.create({
+    const isCodexModel = model.toLowerCase().includes("codex");
+    const response = await getOpenAIClient().responses.create({
       model,
-      messages: [
-        { role: "system", content: systemPrompt },
-        { role: "user", content: prompt + contextMessage },
-      ],
-      response_format: { type: "json_object" },
-      temperature: 0.7,
-      max_tokens: 4096,
+      instructions: systemPrompt,
+      input: prompt + contextMessage + "\n\nRespond with valid JSON only.",
+      text: {
+        format: { type: "json_object" },
+      },
+      ...(isCodexModel ? {} : { temperature: 0.7 }),
+      max_output_tokens: 4096,
     });
 
-    const content = completion.choices[0]?.message?.content;
+    const content = response.output_text;
     if (!content) {
       return NextResponse.json(
         { error: "Empty response from AI" },
