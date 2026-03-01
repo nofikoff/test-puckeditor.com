@@ -9,6 +9,7 @@ import {
   Tag,
   LogOut,
   PanelLeft,
+  Settings,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
@@ -27,6 +28,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
     { href: "/admin/categories" as const, label: t("categories"), icon: FolderOpen },
     { href: "/admin/tags" as const, label: t("tags"), icon: Tag },
     { href: "/admin/pages" as const, label: t("pages"), icon: PanelLeft },
+    { href: "/admin/settings" as const, label: t("settings"), icon: Settings },
   ];
 
   return (

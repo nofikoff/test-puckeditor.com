@@ -51,6 +51,22 @@ async function main() {
   }
   console.log("Created tags");
 
+  await prisma.siteSettings.upsert({
+    where: { id: "default" },
+    update: {},
+    create: {
+      id: "default",
+      data: {
+        logoUrl: "",
+        menuItems: [
+          { label: "Home", url: "/" },
+          { label: "About", url: "/about" },
+        ],
+      },
+    },
+  });
+  console.log("Created default site settings");
+
   console.log("Seed completed successfully");
 }
 

@@ -86,3 +86,11 @@ model Tag {
   @@unique([slug, locale])
   @@map("tags")
 }
+
+model SiteSettings {
+  id        String   @id @default("default")
+  data      Json     @default("{}")
+  updatedAt DateTime @updatedAt
+
+  @@map("site_settings")
+}

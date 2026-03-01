@@ -33,7 +33,19 @@
     "published": "Objavljeno",
     "draft": "Nacrt",
     "featured": "Istaknuto",
-    "settings": "Podešavanja"
+    "settings": "Podešavanja",
+    "editorHeaderSettings": "Podešavanja zaglavlja editora",
+    "logoUrl": "URL logotipa",
+    "logoUrlHint": "Ostavite prazno za podrazumevani tekstualni logo",
+    "menuItems": "Stavke navigacionog menija",
+    "addMenuItem": "Dodaj stavku",
+    "noMenuItems": "Nema stavki menija. Kliknite \"Dodaj stavku\" za kreiranje navigacionih linkova.",
+    "menuItemLabel": "Naziv",
+    "saveSettings": "Sačuvaj podešavanja",
+    "settingsSaved": "Sačuvano",
+    "settingsSavedDesc": "Podešavanja zaglavlja editora su uspešno ažurirana",
+    "saving": "Čuvanje...",
+    "preview": "Pregled"
   },
   "auth": {
     "signIn": "Prijava",

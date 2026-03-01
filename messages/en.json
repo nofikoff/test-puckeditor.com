@@ -33,7 +33,19 @@
     "published": "Published",
     "draft": "Draft",
     "featured": "Featured",
-    "settings": "Settings"
+    "settings": "Settings",
+    "editorHeaderSettings": "Editor Header Settings",
+    "logoUrl": "Logo URL",
+    "logoUrlHint": "Leave empty to show default text logo",
+    "menuItems": "Navigation Menu Items",
+    "addMenuItem": "Add Item",
+    "noMenuItems": "No menu items added. Click \"Add Item\" to create navigation links.",
+    "menuItemLabel": "Label",
+    "saveSettings": "Save Settings",
+    "settingsSaved": "Saved",
+    "settingsSavedDesc": "Editor header settings updated successfully",
+    "saving": "Saving...",
+    "preview": "Preview"
   },
   "auth": {
     "signIn": "Sign In",
