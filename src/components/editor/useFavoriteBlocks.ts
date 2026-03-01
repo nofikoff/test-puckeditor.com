@@ -23,7 +23,7 @@ function loadFromStorage(): Set<string> {
 }
 
 function persistToStorage(set: Set<string>) {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify([...set]));
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(Array.from(set)));
 }
 
 function emitChange() {
