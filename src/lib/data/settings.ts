@@ -29,9 +29,14 @@ const DEFAULT_SETTINGS: SiteSettings = {
 };
 
 export async function getSiteSettings(): Promise<SiteSettings> {
-  const row = await prisma.siteSettings.findUnique({
-    where: { id: "default" },
-  });
+  let row;
+  try {
+    row = await prisma.siteSettings.findUnique({
+      where: { id: "default" },
+    });
+  } catch {
+    return DEFAULT_SETTINGS;
+  }
 
   if (!row) return DEFAULT_SETTINGS;
 
