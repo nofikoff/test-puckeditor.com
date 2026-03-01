@@ -18,16 +18,16 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
-    slug: "getting-started-with-puck",
-    title: "Getting Started with Puck Editor",
-    excerpt: "Learn how to set up and configure Puck Editor in your Next.js project in under 10 minutes.",
+    slug: "getting-started-with-visual-editor",
+    title: "Getting Started with the Visual Editor",
+    excerpt: "Learn how to set up and configure the visual editor in your Next.js project in under 10 minutes.",
     content: `
       <h2>Introduction</h2>
-      <p>Puck Editor is a powerful visual editor for React applications. In this tutorial, we'll walk through the setup process step by step.</p>
+      <p>The visual editor is a powerful drag-and-drop page builder for React applications. In this tutorial, we'll walk through the setup process step by step.</p>
 
       <h2>Installation</h2>
-      <p>First, install the Puck package:</p>
-      <pre><code>npm install @measured/puck</code></pre>
+      <p>First, install the required packages:</p>
+      <pre><code>npm install</code></pre>
 
       <h2>Basic Configuration</h2>
       <p>Create a configuration file that defines your components:</p>
@@ -41,12 +41,11 @@ export const blogPosts: BlogPost[] = [
 };</code></pre>
 
       <h2>Rendering the Editor</h2>
-      <p>Import and render the Puck component in your page:</p>
-      <pre><code>import { Puck } from "@measured/puck";
-import "@measured/puck/puck.css";
+      <p>Import and render the editor component in your page:</p>
+      <pre><code>import { Editor } from "./components/Editor";
 
-export default function Editor() {
-  return &lt;Puck config={config} data={{}} /&gt;;
+export default function EditorPage() {
+  return &lt;Editor config={config} data={{}} /&gt;;
 }</code></pre>
 
       <h2>Conclusion</h2>
@@ -60,19 +59,19 @@ export default function Editor() {
     },
     publishedAt: "2024-01-15",
     category: "Tutorial",
-    tags: ["puck", "react", "nextjs", "tutorial"],
+    tags: ["visual-editor", "react", "nextjs", "tutorial"],
     readTime: 5,
   },
   {
     slug: "building-custom-components",
-    title: "Building Custom Components for Puck",
-    excerpt: "A deep dive into creating reusable, configurable components for your Puck-powered website.",
+    title: "Building Custom Components for the Editor",
+    excerpt: "A deep dive into creating reusable, configurable components for your website.",
     content: `
       <h2>Why Custom Components?</h2>
-      <p>While Puck comes with basic building blocks, the real power lies in creating custom components tailored to your needs.</p>
+      <p>While the editor comes with basic building blocks, the real power lies in creating custom components tailored to your needs.</p>
 
       <h2>Component Structure</h2>
-      <p>Every Puck component needs three things:</p>
+      <p>Every editor component needs three things:</p>
       <ul>
         <li><strong>Fields</strong> - Define the editable properties</li>
         <li><strong>Default Props</strong> - Initial values</li>
@@ -117,14 +116,14 @@ export default function Editor() {
     readTime: 8,
   },
   {
-    slug: "puck-vs-other-builders",
-    title: "Puck vs Other Page Builders: A Comparison",
-    excerpt: "How does Puck stack up against popular alternatives like Builder.io, Plasmic, and others?",
+    slug: "visual-editor-vs-other-builders",
+    title: "Visual Editor vs Other Page Builders: A Comparison",
+    excerpt: "How does our visual editor stack up against popular alternatives like Builder.io, Plasmic, and others?",
     content: `
       <h2>The Page Builder Landscape</h2>
-      <p>There are many page builders available for React developers. Let's see how Puck compares.</p>
+      <p>There are many page builders available for React developers. Let's see how our visual editor compares.</p>
 
-      <h2>Puck's Advantages</h2>
+      <h2>Key Advantages</h2>
       <ul>
         <li><strong>Open Source</strong> - MIT licensed, no vendor lock-in</li>
         <li><strong>Self-hosted</strong> - Your data stays with you</li>
@@ -134,15 +133,15 @@ export default function Editor() {
 
       <h2>Comparison Table</h2>
       <table>
-        <tr><th>Feature</th><th>Puck</th><th>Builder.io</th><th>Plasmic</th></tr>
+        <tr><th>Feature</th><th>Our Editor</th><th>Builder.io</th><th>Plasmic</th></tr>
         <tr><td>Open Source</td><td>Yes</td><td>No</td><td>Partial</td></tr>
         <tr><td>Self-hosted</td><td>Yes</td><td>No</td><td>Optional</td></tr>
         <tr><td>Free Tier</td><td>Unlimited</td><td>Limited</td><td>Limited</td></tr>
         <tr><td>Custom Components</td><td>Full</td><td>Full</td><td>Full</td></tr>
       </table>
 
-      <h2>When to Choose Puck</h2>
-      <p>Puck is ideal when you need full control, want to avoid vendor lock-in, or have specific security requirements.</p>
+      <h2>When to Choose a Self-Hosted Editor</h2>
+      <p>A self-hosted visual editor is ideal when you need full control, want to avoid vendor lock-in, or have specific security requirements.</p>
     `,
     coverImage: "https://picsum.photos/800/400?random=102",
     author: {
@@ -157,11 +156,11 @@ export default function Editor() {
   },
   {
     slug: "seo-optimization-tips",
-    title: "SEO Optimization Tips for Puck Pages",
-    excerpt: "Make your Puck-built pages rank higher with these proven SEO techniques.",
+    title: "SEO Optimization Tips for CMS Pages",
+    excerpt: "Make your CMS-built pages rank higher with these proven SEO techniques.",
     content: `
       <h2>SEO Fundamentals</h2>
-      <p>Search engine optimization is crucial for any website. Here's how to optimize your Puck pages.</p>
+      <p>Search engine optimization is crucial for any website. Here's how to optimize your pages.</p>
 
       <h2>Meta Tags</h2>
       <p>Use Next.js metadata API to set proper meta tags for each page:</p>
@@ -171,7 +170,7 @@ export default function Editor() {
 };</code></pre>
 
       <h2>Semantic HTML</h2>
-      <p>Ensure your Puck components output semantic HTML:</p>
+      <p>Ensure your components output semantic HTML:</p>
       <ul>
         <li>Use proper heading hierarchy (h1, h2, h3)</li>
         <li>Add alt text to images</li>
@@ -197,11 +196,11 @@ export default function Editor() {
   },
   {
     slug: "advanced-field-types",
-    title: "Advanced Field Types in Puck",
-    excerpt: "Explore custom fields, arrays, objects, and external data sources in Puck Editor.",
+    title: "Advanced Field Types in the Visual Editor",
+    excerpt: "Explore custom fields, arrays, objects, and external data sources in the visual editor.",
     content: `
       <h2>Beyond Basic Fields</h2>
-      <p>Puck supports more than just text fields. Let's explore advanced options.</p>
+      <p>The editor supports more than just text fields. Let's explore advanced options.</p>
 
       <h2>Array Fields</h2>
       <p>Perfect for lists, galleries, and repeatable content:</p>
@@ -241,9 +240,9 @@ export default function Editor() {
     readTime: 10,
   },
   {
-    slug: "deploying-puck-production",
-    title: "Deploying Puck to Production",
-    excerpt: "Best practices for deploying your Puck-powered application to production environments.",
+    slug: "deploying-to-production",
+    title: "Deploying Your CMS to Production",
+    excerpt: "Best practices for deploying your application to production environments.",
     content: `
       <h2>Production Checklist</h2>
       <p>Before deploying, ensure you've covered these essentials.</p>

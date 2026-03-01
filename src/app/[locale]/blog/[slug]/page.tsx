@@ -11,7 +11,7 @@ import { PuckRoot } from "@/components/PuckRoot";
 export const dynamic = "force-dynamic";
 
 const rootProps = {
-  siteName: "Puck Demo",
+  siteName: "My Site",
   logoUrl: "",
   navLinks: [
     { label: "Home", href: "/" },
@@ -22,7 +22,7 @@ const rootProps = {
   ],
   ctaText: "Open Editor",
   ctaHref: "/editor",
-  footerDescription: "The visual editor for React.",
+  footerDescription: "Build beautiful pages without writing code.",
   footerLinks: [
     { title: "Product", items: "Features\nPricing\nDemo" },
     { title: "Company", items: "About\nBlog\nContact" },
@@ -33,7 +33,7 @@ const rootProps = {
     linkedin: "https://linkedin.com",
     github: "https://github.com",
   },
-  copyright: "\u00a9 2024 Puck Editor Demo",
+  copyright: "\u00a9 2025 All rights reserved",
 };
 
 type Props = {

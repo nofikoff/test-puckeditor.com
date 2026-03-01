@@ -34,6 +34,7 @@ export function EditorHeader({
         borderBottom: "1px solid #e5e7eb",
         background: "#fff",
         minHeight: 53,
+        gridColumn: "1 / -1",
       }}
     >
       {/* Left: Logo + Title + Nav */}
@@ -46,7 +47,7 @@ export function EditorHeader({
           />
         ) : (
           <span style={{ fontWeight: 700, fontSize: 16, color: "#111827" }}>
-            Puck CMS
+            CMS
           </span>
         )}
 

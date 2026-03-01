@@ -3,7 +3,7 @@ import { buildBlockSchemaPrompt } from "./schema";
 export function buildSystemPrompt(): string {
   const blockSchema = buildBlockSchemaPrompt();
 
-  return `You are an AI assistant for a visual page builder (Puck Editor).
+  return `You are an AI assistant for a visual page builder.
 Your job is to generate page blocks based on user descriptions.
 
 ## Available Block Types

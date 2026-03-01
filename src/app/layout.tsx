@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Puck CMS",
-  description: "Visual editor for React with CMS",
+  title: "CMS",
+  description: "Visual page builder CMS",
 };
 
 export default function RootLayout({

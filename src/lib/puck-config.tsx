@@ -189,7 +189,7 @@ export const config: Config<Props> = {
       },
     },
     defaultProps: {
-      siteName: "Puck Demo",
+      siteName: "My Site",
       logoUrl: "",
       navLinks: [
         { label: "Home", href: "/" },
@@ -210,9 +210,9 @@ export const config: Config<Props> = {
         facebook: "https://facebook.com",
         twitter: "https://twitter.com",
         linkedin: "https://linkedin.com",
-        github: "https://github.com/puckeditor/puck",
+        github: "https://github.com",
       },
-      copyright: "© 2024 Puck Editor Demo. All rights reserved.",
+      copyright: `© ${new Date().getFullYear()} All rights reserved.`,
     },
     render: PuckRoot,
   },

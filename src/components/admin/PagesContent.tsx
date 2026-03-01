@@ -116,7 +116,7 @@ export function PagesContent({ initialPages }: { initialPages: Page[] }) {
         <div>
           <h1 className="text-3xl font-bold">Pages</h1>
           <p className="text-gray-500 mt-1">
-            Manage pages and edit them with the Puck visual editor.
+            Manage pages and edit them with the visual editor.
           </p>
         </div>
         <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>

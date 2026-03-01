@@ -6,7 +6,7 @@ type PageData = {
 
 // Default root props for header/footer
 const defaultRootProps = {
-  siteName: "Puck Demo",
+  siteName: "My Site",
   logoUrl: "",
   navLinks: [
     { label: "Home", href: "/" },
@@ -18,7 +18,7 @@ const defaultRootProps = {
   ],
   ctaText: "Open Editor",
   ctaHref: "/editor",
-  footerDescription: "The visual editor for React. Build beautiful pages without writing code.",
+  footerDescription: "Build beautiful pages without writing code.",
   footerLinks: [
     { title: "Product", items: "Features\nPricing\nDemo\nEditor" },
     { title: "Company", items: "About\nBlog\nCareers\nContact" },
@@ -28,9 +28,9 @@ const defaultRootProps = {
     facebook: "https://facebook.com",
     twitter: "https://twitter.com",
     linkedin: "https://linkedin.com",
-    github: "https://github.com/puckeditor/puck",
+    github: "https://github.com",
   },
-  copyright: "© 2024 Puck Editor Demo. All rights reserved.",
+  copyright: "© 2025 All rights reserved.",
 };
 
 export const demoPages: Record<string, PageData> = {
@@ -41,8 +41,8 @@ export const demoPages: Record<string, PageData> = {
         type: "Hero",
         props: {
           id: "hero-1",
-          title: "Build Stunning Websites with Puck Editor",
-          subtitle: "The most powerful visual editor for React. Create beautiful, responsive pages with drag-and-drop simplicity.",
+          title: "Build Stunning Websites Visually",
+          subtitle: "Create beautiful, responsive pages with drag-and-drop simplicity.",
           primaryButtonText: "Start Building",
           primaryButtonHref: "/editor",
           secondaryButtonText: "View Demo",
@@ -71,7 +71,7 @@ export const demoPages: Record<string, PageData> = {
         props: {
           id: "features-1",
           title: "Everything You Need to Build Amazing Pages",
-          subtitle: "Puck Editor comes with all the tools you need to create professional websites",
+          subtitle: "All the tools you need to create professional websites",
           columns: "3",
           features: [
             { icon: "🎨", title: "Visual Editor", description: "Drag and drop components to build pages visually without writing code" },
@@ -103,14 +103,14 @@ export const demoPages: Record<string, PageData> = {
           title: "Loved by Developers & Designers",
           testimonials: [
             {
-              quote: "Puck Editor has completely transformed how we build landing pages. What used to take days now takes hours.",
+              quote: "the visual editor has completely transformed how we build landing pages. What used to take days now takes hours.",
               author: "Sarah Chen",
               role: "Head of Engineering",
               company: "TechStartup",
               avatar: "https://i.pravatar.cc/100?img=1",
             },
             {
-              quote: "The flexibility of Puck is incredible. We've built our entire CMS on top of it and our clients love it.",
+              quote: "The flexibility of the editor is incredible. We've built our entire CMS on top of it and our clients love it.",
               author: "Marcus Johnson",
               role: "CTO",
               company: "AgencyPro",
@@ -170,12 +170,12 @@ export const demoPages: Record<string, PageData> = {
           title: "Frequently Asked Questions",
           questions: [
             {
-              question: "Is Puck Editor free to use?",
-              answer: "Yes! Puck Editor is open-source and free to use under the MIT license. You can use it for both personal and commercial projects without any fees.",
+              question: "Is the visual editor free to use?",
+              answer: "Yes! the visual editor is open-source and free to use under the MIT license. You can use it for both personal and commercial projects without any fees.",
             },
             {
               question: "Does it work with Next.js?",
-              answer: "Absolutely! Puck Editor is designed to work seamlessly with Next.js, including support for the App Router, Server Components, and all Next.js features.",
+              answer: "Absolutely! the visual editor is designed to work seamlessly with Next.js, including support for the App Router, Server Components, and all Next.js features.",
             },
             {
               question: "Can I use my own components?",
@@ -183,7 +183,7 @@ export const demoPages: Record<string, PageData> = {
             },
             {
               question: "How do I store the page data?",
-              answer: "Puck Editor outputs JSON data that you can store anywhere - in a database, file system, or any headless CMS. You have complete control over your data.",
+              answer: "the visual editor outputs JSON data that you can store anywhere - in a database, file system, or any headless CMS. You have complete control over your data.",
             },
           ],
         },
@@ -193,7 +193,7 @@ export const demoPages: Record<string, PageData> = {
         props: {
           id: "cta-1",
           title: "Ready to Build Something Amazing?",
-          subtitle: "Join thousands of developers who are already using Puck Editor to create stunning websites.",
+          subtitle: "Join thousands of developers who are already using the visual editor to create stunning websites.",
           buttonText: "Get Started for Free",
           buttonHref: "/editor",
           variant: "gradient",
@@ -241,7 +241,7 @@ export const demoPages: Record<string, PageData> = {
           title: "Our Journey",
           events: [
             { date: "2021", title: "The Idea", description: "Started as an internal tool to help our team build landing pages faster" },
-            { date: "2022", title: "Open Source Launch", description: "Released Puck Editor as an open-source project on GitHub" },
+            { date: "2022", title: "Open Source Launch", description: "Released the visual editor as an open-source project on GitHub" },
             { date: "2023", title: "Community Growth", description: "Reached 10,000+ GitHub stars and built an active community" },
             { date: "2024", title: "Enterprise Launch", description: "Launched enterprise features and premium support" },
             { date: "2025", title: "AI Integration", description: "Added AI-powered features for content generation and optimization" },
@@ -253,7 +253,7 @@ export const demoPages: Record<string, PageData> = {
         props: {
           id: "team-1",
           title: "Meet Our Team",
-          subtitle: "The passionate people behind Puck Editor",
+          subtitle: "The passionate people behind the visual editor",
           members: [
             {
               name: "Alex Thompson",
@@ -303,7 +303,7 @@ export const demoPages: Record<string, PageData> = {
         props: {
           id: "blog-list-1",
           title: "Latest from Our Blog",
-          subtitle: "Insights, tutorials, and updates from the Puck Editor team",
+          subtitle: "Insights, tutorials, and updates from the the visual editor team",
           showCategories: "true",
           showFeatured: "true",
           postsPerPage: 7,
@@ -374,7 +374,7 @@ export const demoPages: Record<string, PageData> = {
         props: {
           id: "hero-1",
           title: "Component Showcase",
-          subtitle: "Explore all the components available in Puck Editor",
+          subtitle: "Explore all the components available in the visual editor",
           primaryButtonText: "Open Editor",
           primaryButtonHref: "/editor",
           secondaryButtonText: "",
@@ -453,9 +453,9 @@ export const demoPages: Record<string, PageData> = {
         props: {
           id: "acc-1",
           items: [
-            { title: "What is Puck Editor?", content: "Puck Editor is a visual drag-and-drop editor for React applications." },
-            { title: "How do I install it?", content: "You can install it via npm: npm install @measured/puck" },
-            { title: "Is it free?", content: "Yes! Puck Editor is open-source and free to use under the MIT license." },
+            { title: "What is the visual editor?", content: "the visual editor is a visual drag-and-drop editor for React applications." },
+            { title: "How do I install it?", content: "You can install it via npm: npm install" },
+            { title: "Is it free?", content: "Yes! the visual editor is open-source and free to use under the MIT license." },
           ],
         },
       },

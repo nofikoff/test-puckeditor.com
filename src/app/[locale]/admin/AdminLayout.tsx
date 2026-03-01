@@ -36,7 +36,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
       <aside className="w-64 bg-gray-900 text-white flex flex-col">
         <div className="p-4">
           <Link href="/admin" className="text-xl font-bold">
-            Puck CMS
+            CMS
           </Link>
         </div>
         <Separator className="bg-gray-700" />
