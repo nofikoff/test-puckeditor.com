@@ -43,14 +43,14 @@ export function PuckRoot({
   return (
     <div className="min-h-screen flex flex-col">
       {/* Header */}
-      <header className="bg-white shadow-sm sticky top-0 z-50">
+      <header className="bg-background shadow-sm sticky top-0 z-50">
         <nav className="max-w-6xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center gap-2">
               {logoUrl && (
                 <img src={logoUrl} alt={siteName} className="h-8 w-auto" />
               )}
-              <span className="text-xl font-bold text-gray-900">{siteName}</span>
+              <span className="text-xl font-bold text-foreground">{siteName}</span>
             </Link>
 
             <div className="hidden md:flex items-center gap-6">
@@ -58,7 +58,7 @@ export function PuckRoot({
                 <Link
                   key={i}
                   href={item.href}
-                  className="text-sm font-medium text-gray-600 hover:text-gray-900 transition"
+                  className="text-sm font-medium text-muted-foreground hover:text-foreground transition"
                 >
                   {item.label}
                 </Link>
@@ -70,7 +70,7 @@ export function PuckRoot({
               {ctaText && (
                 <Link
                   href={editorLink}
-                  className="px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition"
+                  className="px-4 py-2 bg-primary text-primary-foreground text-sm font-medium rounded-lg hover:bg-primary/90 transition"
                 >
                   {ctaText}
                 </Link>
@@ -84,32 +84,32 @@ export function PuckRoot({
       <main className="flex-1">{children}</main>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-gray-300 py-12 px-4">
+      <footer className="bg-foreground text-muted-foreground py-12 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             {/* Brand */}
             <div>
-              <h3 className="text-xl font-bold text-white mb-4">{siteName}</h3>
-              <p className="text-gray-400 mb-4">{footerDescription}</p>
+              <h3 className="text-xl font-bold text-background mb-4">{siteName}</h3>
+              <p className="text-muted-foreground mb-4">{footerDescription}</p>
               {/* Social Links */}
               <div className="flex gap-3">
                 {socialLinks.facebook && (
-                  <a href={socialLinks.facebook} className="text-gray-400 hover:text-white transition">
+                  <a href={socialLinks.facebook} className="text-muted-foreground hover:text-background transition">
                     <span className="text-xl">📘</span>
                   </a>
                 )}
                 {socialLinks.twitter && (
-                  <a href={socialLinks.twitter} className="text-gray-400 hover:text-white transition">
+                  <a href={socialLinks.twitter} className="text-muted-foreground hover:text-background transition">
                     <span className="text-xl">🐦</span>
                   </a>
                 )}
                 {socialLinks.linkedin && (
-                  <a href={socialLinks.linkedin} className="text-gray-400 hover:text-white transition">
+                  <a href={socialLinks.linkedin} className="text-muted-foreground hover:text-background transition">
                     <span className="text-xl">💼</span>
                   </a>
                 )}
                 {socialLinks.github && (
-                  <a href={socialLinks.github} className="text-gray-400 hover:text-white transition">
+                  <a href={socialLinks.github} className="text-muted-foreground hover:text-background transition">
                     <span className="text-xl">🐙</span>
                   </a>
                 )}
@@ -119,11 +119,11 @@ export function PuckRoot({
             {/* Footer Link Columns */}
             {footerLinks.map((column, i) => (
               <div key={i}>
-                <h4 className="font-semibold text-white mb-4">{column.title}</h4>
+                <h4 className="font-semibold text-background mb-4">{column.title}</h4>
                 <ul className="space-y-2">
                   {column.items.split("\n").filter(Boolean).map((item, j) => (
                     <li key={j}>
-                      <a href="#" className="hover:text-white transition">
+                      <a href="#" className="hover:text-background transition">
                         {item}
                       </a>
                     </li>
@@ -133,8 +133,8 @@ export function PuckRoot({
             ))}
           </div>
 
-          <div className="border-t border-gray-800 pt-8 text-center">
-            <p className="text-gray-400">{copyright}</p>
+          <div className="border-t border-muted-foreground/20 pt-8 text-center">
+            <p className="text-muted-foreground">{copyright}</p>
           </div>
         </div>
       </footer>

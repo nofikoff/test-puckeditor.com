@@ -15,7 +15,8 @@ import {
   SidebarTab,
 } from "@/components/editor/ComponentSidebar";
 import { useFavoriteBlocks } from "@/components/editor/useFavoriteBlocks";
-import type { EditorHeaderSettings } from "@/lib/data/settings";
+import type { SiteSettings, ThemeSettings } from "@/lib/data/settings";
+import { buildThemeCss } from "@/lib/theme-css";
 
 function ComponentItemWithFavorite({
   children,
@@ -70,7 +71,7 @@ function ComponentItemWithFavorite({
 }
 
 type EditorContentProps = {
-  editorSettings: EditorHeaderSettings;
+  editorSettings: SiteSettings;
 };
 
 export function EditorContent({ editorSettings }: EditorContentProps) {
@@ -191,6 +192,22 @@ export function EditorContent({ editorSettings }: EditorContentProps) {
         onPublish={handlePublish}
         headerTitle={headerTitle}
         overrides={{
+          iframe: ({ children, document: iframeDoc }) => {
+            // eslint-disable-next-line react-hooks/rules-of-hooks
+            useEffect(() => {
+              if (!iframeDoc) return;
+              const css = buildThemeCss(editorSettings.theme);
+              if (!css) return;
+              let style = iframeDoc.getElementById("__puck-theme") as HTMLStyleElement | null;
+              if (!style) {
+                style = iframeDoc.createElement("style");
+                style.id = "__puck-theme";
+                iframeDoc.head.appendChild(style);
+              }
+              style.textContent = css;
+            }, [iframeDoc, editorSettings.theme]);
+            return <>{children}</>;
+          },
           header: ({ actions }) => (
             <EditorHeader
               logoUrl={editorSettings.logoUrl}

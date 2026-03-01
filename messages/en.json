@@ -45,7 +45,13 @@
     "settingsSaved": "Saved",
     "settingsSavedDesc": "Editor header settings updated successfully",
     "saving": "Saving...",
-    "preview": "Preview"
+    "preview": "Preview",
+    "themeSettings": "Theme Settings",
+    "primaryColor": "Primary Color",
+    "secondaryColor": "Secondary Color",
+    "accentColor": "Accent Color",
+    "borderRadius": "Border Radius",
+    "fontFamily": "Font Family"
   },
   "auth": {
     "signIn": "Sign In",

@@ -45,7 +45,13 @@
     "settingsSaved": "Sačuvano",
     "settingsSavedDesc": "Podešavanja zaglavlja editora su uspešno ažurirana",
     "saving": "Čuvanje...",
-    "preview": "Pregled"
+    "preview": "Pregled",
+    "themeSettings": "Podešavanja teme",
+    "primaryColor": "Primarna boja",
+    "secondaryColor": "Sekundarna boja",
+    "accentColor": "Akcentna boja",
+    "borderRadius": "Zaobljenost uglova",
+    "fontFamily": "Font"
   },
   "auth": {
     "signIn": "Prijava",
