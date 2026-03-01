@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -14,12 +15,12 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
-import { Plus, Trash2, GripVertical, Save } from "lucide-react";
+import { Plus, Trash2, Save } from "lucide-react";
 import type { SiteSettings, ThemeSettings } from "@/lib/data/settings";
 import { DEFAULT_THEME } from "@/lib/data/settings";
 import { hexToHsl, hslToHex } from "@/lib/color-utils";
 
-type MenuItem = { label: string; url: string };
+type MenuItem = { id: string; label: string; url: string };
 
 type SettingsContentProps = {
   initialSettings: SiteSettings;
@@ -156,10 +157,14 @@ function ThemePreview({ theme }: { theme: ThemeSettings }) {
 
 export function SettingsContent({ initialSettings }: SettingsContentProps) {
   const t = useTranslations("admin");
+  const router = useRouter();
   const { toast } = useToast();
   const [logoUrl, setLogoUrl] = useState(initialSettings.logoUrl);
   const [menuItems, setMenuItems] = useState<MenuItem[]>(
-    initialSettings.menuItems
+    initialSettings.menuItems.map((item) => ({
+      ...item,
+      id: crypto.randomUUID(),
+    }))
   );
   const [theme, setTheme] = useState<ThemeSettings>(
     initialSettings.theme ?? DEFAULT_THEME
@@ -171,7 +176,7 @@ export function SettingsContent({ initialSettings }: SettingsContentProps) {
   };
 
   const handleAddItem = () => {
-    setMenuItems([...menuItems, { label: "", url: "" }]);
+    setMenuItems([...menuItems, { id: crypto.randomUUID(), label: "", url: "" }]);
   };
 
   const handleRemoveItem = (index: number) => {
@@ -191,13 +196,15 @@ export function SettingsContent({ initialSettings }: SettingsContentProps) {
   const handleSave = async () => {
     setSaving(true);
     try {
+      const payload = menuItems.map(({ label, url }) => ({ label, url }));
       const res = await fetch("/api/settings", {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ logoUrl, menuItems, theme }),
+        body: JSON.stringify({ logoUrl, menuItems: payload, theme }),
       });
 
       if (res.ok) {
+        router.refresh();
         toast({ title: t("settingsSaved"), description: t("settingsSavedDesc") });
       } else {
         const data = await res.json();
@@ -270,10 +277,9 @@ export function SettingsContent({ initialSettings }: SettingsContentProps) {
           <div className="space-y-3">
             {menuItems.map((item, index) => (
               <div
-                key={index}
+                key={item.id}
                 className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg"
               >
-                <GripVertical className="h-4 w-4 text-gray-400 flex-shrink-0" />
                 <div className="flex-1 grid grid-cols-2 gap-3">
                   <Input
                     value={item.label}

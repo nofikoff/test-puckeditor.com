@@ -38,58 +38,38 @@ export function ComponentSidebar({
     const container = containerRef.current;
     if (!container) return;
 
+    const scrollArea = container.querySelector<HTMLElement>("[data-puck-scroll-area]");
+    if (!scrollArea) return;
+
     const search = debouncedQuery.toLowerCase().trim();
 
-    // Find all drawer items (component items in the list)
-    const items = container.querySelectorAll<HTMLElement>(
-      '[class*="DrawerItem_"], [class*="DrawerItem-draggable_"]'
-    );
+    const componentItems = container.querySelectorAll<HTMLElement>("[data-puck-component]");
 
-    // Filter to top-level DrawerItem elements (not nested children)
-    const drawerItems = Array.from(items).filter((el) => {
-      const classes = el.className;
-      return (
-        /\b_DrawerItem_\w+\b/.test(classes) &&
-        !/DrawerItem-/.test(classes)
-      );
-    });
-
-    // Show/hide individual items based on search + favorites filter
-    drawerItems.forEach((item) => {
-      const nameEl = item.querySelector<HTMLElement>(
-        '[class*="DrawerItem-name_"]'
-      );
-      const text = (nameEl?.textContent ?? "").toLowerCase();
+    componentItems.forEach((item) => {
+      const name = item.getAttribute("data-puck-component") ?? "";
+      const text = name.toLowerCase();
 
       const matchesSearch = !search || text.includes(search);
       const matchesFavorites =
-        activeTab !== "favorites" || favorites.has(nameEl?.textContent ?? "");
+        activeTab !== "favorites" || favorites.has(name);
 
-      item.style.display = matchesSearch && matchesFavorites ? "" : "none";
+      const visible = matchesSearch && matchesFavorites;
+      const wrapper = item.parentElement;
+      if (wrapper) {
+        wrapper.style.display = visible ? "" : "none";
+      }
     });
 
     // Hide categories where all items are hidden
-    const categories = container.querySelectorAll<HTMLElement>(
-      '[class*="ComponentList_"]'
-    );
+    Array.from(scrollArea.children).forEach((category) => {
+      const el = category as HTMLElement;
+      const items = el.querySelectorAll<HTMLElement>("[data-puck-component]");
+      if (items.length === 0) return;
 
-    categories.forEach((category) => {
-      const classes = category.className;
-      if (!/\b_ComponentList_\w+\b/.test(classes)) return;
-
-      const categoryItems = category.querySelectorAll<HTMLElement>(
-        '[class*="DrawerItem_"]'
+      const hasVisible = Array.from(items).some(
+        (item) => item.parentElement?.style.display !== "none"
       );
-      const topLevelItems = Array.from(categoryItems).filter(
-        (el) =>
-          /\b_DrawerItem_\w+\b/.test(el.className) &&
-          !/DrawerItem-/.test(el.className)
-      );
-
-      const hasVisibleItems = topLevelItems.some(
-        (el) => el.style.display !== "none"
-      );
-      category.style.display = hasVisibleItems ? "" : "none";
+      el.style.display = hasVisible ? "" : "none";
     });
   }, [debouncedQuery, activeTab, favorites]);
 
@@ -165,7 +145,7 @@ export function ComponentSidebar({
           }}
         />
       </div>
-      <div style={{ flex: 1, overflow: "auto", paddingTop: "8px" }}>
+      <div data-puck-scroll-area style={{ flex: 1, overflow: "auto", paddingTop: "8px" }}>
         {children}
       </div>
     </div>

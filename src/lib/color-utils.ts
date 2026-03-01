@@ -4,6 +4,10 @@
 export function hexToHsl(hex: string): string {
   hex = hex.replace(/^#/, "");
 
+  if (!/^[0-9a-fA-F]{3}([0-9a-fA-F]{3})?$/.test(hex)) {
+    return "0 0% 0%";
+  }
+
   if (hex.length === 3) {
     hex = hex
       .split("")

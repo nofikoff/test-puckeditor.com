@@ -5,44 +5,36 @@ import { ComponentSidebar, SidebarTab } from "../ComponentSidebar";
 
 function MockComponentList() {
   return (
-    <div>
+    <>
       {/* Category: Hero */}
-      <div className="_ComponentList_1rrlt_1 _ComponentList--isExpanded_1rrlt_5">
-        <button className="_ComponentList-title_1rrlt_17">
+      <div data-testid="category-hero">
+        <button>
           <div>SB: Hero Sections</div>
         </button>
-        <div className="_ComponentList-content_1rrlt_9">
-          <div className="_DrawerItem_fkqfo_25">
-            <div className="_DrawerItem-draggable_fkqfo_25">
-              <div className="_DrawerItem-name_fkqfo_66">Hero Banner</div>
-            </div>
+        <div>
+          <div data-testid="wrapper-hero-banner">
+            <div data-puck-component="Hero Banner">Hero Banner</div>
           </div>
-          <div className="_DrawerItem_fkqfo_25">
-            <div className="_DrawerItem-draggable_fkqfo_25">
-              <div className="_DrawerItem-name_fkqfo_66">Hero Minimal</div>
-            </div>
+          <div data-testid="wrapper-hero-minimal">
+            <div data-puck-component="Hero Minimal">Hero Minimal</div>
           </div>
         </div>
       </div>
       {/* Category: Typography */}
-      <div className="_ComponentList_1rrlt_1 _ComponentList--isExpanded_1rrlt_5">
-        <button className="_ComponentList-title_1rrlt_17">
+      <div data-testid="category-typography">
+        <button>
           <div>Typography (Legacy)</div>
         </button>
-        <div className="_ComponentList-content_1rrlt_9">
-          <div className="_DrawerItem_fkqfo_25">
-            <div className="_DrawerItem-draggable_fkqfo_25">
-              <div className="_DrawerItem-name_fkqfo_66">Heading</div>
-            </div>
+        <div>
+          <div data-testid="wrapper-heading">
+            <div data-puck-component="Heading">Heading</div>
           </div>
-          <div className="_DrawerItem_fkqfo_25">
-            <div className="_DrawerItem-draggable_fkqfo_25">
-              <div className="_DrawerItem-name_fkqfo_66">Text</div>
-            </div>
+          <div data-testid="wrapper-text">
+            <div data-puck-component="Text">Text</div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
@@ -89,15 +81,11 @@ describe("ComponentSidebar", () => {
       vi.advanceTimersByTime(300);
     });
 
-    const heroBanner = screen.getByText("Hero Banner").closest(
-      '[class*="DrawerItem_"]'
-    ) as HTMLElement;
-    expect(heroBanner.style.display).toBe("");
+    const heroBannerWrapper = screen.getByTestId("wrapper-hero-banner");
+    expect(heroBannerWrapper.style.display).toBe("");
 
-    const heading = screen.getByText("Heading").closest(
-      '[class*="DrawerItem_"]'
-    ) as HTMLElement;
-    expect(heading.style.display).toBe("none");
+    const headingWrapper = screen.getByTestId("wrapper-heading");
+    expect(headingWrapper.style.display).toBe("none");
   });
 
   it("hides categories with no matching items", () => {
@@ -114,14 +102,10 @@ describe("ComponentSidebar", () => {
       vi.advanceTimersByTime(300);
     });
 
-    const typographyCategory = screen.getByText("Typography (Legacy)").closest(
-      '[class*="ComponentList_"]'
-    ) as HTMLElement;
+    const typographyCategory = screen.getByTestId("category-typography");
     expect(typographyCategory.style.display).toBe("");
 
-    const heroCategory = screen.getByText("SB: Hero Sections").closest(
-      '[class*="ComponentList_"]'
-    ) as HTMLElement;
+    const heroCategory = screen.getByTestId("category-hero");
     expect(heroCategory.style.display).toBe("none");
   });
 
@@ -144,14 +128,10 @@ describe("ComponentSidebar", () => {
       vi.advanceTimersByTime(300);
     });
 
-    const heading = screen.getByText("Heading").closest(
-      '[class*="DrawerItem_"]'
-    ) as HTMLElement;
-    expect(heading.style.display).toBe("");
+    const headingWrapper = screen.getByTestId("wrapper-heading");
+    expect(headingWrapper.style.display).toBe("");
 
-    const heroCategory = screen.getByText("SB: Hero Sections").closest(
-      '[class*="ComponentList_"]'
-    ) as HTMLElement;
+    const heroCategory = screen.getByTestId("category-hero");
     expect(heroCategory.style.display).toBe("");
   });
 
@@ -168,21 +148,17 @@ describe("ComponentSidebar", () => {
     fireEvent.change(input, { target: { value: "he" } });
     fireEvent.change(input, { target: { value: "hea" } });
 
-    const heading = screen.getByText("Heading").closest(
-      '[class*="DrawerItem_"]'
-    ) as HTMLElement;
-    expect(heading.style.display).toBe("");
+    const headingWrapper = screen.getByTestId("wrapper-heading");
+    expect(headingWrapper.style.display).toBe("");
 
     act(() => {
       vi.advanceTimersByTime(300);
     });
 
-    expect(heading.style.display).toBe("");
+    expect(headingWrapper.style.display).toBe("");
 
-    const heroBanner = screen.getByText("Hero Banner").closest(
-      '[class*="DrawerItem_"]'
-    ) as HTMLElement;
-    expect(heroBanner.style.display).toBe("none");
+    const heroBannerWrapper = screen.getByTestId("wrapper-hero-banner");
+    expect(heroBannerWrapper.style.display).toBe("none");
   });
 
   it("calls onTabChange when clicking tab buttons", () => {
@@ -212,25 +188,17 @@ describe("ComponentSidebar", () => {
       vi.advanceTimersByTime(300);
     });
 
-    const heroBanner = screen.getByText("Hero Banner").closest(
-      '[class*="DrawerItem_"]'
-    ) as HTMLElement;
-    expect(heroBanner.style.display).toBe("");
+    const heroBannerWrapper = screen.getByTestId("wrapper-hero-banner");
+    expect(heroBannerWrapper.style.display).toBe("");
 
-    const heading = screen.getByText("Heading").closest(
-      '[class*="DrawerItem_"]'
-    ) as HTMLElement;
-    expect(heading.style.display).toBe("");
+    const headingWrapper = screen.getByTestId("wrapper-heading");
+    expect(headingWrapper.style.display).toBe("");
 
-    const heroMinimal = screen.getByText("Hero Minimal").closest(
-      '[class*="DrawerItem_"]'
-    ) as HTMLElement;
-    expect(heroMinimal.style.display).toBe("none");
+    const heroMinimalWrapper = screen.getByTestId("wrapper-hero-minimal");
+    expect(heroMinimalWrapper.style.display).toBe("none");
 
-    const text = screen.getByText("Text").closest(
-      '[class*="DrawerItem_"]'
-    ) as HTMLElement;
-    expect(text.style.display).toBe("none");
+    const textWrapper = screen.getByTestId("wrapper-text");
+    expect(textWrapper.style.display).toBe("none");
   });
 
   it("combines search and favorites filters", () => {
@@ -248,15 +216,11 @@ describe("ComponentSidebar", () => {
       vi.advanceTimersByTime(300);
     });
 
-    const heroBanner = screen.getByText("Hero Banner").closest(
-      '[class*="DrawerItem_"]'
-    ) as HTMLElement;
-    expect(heroBanner.style.display).toBe("");
+    const heroBannerWrapper = screen.getByTestId("wrapper-hero-banner");
+    expect(heroBannerWrapper.style.display).toBe("");
 
-    const heading = screen.getByText("Heading").closest(
-      '[class*="DrawerItem_"]'
-    ) as HTMLElement;
-    expect(heading.style.display).toBe("none");
+    const headingWrapper = screen.getByTestId("wrapper-heading");
+    expect(headingWrapper.style.display).toBe("none");
   });
 
   it("hides categories with no visible favorites", () => {
@@ -271,14 +235,10 @@ describe("ComponentSidebar", () => {
       vi.advanceTimersByTime(300);
     });
 
-    const heroCategory = screen.getByText("SB: Hero Sections").closest(
-      '[class*="ComponentList_"]'
-    ) as HTMLElement;
+    const heroCategory = screen.getByTestId("category-hero");
     expect(heroCategory.style.display).toBe("none");
 
-    const typographyCategory = screen.getByText("Typography (Legacy)").closest(
-      '[class*="ComponentList_"]'
-    ) as HTMLElement;
+    const typographyCategory = screen.getByTestId("category-typography");
     expect(typographyCategory.style.display).toBe("");
   });
 });

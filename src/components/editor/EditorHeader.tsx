@@ -72,9 +72,9 @@ export function EditorHeader({
               paddingLeft: 16,
             }}
           >
-            {menuItems.map((item, i) => (
+            {menuItems.map((item) => (
               <a
-                key={i}
+                key={`${item.label}-${item.url}`}
                 href={item.url}
                 target="_blank"
                 rel="noopener noreferrer"

@@ -18,6 +18,31 @@ import { useFavoriteBlocks } from "@/components/editor/useFavoriteBlocks";
 import type { SiteSettings, ThemeSettings } from "@/lib/data/settings";
 import { buildThemeCss } from "@/lib/theme-css";
 
+function IframeThemeInjector({
+  children,
+  document: iframeDoc,
+  theme,
+}: {
+  children: ReactNode;
+  document?: Document;
+  theme: ThemeSettings;
+}) {
+  useEffect(() => {
+    if (!iframeDoc) return;
+    const css = buildThemeCss(theme);
+    if (!css) return;
+    let style = iframeDoc.getElementById("__puck-theme") as HTMLStyleElement | null;
+    if (!style) {
+      style = iframeDoc.createElement("style");
+      style.id = "__puck-theme";
+      iframeDoc.head.appendChild(style);
+    }
+    style.textContent = css;
+  }, [iframeDoc, theme]);
+
+  return <>{children}</>;
+}
+
 function ComponentItemWithFavorite({
   children,
   name,
@@ -30,7 +55,7 @@ function ComponentItemWithFavorite({
   onToggle: (name: string) => void;
 }) {
   return (
-    <div style={{ position: "relative" }}>
+    <div style={{ position: "relative" }} data-puck-component={name}>
       {children}
       <button
         type="button"
@@ -117,16 +142,9 @@ export function EditorContent({ editorSettings }: EditorContentProps) {
     return () => window.removeEventListener("beforeunload", handler);
   }, []);
 
-  const handleChange = useCallback(
-    (data: Data) => {
-      if (initialData && JSON.stringify(data) !== JSON.stringify(initialData)) {
-        hasUnsavedChanges.current = true;
-      } else {
-        hasUnsavedChanges.current = false;
-      }
-    },
-    [initialData]
-  );
+  const handleChange = useCallback(() => {
+    hasUnsavedChanges.current = true;
+  }, []);
 
   const handlePublish = async (data: Data) => {
     try {
@@ -192,22 +210,11 @@ export function EditorContent({ editorSettings }: EditorContentProps) {
         onPublish={handlePublish}
         headerTitle={headerTitle}
         overrides={{
-          iframe: ({ children, document: iframeDoc }) => {
-            // eslint-disable-next-line react-hooks/rules-of-hooks
-            useEffect(() => {
-              if (!iframeDoc) return;
-              const css = buildThemeCss(editorSettings.theme);
-              if (!css) return;
-              let style = iframeDoc.getElementById("__puck-theme") as HTMLStyleElement | null;
-              if (!style) {
-                style = iframeDoc.createElement("style");
-                style.id = "__puck-theme";
-                iframeDoc.head.appendChild(style);
-              }
-              style.textContent = css;
-            }, [iframeDoc, editorSettings.theme]);
-            return <>{children}</>;
-          },
+          iframe: ({ children, document: iframeDoc }) => (
+            <IframeThemeInjector document={iframeDoc} theme={editorSettings.theme}>
+              {children}
+            </IframeThemeInjector>
+          ),
           header: ({ actions }) => (
             <EditorHeader
               logoUrl={editorSettings.logoUrl}

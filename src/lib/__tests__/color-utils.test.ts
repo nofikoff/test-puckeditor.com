@@ -38,6 +38,19 @@ describe("hexToHsl", () => {
     const hsl = hexToHsl("#3B82F6");
     expect(hsl).toMatch(/^\d+ \d+% \d+%$/);
   });
+
+  it("returns 0 0% 0% for empty string", () => {
+    expect(hexToHsl("")).toBe("0 0% 0%");
+  });
+
+  it("returns 0 0% 0% for garbage input", () => {
+    expect(hexToHsl("xyz")).toBe("0 0% 0%");
+  });
+
+  it("handles hue=360 wrapping (magenta)", () => {
+    const hsl = hexToHsl("#FF00FF");
+    expect(hsl).toBe("300 100% 50%");
+  });
 });
 
 describe("hslToHex", () => {

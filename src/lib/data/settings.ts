@@ -14,9 +14,6 @@ export type SiteSettings = {
   theme: ThemeSettings;
 };
 
-/** @deprecated Use SiteSettings instead */
-export type EditorHeaderSettings = SiteSettings;
-
 export const DEFAULT_THEME: ThemeSettings = {
   primaryColor: "0 0% 9%",
   secondaryColor: "0 0% 96.1%",
