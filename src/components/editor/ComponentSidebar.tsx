@@ -2,11 +2,21 @@
 
 import { ReactNode, useCallback, useEffect, useRef, useState } from "react";
 
-type ComponentSearchProps = {
+export type SidebarTab = "all" | "favorites";
+
+type ComponentSidebarProps = {
   children: ReactNode;
+  favorites: Set<string>;
+  activeTab: SidebarTab;
+  onTabChange: (tab: SidebarTab) => void;
 };
 
-export function ComponentSearch({ children }: ComponentSearchProps) {
+export function ComponentSidebar({
+  children,
+  favorites,
+  activeTab,
+  onTabChange,
+}: ComponentSidebarProps) {
   const [query, setQuery] = useState("");
   const [debouncedQuery, setDebouncedQuery] = useState("");
   const containerRef = useRef<HTMLDivElement>(null);
@@ -38,26 +48,24 @@ export function ComponentSearch({ children }: ComponentSearchProps) {
     // Filter to top-level DrawerItem elements (not nested children)
     const drawerItems = Array.from(items).filter((el) => {
       const classes = el.className;
-      // Match the main DrawerItem container class but not sub-element classes
       return (
         /\b_DrawerItem_\w+\b/.test(classes) &&
         !/DrawerItem-/.test(classes)
       );
     });
 
-    // Show/hide individual items
+    // Show/hide individual items based on search + favorites filter
     drawerItems.forEach((item) => {
-      if (!search) {
-        item.style.display = "";
-        return;
-      }
-
       const nameEl = item.querySelector<HTMLElement>(
         '[class*="DrawerItem-name_"]'
       );
       const text = (nameEl?.textContent ?? "").toLowerCase();
-      const matches = text.includes(search);
-      item.style.display = matches ? "" : "none";
+
+      const matchesSearch = !search || text.includes(search);
+      const matchesFavorites =
+        activeTab !== "favorites" || favorites.has(nameEl?.textContent ?? "");
+
+      item.style.display = matchesSearch && matchesFavorites ? "" : "none";
     });
 
     // Hide categories where all items are hidden
@@ -67,13 +75,7 @@ export function ComponentSearch({ children }: ComponentSearchProps) {
 
     categories.forEach((category) => {
       const classes = category.className;
-      // Only process top-level ComponentList containers (class _ComponentList_xxx)
       if (!/\b_ComponentList_\w+\b/.test(classes)) return;
-
-      if (!search) {
-        category.style.display = "";
-        return;
-      }
 
       const categoryItems = category.querySelectorAll<HTMLElement>(
         '[class*="DrawerItem_"]'
@@ -89,11 +91,55 @@ export function ComponentSearch({ children }: ComponentSearchProps) {
       );
       category.style.display = hasVisibleItems ? "" : "none";
     });
-  }, [debouncedQuery]);
+  }, [debouncedQuery, activeTab, favorites]);
+
+  const tabStyle = (tab: SidebarTab): React.CSSProperties => ({
+    flex: 1,
+    padding: "6px 0",
+    fontSize: "13px",
+    fontWeight: activeTab === tab ? 600 : 400,
+    color:
+      activeTab === tab
+        ? "var(--puck-color-azure-06, #4a90d9)"
+        : "var(--puck-color-grey-04, #666)",
+    backgroundColor: "transparent",
+    border: "none",
+    borderBottom:
+      activeTab === tab
+        ? "2px solid var(--puck-color-azure-06, #4a90d9)"
+        : "2px solid transparent",
+    cursor: "pointer",
+    transition: "color 0.15s, border-color 0.15s",
+  });
 
   return (
-    <div ref={containerRef} style={{ display: "flex", flexDirection: "column", height: "100%" }}>
-      <div style={{ padding: "12px 16px 8px" }}>
+    <div
+      ref={containerRef}
+      style={{ display: "flex", flexDirection: "column", height: "100%" }}
+    >
+      <div style={{ padding: "12px 16px 0" }}>
+        <div
+          style={{
+            display: "flex",
+            borderBottom: "1px solid var(--puck-color-grey-09, #ddd)",
+            marginBottom: "8px",
+          }}
+        >
+          <button
+            type="button"
+            style={tabStyle("all")}
+            onClick={() => onTabChange("all")}
+          >
+            All
+          </button>
+          <button
+            type="button"
+            style={tabStyle("favorites")}
+            onClick={() => onTabChange("favorites")}
+          >
+            Favorites
+          </button>
+        </div>
         <input
           type="search"
           value={query}
@@ -119,7 +165,9 @@ export function ComponentSearch({ children }: ComponentSearchProps) {
           }}
         />
       </div>
-      <div style={{ flex: 1, overflow: "auto" }}>{children}</div>
+      <div style={{ flex: 1, overflow: "auto", paddingTop: "8px" }}>
+        {children}
+      </div>
     </div>
   );
 }

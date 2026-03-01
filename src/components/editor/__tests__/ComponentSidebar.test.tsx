@@ -1,9 +1,8 @@
 import React from "react";
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 import { render, screen, fireEvent, act } from "@testing-library/react";
-import { ComponentSearch } from "../ComponentSearch";
+import { ComponentSidebar, SidebarTab } from "../ComponentSidebar";
 
-// Helper to create a mock Puck component list DOM structure
 function MockComponentList() {
   return (
     <div>
@@ -47,7 +46,13 @@ function MockComponentList() {
   );
 }
 
-describe("ComponentSearch", () => {
+const defaultProps = {
+  favorites: new Set<string>(),
+  activeTab: "all" as SidebarTab,
+  onTabChange: vi.fn(),
+};
+
+describe("ComponentSidebar", () => {
   beforeEach(() => {
     vi.useFakeTimers();
   });
@@ -56,13 +61,15 @@ describe("ComponentSearch", () => {
     vi.useRealTimers();
   });
 
-  it("renders search input and children", () => {
+  it("renders tabs, search input and children", () => {
     render(
-      <ComponentSearch>
+      <ComponentSidebar {...defaultProps}>
         <MockComponentList />
-      </ComponentSearch>
+      </ComponentSidebar>
     );
 
+    expect(screen.getByText("All")).toBeTruthy();
+    expect(screen.getByText("Favorites")).toBeTruthy();
     expect(screen.getByPlaceholderText("Search blocks...")).toBeTruthy();
     expect(screen.getByText("Hero Banner")).toBeTruthy();
     expect(screen.getByText("Heading")).toBeTruthy();
@@ -70,26 +77,23 @@ describe("ComponentSearch", () => {
 
   it("filters components by name (case-insensitive)", () => {
     render(
-      <ComponentSearch>
+      <ComponentSidebar {...defaultProps}>
         <MockComponentList />
-      </ComponentSearch>
+      </ComponentSidebar>
     );
 
     const input = screen.getByPlaceholderText("Search blocks...");
     fireEvent.change(input, { target: { value: "hero" } });
 
-    // Wait for debounce
     act(() => {
       vi.advanceTimersByTime(300);
     });
 
-    // Hero items should be visible
     const heroBanner = screen.getByText("Hero Banner").closest(
       '[class*="DrawerItem_"]'
     ) as HTMLElement;
     expect(heroBanner.style.display).toBe("");
 
-    // Non-hero items should be hidden
     const heading = screen.getByText("Heading").closest(
       '[class*="DrawerItem_"]'
     ) as HTMLElement;
@@ -98,9 +102,9 @@ describe("ComponentSearch", () => {
 
   it("hides categories with no matching items", () => {
     render(
-      <ComponentSearch>
+      <ComponentSidebar {...defaultProps}>
         <MockComponentList />
-      </ComponentSearch>
+      </ComponentSidebar>
     );
 
     const input = screen.getByPlaceholderText("Search blocks...");
@@ -110,13 +114,11 @@ describe("ComponentSearch", () => {
       vi.advanceTimersByTime(300);
     });
 
-    // Typography category should be visible (has "Heading")
     const typographyCategory = screen.getByText("Typography (Legacy)").closest(
       '[class*="ComponentList_"]'
     ) as HTMLElement;
     expect(typographyCategory.style.display).toBe("");
 
-    // Hero category should be hidden (no matches)
     const heroCategory = screen.getByText("SB: Hero Sections").closest(
       '[class*="ComponentList_"]'
     ) as HTMLElement;
@@ -125,26 +127,23 @@ describe("ComponentSearch", () => {
 
   it("restores all items when search is cleared", () => {
     render(
-      <ComponentSearch>
+      <ComponentSidebar {...defaultProps}>
         <MockComponentList />
-      </ComponentSearch>
+      </ComponentSidebar>
     );
 
     const input = screen.getByPlaceholderText("Search blocks...");
 
-    // Type a search query
     fireEvent.change(input, { target: { value: "hero" } });
     act(() => {
       vi.advanceTimersByTime(300);
     });
 
-    // Clear search
     fireEvent.change(input, { target: { value: "" } });
     act(() => {
       vi.advanceTimersByTime(300);
     });
 
-    // All items should be visible again
     const heading = screen.getByText("Heading").closest(
       '[class*="DrawerItem_"]'
     ) as HTMLElement;
@@ -158,25 +157,22 @@ describe("ComponentSearch", () => {
 
   it("debounces input to avoid excessive filtering", () => {
     render(
-      <ComponentSearch>
+      <ComponentSidebar {...defaultProps}>
         <MockComponentList />
-      </ComponentSearch>
+      </ComponentSidebar>
     );
 
     const input = screen.getByPlaceholderText("Search blocks...");
 
-    // Type quickly
     fireEvent.change(input, { target: { value: "h" } });
     fireEvent.change(input, { target: { value: "he" } });
     fireEvent.change(input, { target: { value: "hea" } });
 
-    // Before debounce fires, nothing should be filtered
     const heading = screen.getByText("Heading").closest(
       '[class*="DrawerItem_"]'
     ) as HTMLElement;
     expect(heading.style.display).toBe("");
 
-    // After debounce, only "hea" should be applied
     act(() => {
       vi.advanceTimersByTime(300);
     });
@@ -187,5 +183,102 @@ describe("ComponentSearch", () => {
       '[class*="DrawerItem_"]'
     ) as HTMLElement;
     expect(heroBanner.style.display).toBe("none");
+  });
+
+  it("calls onTabChange when clicking tab buttons", () => {
+    const onTabChange = vi.fn();
+    render(
+      <ComponentSidebar {...defaultProps} onTabChange={onTabChange}>
+        <MockComponentList />
+      </ComponentSidebar>
+    );
+
+    fireEvent.click(screen.getByText("Favorites"));
+    expect(onTabChange).toHaveBeenCalledWith("favorites");
+
+    fireEvent.click(screen.getByText("All"));
+    expect(onTabChange).toHaveBeenCalledWith("all");
+  });
+
+  it("shows only favorited items when favorites tab is active", () => {
+    const favorites = new Set(["Hero Banner", "Heading"]);
+    render(
+      <ComponentSidebar {...defaultProps} favorites={favorites} activeTab="favorites">
+        <MockComponentList />
+      </ComponentSidebar>
+    );
+
+    act(() => {
+      vi.advanceTimersByTime(300);
+    });
+
+    const heroBanner = screen.getByText("Hero Banner").closest(
+      '[class*="DrawerItem_"]'
+    ) as HTMLElement;
+    expect(heroBanner.style.display).toBe("");
+
+    const heading = screen.getByText("Heading").closest(
+      '[class*="DrawerItem_"]'
+    ) as HTMLElement;
+    expect(heading.style.display).toBe("");
+
+    const heroMinimal = screen.getByText("Hero Minimal").closest(
+      '[class*="DrawerItem_"]'
+    ) as HTMLElement;
+    expect(heroMinimal.style.display).toBe("none");
+
+    const text = screen.getByText("Text").closest(
+      '[class*="DrawerItem_"]'
+    ) as HTMLElement;
+    expect(text.style.display).toBe("none");
+  });
+
+  it("combines search and favorites filters", () => {
+    const favorites = new Set(["Hero Banner", "Heading"]);
+    render(
+      <ComponentSidebar {...defaultProps} favorites={favorites} activeTab="favorites">
+        <MockComponentList />
+      </ComponentSidebar>
+    );
+
+    const input = screen.getByPlaceholderText("Search blocks...");
+    fireEvent.change(input, { target: { value: "hero" } });
+
+    act(() => {
+      vi.advanceTimersByTime(300);
+    });
+
+    const heroBanner = screen.getByText("Hero Banner").closest(
+      '[class*="DrawerItem_"]'
+    ) as HTMLElement;
+    expect(heroBanner.style.display).toBe("");
+
+    const heading = screen.getByText("Heading").closest(
+      '[class*="DrawerItem_"]'
+    ) as HTMLElement;
+    expect(heading.style.display).toBe("none");
+  });
+
+  it("hides categories with no visible favorites", () => {
+    const favorites = new Set(["Heading"]);
+    render(
+      <ComponentSidebar {...defaultProps} favorites={favorites} activeTab="favorites">
+        <MockComponentList />
+      </ComponentSidebar>
+    );
+
+    act(() => {
+      vi.advanceTimersByTime(300);
+    });
+
+    const heroCategory = screen.getByText("SB: Hero Sections").closest(
+      '[class*="ComponentList_"]'
+    ) as HTMLElement;
+    expect(heroCategory.style.display).toBe("none");
+
+    const typographyCategory = screen.getByText("Typography (Legacy)").closest(
+      '[class*="ComponentList_"]'
+    ) as HTMLElement;
+    expect(typographyCategory.style.display).toBe("");
   });
 });

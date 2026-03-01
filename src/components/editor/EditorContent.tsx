@@ -5,12 +5,69 @@ import "@measured/puck/puck.css";
 import { config } from "@/lib/puck-config";
 import { getPage } from "@/data/demo-pages";
 import { useSearchParams, useParams } from "next/navigation";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { ReactNode, useCallback, useEffect, useRef, useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { Star } from "lucide-react";
 import { AIChatPanel } from "@/components/editor/AIChatPanel";
 import { EditorHeader } from "@/components/editor/EditorHeader";
-import { ComponentSearch } from "@/components/editor/ComponentSearch";
+import {
+  ComponentSidebar,
+  SidebarTab,
+} from "@/components/editor/ComponentSidebar";
+import { useFavoriteBlocks } from "@/components/editor/useFavoriteBlocks";
 import type { EditorHeaderSettings } from "@/lib/data/settings";
+
+function ComponentItemWithFavorite({
+  children,
+  name,
+  isFavorite,
+  onToggle,
+}: {
+  children: ReactNode;
+  name: string;
+  isFavorite: boolean;
+  onToggle: (name: string) => void;
+}) {
+  return (
+    <div style={{ position: "relative" }}>
+      {children}
+      <button
+        type="button"
+        title={isFavorite ? "Remove from favorites" : "Add to favorites"}
+        onClick={(e) => {
+          e.stopPropagation();
+          e.preventDefault();
+          onToggle(name);
+        }}
+        onMouseDown={(e) => e.stopPropagation()}
+        style={{
+          position: "absolute",
+          right: "8px",
+          top: "50%",
+          transform: "translateY(-50%)",
+          background: "none",
+          border: "none",
+          cursor: "pointer",
+          padding: "4px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          color: isFavorite
+            ? "var(--puck-color-azure-06, #4a90d9)"
+            : "var(--puck-color-grey-07, #aaa)",
+          transition: "color 0.15s",
+          zIndex: 1,
+        }}
+      >
+        <Star
+          size={14}
+          fill={isFavorite ? "currentColor" : "none"}
+          strokeWidth={2}
+        />
+      </button>
+    </div>
+  );
+}
 
 type EditorContentProps = {
   editorSettings: EditorHeaderSettings;
@@ -25,7 +82,9 @@ export function EditorContent({ editorSettings }: EditorContentProps) {
   const [initialData, setInitialData] = useState<Data | null>(null);
   const [loading, setLoading] = useState(true);
   const [showAIPanel, setShowAIPanel] = useState(false);
+  const [sidebarTab, setSidebarTab] = useState<SidebarTab>("all");
   const hasUnsavedChanges = useRef(false);
+  const { favorites, toggle, isFavorite } = useFavoriteBlocks();
 
   useEffect(() => {
     async function loadPage() {
@@ -143,7 +202,22 @@ export function EditorContent({ editorSettings }: EditorContentProps) {
             />
           ),
           components: ({ children }) => (
-            <ComponentSearch>{children}</ComponentSearch>
+            <ComponentSidebar
+              favorites={favorites}
+              activeTab={sidebarTab}
+              onTabChange={setSidebarTab}
+            >
+              {children}
+            </ComponentSidebar>
+          ),
+          componentItem: ({ children, name }) => (
+            <ComponentItemWithFavorite
+              name={name}
+              isFavorite={isFavorite(name)}
+              onToggle={toggle}
+            >
+              {children}
+            </ComponentItemWithFavorite>
           ),
           puck: ({ children }) => (
             <>
