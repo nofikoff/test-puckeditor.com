@@ -9,6 +9,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { AIChatPanel } from "@/components/editor/AIChatPanel";
 import { EditorHeader } from "@/components/editor/EditorHeader";
+import { ComponentSearch } from "@/components/editor/ComponentSearch";
 import type { EditorHeaderSettings } from "@/lib/data/settings";
 
 type EditorContentProps = {
@@ -140,6 +141,9 @@ export function EditorContent({ editorSettings }: EditorContentProps) {
               showAIPanel={showAIPanel}
               onToggleAI={() => setShowAIPanel(!showAIPanel)}
             />
+          ),
+          components: ({ children }) => (
+            <ComponentSearch>{children}</ComponentSearch>
           ),
           puck: ({ children }) => (
             <>
